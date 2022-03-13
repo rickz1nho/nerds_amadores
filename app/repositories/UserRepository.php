@@ -9,7 +9,7 @@ class UserRepository
 {
 
     private $connection;
-    private $base_path = "http://localhost/projeto_ifpr/usuarios_login157";
+    private $base_path = "http://localhost/nerds_amadores";
 
 
     public function __construct()

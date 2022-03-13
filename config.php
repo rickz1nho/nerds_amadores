@@ -8,9 +8,9 @@ error_reporting(E_ALL);
 
 session_start();
 
-$base_path = "http://localhost/projeto_ifpr/usuarios_login157";
+$base_path = "http://localhost/nerds_amadores";
 
-define("BASE_URL", "http://localhost/projeto_ifpr/usuarios_login157");
+define("BASE_URL", "http://localhost/nerds_amadores");
 
 
 function valida_login()
