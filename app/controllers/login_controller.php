@@ -13,7 +13,7 @@ if (empty($user) or empty($pass)) {
     # se usuario ou senha estiverem vazios
     header("location: {$base_path}/login_page.php?msg=2");
     exit; //nada eh executado daqui pra baixo...
-}
+};
 
 $repository = new UserRepository();
 $usuario = $repository->findUserByLogin($user, $pass);

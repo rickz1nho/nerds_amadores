@@ -152,6 +152,7 @@ class UserRepository
         if (!empty($conteudoTexto['texto']['conteudo'])) {
             echo $conteudoTexto['texto']['conteudo'];
         }
+        return $conteudoTexto['texto'];
     }
 
     function getPubliId()
