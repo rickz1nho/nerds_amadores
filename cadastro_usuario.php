@@ -37,30 +37,30 @@
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Criar uma conta</h2>
 
-                            <form>
+                            <form action="app/controllers/userController.php?action=register" method="POST">
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example1cg">Nome</label>
-                                    <input name="field_nome_cadastro" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                                    <label for="field_nome_cadastro" class="form-label">Nome</label>
+                                    <input name="field_nome_cadastro" type="text" class="form-control form-control-lg" />
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example1cg">Usuário</label>
-                                    <input name="field_usuario_cadastro type=" text" id="form3Example1cg" class="form-control form-control-lg" />
+                                    <label for="field_usuario_cadastro" class="form-label">Usuário</label>
+                                    <input name="field_usuario_cadastro" type=" text" class="form-control form-control-lg" />
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example3cg">Email</label>
-                                    <input name="field_senha_cadastro type=" email" id="form3Example3cg" class="form-control form-control-lg" />
+                                    <label for="field_email_cadastro" class="form-label">Email</label>
+                                    <input name="field_email_cadastro" type="email" class="form-control form-control-lg" />
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form3Example4cg">Password</label>
-                                    <input name="field_email_cadastro" type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <label for="field_senha_cadastro" class="form-label" ">Senha</label>
+                                    <input name=" field_senha_cadastro" type="password" class="form-control form-control-lg" />
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="button" class="button text-center">Registrar</button>
+                                    <button type="submit" class="button text-center">Registrar</button>
                                 </div>
 
                                 <p class="text-center text-muted mt-5 mb-0">Já tem uma conta? <a href="login_page.php" class="fw-bold text-body"><u>Logue aqui!</u></a></p>
