@@ -78,15 +78,20 @@
                 <?php
             }
 
+
             $repository = new UserRepository();
             $repository->view();
 
 
+            if(!empty($repository->view())){
                 ?>
 
                 <input type="submit" value="DELETAR PUBLICACAO" onclick="return confirm('Tem certeza que deseja deletar essa publicacao?')">
 
                 </form>
+            <?php
+            }
+            ?>
 
         </div>
     </div>
