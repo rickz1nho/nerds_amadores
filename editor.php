@@ -54,23 +54,25 @@
   <script type="text/javascript" src="js/plugins/inline_style.min.js"></script>
   <script type="text/javascript" src="js/plugins/save.min.js"></script>
 
+
   <?php
   $str = ''; // variable to store the options
-  $tech = array("Cripto", "Software", "Hardware");
-  $str = '<option value="' . $tech[0] . '" />' . '<option value="' . $tech[1] . '" />' . '<option value="' . $tech[2] . '" />';
-  ?>
+  $tech = array("Cripto", "Software", "Hardware", "Tecnologias em Geral");
+  $str = '<option value="' . $tech[0] . '" />' . '<option value="' . $tech[1] . '" />' . '<option value="' . $tech[2] . '<option value="' . $tech[3] . '" />';
 
+  ?>
 
   <form action="app/controllers/controllerForm.php?action=save" method="POST">
     <div class="form-group">
       <label>Titulo*:</label>
       <input required pattern="[A-Za-z[^0-9]*{0,50}" class="col-sm-6" type="text" name="titulo"><br><br>
       <label>Categoria*:</label>
-      <input class="col-sm-6 custom-select custom-select-sm" type="text" id="t1" name="str" list="l1" required pattern="Cripto|Software|Hardware">
+      <input class="col-sm-6 custom-select custom-select-sm" type="text" id="t1" name="str" list="l1" required pattern="Cripto|Software|Hardware|Tecnologias em Geral">
       <datalist id="l1">
         <option>Cripto</option>
         <option>Software</option>
         <option>Hardware</option>
+        <option>Tecnologias em Geral</option>
       </datalist>
     </div>
     <div class="myEditor">

@@ -15,7 +15,7 @@ var cccTheme = {
         "colorDown": "#ff0000"
     }
 };
-(function () {
+(function() {
     var appName = encodeURIComponent(window.location.hostname);
     if (appName == "") {
         appName = "local";
@@ -23,7 +23,7 @@ var cccTheme = {
     var s = document.createElement("script");
     s.type = "text/javascript";
     s.async = true;
-    var theUrl = baseUrl + 'serve/v3/coin/header?fsyms=BTC,SLP,ETH,DOGE&tsyms=USD,BRL';
+    var theUrl = baseUrl + 'serve/v3/coin/header?fsyms=BTC,ETH,XMR,LTC&tsyms=USD,EUR,CNY,GBP';
     s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
     embedder.parentNode.appendChild(s);
 })();

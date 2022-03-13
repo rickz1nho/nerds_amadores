@@ -29,7 +29,8 @@ class UserRepository
 
         if ($statement->rowCount() == 0) {
 
-            header("location:{$this->base_path}/login_page.php?msg=usuario ou senha nao estao corretos");
+
+            header("location:{$this->base_path}/login_page.php?msg=1");
             exit;
         } else {
 
@@ -148,21 +149,22 @@ class UserRepository
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         $conteudoTexto['texto'] = $conteudo;
-        if(!empty($conteudoTexto['texto']['conteudo'])){
-        echo $conteudoTexto['texto']['conteudo'];
+        if (!empty($conteudoTexto['texto']['conteudo'])) {
+            echo $conteudoTexto['texto']['conteudo'];
         }
     }
 
-    function getPubliId(){
+    function getPubliId()
+    {
         $sql = "SELECT `id` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         return $conteudo;
-
     }
 
-    function deletePubli($id){
+    function deletePubli($id)
+    {
         $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
