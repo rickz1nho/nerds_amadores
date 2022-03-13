@@ -54,8 +54,10 @@
 
         $publiId['publi'] = $id;
 
-        $repository->deletePubli($publiId['publi']);
-
+        if($repository->deletePubli($publiId['publi'])==1){
+            header("location:" .BASE_URL. "/index.php?msg=vocenaotempermissao");
+        }else{
         header("location:" .BASE_URL. "/index.php?msg=publicacaodeletada");
+        }
 
     }

@@ -188,8 +188,10 @@ class UserRepository
 
     function deletePubli($id)
     {
+        if($_GET['session']['nivel']==4){
         $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
+        }else return 1;
     }
 }
