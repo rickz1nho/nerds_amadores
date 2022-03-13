@@ -47,6 +47,23 @@
                 <h1 class="text-white">Home page</h1>
 
             </div>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bitcoinPriceWidgets.js"></script>
+    <script src="assets/js/bitcoinPrice.js"></script>
+    <script src="assets/js/bitcoinTracker.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script src="assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/rsconfig.js"></script>
             <?php
 
             require_once __DIR__ . "/config.php";
@@ -99,23 +116,6 @@
     </div>
     <br>
     <br>
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/bitcoinPriceWidgets.js"></script>
-    <script src="assets/js/bitcoinPrice.js"></script>
-    <script src="assets/js/bitcoinTracker.js"></script>
-    <script src="assets/js/functions.js"></script>
-    <script src="assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
-    <script src="assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="assets/js/rsconfig.js"></script>
 </body>
 
 </html>
