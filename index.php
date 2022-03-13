@@ -24,11 +24,11 @@
 
 <body>
 
-    <div class="preloader">
+    <!--<div class="preloader">
         <div class="loader-eclipse">
             <div class="loader-content"></div>
         </div>
-    </div>
+    </div>-->
     <div id="wrapper" class="wrapper clearfix">
         <div id="top-bar" class="top-bar bitcoin-tracker-dark">
             <div class="container-fluid pr-0 pl-0">
@@ -78,17 +78,18 @@
 
 
             $repository = new UserRepository();
-            $repository->view();
+            $titulo = $repository->view(1);
+            $id = $repository->getPubliId($titulo);
 
+            echo "<a href='publi.php?id=$id'>".$repository->view(2)."</a>" ?>
 
-            if(!empty($repository->getPubliId())){
-                ?>
-                <form action="app/controllers/controllerForm.php?action=delete" method="POST">
-
-                <input type="submit" value="DELETAR PUBLICACAO" onclick="return confirm('Tem certeza que deseja deletar essa publicacao?')">
-
-                </form>
             <?php
+            if(!empty($repository->getPubliId($titulo))){
+                echo '<form action="app/controllers/controllerForm.php?action=delete&msg='.$titulo.'" method="POST">
+
+                <input type="submit" value="DELETAR PUBLICACAO" onclick="return confirm(`Tem certeza que deseja deletar essa publicacao?`)">
+
+                </form>';
             }
             ?>
 
