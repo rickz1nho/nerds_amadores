@@ -1,3 +1,10 @@
+<?php
+
+require_once __DIR__."/config.php";  
+
+if(valida_nivel()==2){
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -97,3 +104,10 @@
 </body>
 
 </html>
+  
+<?php
+}else{
+  echo "sem permissao";
+  exit;
+}
+?>
