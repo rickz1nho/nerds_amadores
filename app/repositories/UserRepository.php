@@ -142,26 +142,33 @@ class UserRepository
         header("location: {$this->base_path}/index.php?msg=publicacaocriada");
     }
 
-    function view()
+    function view($comando)
     {
-        $sql = "SELECT `conteudo` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
+        $sql = "SELECT `conteudo`, `titulo` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         $conteudoTexto['texto'] = $conteudo;
-        if (!empty($conteudoTexto['texto']['conteudo'])) {
+        if (!empty($conteudoTexto['texto']['conteudo']) && $comando == 1) {
             echo $conteudoTexto['texto']['conteudo'];
         }
-        return $conteudoTexto['texto'];
+        if (!empty($conteudoTexto['texto']['conteudo'])) {
+            return $conteudoTexto['texto']['titulo'];
+        }
     }
 
-    function getPubliId()
+    function getPubliId($titulo)
     {
-        $sql = "SELECT `id` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
+        $sql = "SELECT `id` FROM `publicacao` WHERE `titulo` = '$titulo'";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
-        return $conteudo;
+        $conteudoId['publi'] = $conteudo;
+        if(!empty($conteudoId['publi']['id'])){
+
+        return $conteudoId['publi']['id'];
+
+        }else exit;
     }
 
     function deletePubli($id)

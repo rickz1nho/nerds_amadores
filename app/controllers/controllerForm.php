@@ -46,13 +46,15 @@
 
     function delete(){
 
+        $titulo = $_GET['msg'];
+
         $repository = new UserRepository;
 
-        $id = $repository->getPubliId();
+        $id = $repository->getPubliId($titulo);
 
         $publiId['publi'] = $id;
 
-        $repository->deletePubli($publiId['publi']['id']);
+        $repository->deletePubli($publiId['publi']);
 
         header("location:" .BASE_URL. "/index.php?msg=publicacaodeletada");
 
