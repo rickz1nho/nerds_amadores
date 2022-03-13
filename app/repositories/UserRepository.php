@@ -150,14 +150,14 @@ class UserRepository
         $conteudo = $statement->fetchAll(PDO::FETCH_ASSOC);
         $conteudoTexto = $conteudo;
         if (!empty($conteudoTexto[0]) && $comando == 1) {
-            echo $conteudoTexto[0]['conteudo'];
-            echo $conteudoTexto[1]['conteudo'];
-            echo $conteudoTexto[2]['conteudo'];
-        }
-        if (!empty($conteudoTexto[0])) {
             echo $conteudoTexto[0]['titulo'];
             echo $conteudoTexto[1]['titulo'];
             echo $conteudoTexto[2]['titulo'];
+        }
+        if (!empty($conteudoTexto[0])) {
+            echo $conteudoTexto[0]['conteudo'];
+            echo $conteudoTexto[1]['conteudo'];
+            echo $conteudoTexto[2]['conteudo'];
         }
     }
 
