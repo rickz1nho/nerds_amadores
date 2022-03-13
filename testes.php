@@ -16,3 +16,11 @@ if ($info['http_code'] == 200) {
 } else {
     echo 'Failed with ' . $info['http_code'];
 }
+
+require_once __DIR__ . "/config.php";
+require_once __DIR__ . "/app/repositories/UserRepository.php";
+
+
+echo "--------------------------";
+$repository = new UserRepository();
+$repository->view(2);

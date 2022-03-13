@@ -144,16 +144,20 @@ class UserRepository
 
     function view($comando)
     {
-        $sql = "SELECT `conteudo`, `titulo` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
+        $sql = "SELECT `conteudo`, `titulo` FROM `publicacao` ORDER BY `postagem` DESC LIMIT 3;";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
-        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
-        $conteudoTexto['texto'] = $conteudo;
-        if (!empty($conteudoTexto['texto']['conteudo']) && $comando == 1) {
-            echo $conteudoTexto['texto']['conteudo'];
+        $conteudo = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $conteudoTexto = $conteudo;
+        if (!empty($conteudoTexto[0]) && $comando == 1) {
+            echo $conteudoTexto[0]['conteudo'];
+            echo $conteudoTexto[1]['conteudo'];
+            echo $conteudoTexto[2]['conteudo'];
         }
-        if (!empty($conteudoTexto['texto']['conteudo'])) {
-            return $conteudoTexto['texto']['titulo'];
+        if (!empty($conteudoTexto[0])) {
+            echo $conteudoTexto[0]['titulo'];
+            echo $conteudoTexto[1]['titulo'];
+            echo $conteudoTexto[2]['titulo'];
         }
     }
 
