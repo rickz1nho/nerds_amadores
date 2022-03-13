@@ -22,6 +22,7 @@
         header("location: {$base_path}/index.php?");
     }
 
+    if(!empty($_GET['msg'])){
     $link = $_GET['msg']; //ESSA VARÍAVEL QUANDO FICA VAZIA RETORNA UM WARNING NA PAGINA DE LOGIN
     if ($link == 1) {
     ?><p class="alert-danger text-center">Usuário ou senha Inválido!</a><?php
@@ -31,6 +32,7 @@
                                                                     } else {
                                                                         echo "";
                                                                     }
+                                                                }else 
                                                                         ?>
         <h2 class="titulo">Login</h2>
         <div class="login-box">
