@@ -83,7 +83,7 @@
             $titulo = $repository->view(1);
             $id = $repository->getPubliId($titulo);
 
-            echo "<a href='publi.php?id=$id'>" . $repository->view(2) . "</a>" ?>
+            echo "<a href='post.php?id=$id'>" . $repository->view(2) . "</a>" ?>
 
             <?php
             if (!empty($repository->getPubliId($titulo))) {
