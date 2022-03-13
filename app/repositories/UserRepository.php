@@ -144,20 +144,23 @@ class UserRepository
 
     function view($comando)
     {
-        $sql = "SELECT `conteudo`, `titulo` FROM `publicacao` ORDER BY `postagem` DESC LIMIT 3;";
+        $sql = "SELECT `conteudo`, `titulo`, `id` FROM `publicacao` ORDER BY `postagem` DESC LIMIT 3";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetchAll(PDO::FETCH_ASSOC);
         $conteudoTexto = $conteudo;
-        if (!empty($conteudoTexto[0]) && $comando == 1) {
-            echo $conteudoTexto[0]['titulo'];
-            echo $conteudoTexto[1]['titulo'];
-            echo $conteudoTexto[2]['titulo'];
-        }
-        if (!empty($conteudoTexto[0])) {
+        $link1 = $conteudoTexto[0]['id'];
+        $link2 = $conteudoTexto[1]['id'];
+        $link3 = $conteudoTexto[2]['id'];
+        if (!empty($conteudoTexto) && $comando == 1) {
+            echo "<a href=post.php?id=$link1>".$conteudoTexto[0]['titulo']."</a>";
             echo $conteudoTexto[0]['conteudo'];
+            echo "<a href=post.php?id=$link2>".$conteudoTexto[1]['titulo']."</a>";
             echo $conteudoTexto[1]['conteudo'];
+            echo "<a href=post.php?id=$link3>".$conteudoTexto[2]['titulo']."</a>";
             echo $conteudoTexto[2]['conteudo'];
+        }
+        if (!empty($conteudoTexto)) {
         }
     }
 

@@ -98,9 +98,7 @@
 
             $repository = new UserRepository();
             $titulo = $repository->view(1);
-            $id = $repository->getPubliId($titulo);
-
-            echo "<a href='post.php?id=$id'>" . $repository->view(2) . "</a>" ?>
+            $id = $repository->getPubliId($titulo); ?>
 
             <?php
             if (!empty($repository->getPubliId($titulo))) {

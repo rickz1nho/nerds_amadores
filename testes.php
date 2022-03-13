@@ -23,4 +23,4 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 
 echo "--------------------------";
 $repository = new UserRepository();
-$repository->view(2);
+$repository->view(1);
