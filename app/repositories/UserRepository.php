@@ -157,6 +157,21 @@ class UserRepository
         }
     }
 
+    function viewById($comando, $id)
+    {
+        $sql = "SELECT `conteudo`, `titulo` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        $conteudoTexto['texto'] = $conteudo;
+        if (!empty($conteudoTexto['texto']['conteudo']) && $comando == 1) {
+            echo $conteudoTexto['texto']['conteudo'];
+        }
+        if (!empty($conteudoTexto['texto']['conteudo'])) {
+            return $conteudoTexto['texto']['titulo'];
+        }
+    }
+
     function getPubliId($titulo)
     {
         $sql = "SELECT `id` FROM `publicacao` WHERE `titulo` = '$titulo'";
