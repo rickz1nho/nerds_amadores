@@ -82,7 +82,11 @@ if (valida_nivel() == 2) {
           <option>Hardware</option>
           <option>Tecnologias em Geral</option>
         </datalist>
+
       </div>
+      Selecione uma imagem para o Banner do post:
+      <input required type="file" value="Selecione o arquivo" name="fileToUpload" id="fileToUpload">
+      <br>
       <div class="myEditor">
         <br>
         <textarea name="editor_content" id="myEditor"></textarea>
