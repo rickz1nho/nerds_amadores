@@ -65,36 +65,6 @@ $previous8 = $repository->getPreviousPostId($previous7);
 $img6 = $repository->getImagemById($previous8);
 ?>
 
-
-<body>
-    <!--<div class="preloader">
-        <div class="loader-eclipse">
-            <div class="loader-content"></div>
-        </div>
-    </div>-->
-    <div id="wrapper" class="wrapper clearfix">
-        <div id="top-bar" class="top-bar bitcoin-tracker-dark">
-            <div class="container-fluid pr-0 pl-0">
-                <div class="row clearfix">
-                    <div class="topbarBitcoinTracker"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid bg-dark py-4 h-25">
-        <div class="row">
-            <div class="col">
-                <h3 class="text-white">Nerds Amadores</h1>
-
-            </div>
-            <script src="assets/js/jquery-3.3.1.min.js"></script>
-            <script src="assets/js/plugins.js"></script>
-            <script src="assets/js/bitcoinPriceWidgets.js"></script>
-            <script src="assets/js/bitcoinPrice.js"></script>
-            <script src="assets/js/bitcoinTracker.js"></script>
-</body>
-
 <body id="top">
 
     <section class="s-pageheader s-pageheader--home">
