@@ -253,5 +253,9 @@ class UserRepository
         return $id['id'];
         }else return null;
     }
-
+    function insertImagemBanco($imagem){
+        $sql = "INSERT INTO `publicacao` (`imagem`) VALUES ('". $imagem ."')";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
 }
