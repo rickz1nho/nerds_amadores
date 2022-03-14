@@ -25,10 +25,18 @@
     <script src="js/post/modernizr.js"></script>
     <script src="js/post/pace.min.js"></script>
 
+<<<<<<< HEAD
     <!-- WGCodigo copiado-->
     <link href="assets/css/external.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Termino do codigo copiado-->
+=======
+    <!-- Codigo copiado-->
+
+    <!-- Termino do codigo copiado-->
+
+</head>
+>>>>>>> 702841452d5626635618700aa742bc5252335577
 
 </head>
 
@@ -65,16 +73,48 @@ $previous8 = $repository->getPreviousPostId($previous7);
 $img6 = $repository->getImagemById($previous8);
 ?>
 
+<body>
+
+<div id="wrapper" class="wrapper clearfix ignore-css" style="all:unset;">
+        <div id="top-bar" class="top-bar bitcoin-tracker-dark">
+            <div class="container-fluid pr-0 pl-0">
+                <div class="row clearfix">
+                    <div class="topbarBitcoinTracker"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/bitcoinPriceWidgets.js"></script>
+            <script src="assets/js/bitcoinPrice.js"></script>
+            <script src="assets/js/bitcoinTracker.js"></script>
+
+</body>
+
 <body id="top">
 
+<<<<<<< HEAD
     <section class="s-pageheader s-pageheader--home">
+=======
+    <!-- pageheader
+================================================== -->
+>>>>>>> 702841452d5626635618700aa742bc5252335577
 
+    <div class="s-pageheader">
+    
         <header class="header">
+            
             <div class="header__content row">
 
                 <div class="header__logo">
                     <a class="logo" href="index.html">
+<<<<<<< HEAD
                         <img src="images/logo.svg" alt="Homepage">
+=======
+                        <img src="app/controllers/images/logo.png" alt="Homepage">
+>>>>>>> 702841452d5626635618700aa742bc5252335577
                     </a>
                 </div> <!-- end header__logo -->
                 </ul> <!-- end header__social -->
@@ -130,6 +170,7 @@ $img6 = $repository->getImagemById($previous8);
                                         <img class="avatar" src="images/avatars/user-03.jpg" alt="">
                                     </a>
 
+<<<<<<< HEAD
                                     <ul class="entry__meta">
                                         <li><a href="#0">John Doe</a></li>
                                         <li>December 29, 2017</li>
@@ -141,6 +182,18 @@ $img6 = $repository->getImagemById($previous8);
                     </div> <!-- end featured__big -->
 
                     <div class="featured__column featured__column--small">
+=======
+        $previous6 = $repository->getPreviousPostId($previous5);
+        $img7 = $repository->getImagemById($previous6);
+
+        $previous7 = $repository->getPreviousPostId($previous6);
+        $img8 = $repository->getImagemById($previous7);
+
+        $previous8 = $repository->getPreviousPostId($previous7);
+        $img9 = $repository->getImagemById($previous8);
+    ?> 
+        <div class="col-full">
+>>>>>>> 702841452d5626635618700aa742bc5252335577
 
                         <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
 
@@ -203,7 +256,7 @@ $img6 = $repository->getImagemById($previous8);
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/lamp-400.jpg" srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x" alt="">
+                            <img src="<?php echo $img4 ?>" srcset="<?php echo $img4 ?> 1x, <?php echo $img4 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -211,23 +264,20 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous3); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Just a Standard Format Post.</a>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous3); ?></a>
                             </h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous3); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Design</a>
-                                <a href="category.html">Photography</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous3); ?></a>
                             </span>
                         </div>
                     </div>
@@ -238,7 +288,7 @@ $img6 = $repository->getImagemById($previous8);
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/tulips-400.jpg" srcset="images/thumbs/masonry/tulips-400.jpg 1x, images/thumbs/masonry/tulips-800.jpg 2x" alt="">
+                        <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -246,22 +296,19 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous4); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">10 Interesting Facts About
-                                    Caffeine.</a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous4); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Health</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous4); ?></a>
                             </span>
                         </div>
                     </div>
@@ -272,7 +319,7 @@ $img6 = $repository->getImagemById($previous8);
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/cookies-400.jpg" srcset="images/thumbs/masonry/cookies-400.jpg 1x, images/thumbs/masonry/cookies-800.jpg 2x" alt="">
+                        <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -280,22 +327,19 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous5); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">No Sugar Oatmeal Cookies.</a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous5); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Cooking</a>
-                                <a href="category.html">Health</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous5); ?></a>
                             </span>
                         </div>
                     </div>
@@ -306,7 +350,7 @@ $img6 = $repository->getImagemById($previous8);
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/wheel-400.jpg" srcset="images/thumbs/masonry/wheel-400.jpg 1x, images/thumbs/masonry/wheel-800.jpg 2x" alt="">
+                        <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -314,34 +358,30 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous6); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Visiting Theme Parks Improves Your
-                                    Health.</a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous6); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="#">Health</a>
-                                <a href="#">Lifestyle</a>
+                                <a href="#"><?php echo $repository->getCategoriaById($previous6); ?></a>
                             </span>
                         </div>
                     </div>
 
                 </article> <!-- end article -->
 
-                <article class="masonry__brick entry format-video" data-aos="fade-up">
+                <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                    <div class="entry__thumb video-image">
-                        <a href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0" data-lity>
-                            <img src="images/thumbs/masonry/shutterbug-400.jpg" srcset="images/thumbs/masonry/shutterbug-400.jpg 1x, images/thumbs/masonry/shutterbug-800.jpg 2x" alt="">
+                    <div class="entry__thumb">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                        <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -349,23 +389,20 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-video.html">December 10, 2017</a>
+                                <a href="single-video.html"><?php echo $repository->getDataById($previous7); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-video.html">Key Benefits Of Family Photography.</a>
+                            <h1 class="entry__title"><a href="single-video.html"><?php echo $repository->getTituloById($previous7); ?></a>
                             </h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous7); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Family</a>
-                                <a href="category.html">Photography</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous7); ?></a>
                             </span>
                         </div>
                     </div>
@@ -373,43 +410,31 @@ $img6 = $repository->getImagemById($previous8);
                 </article> <!-- end article -->
 
 
-                <article class="masonry__brick entry format-gallery" data-aos="fade-up">
+                <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                    <div class="entry__thumb slider">
-                        <div class="slider__slides">
-                            <div class="slider__slide">
-                                <img src="images/thumbs/masonry/gallery/gallery-1-400.jpg" srcset="images/thumbs/masonry/gallery/gallery-1-400.jpg 1x, images/thumbs/masonry/gallery/gallery-1-800.jpg 2x" alt="">
-                            </div>
-                            <div class="slider__slide">
-                                <img src="images/thumbs/masonry/gallery/gallery-2-400.jpg" srcset="images/thumbs/masonry/gallery/gallery-2-400.jpg 1x, images/thumbs/masonry/gallery/gallery-2-800.jpg 2x" alt="">
-                            </div>
-                            <div class="slider__slide">
-                                <img src="images/thumbs/masonry/gallery/gallery-3-400.jpg" srcset="images/thumbs/masonry/gallery/gallery-3-400.jpg 1x, images/thumbs/masonry/gallery/gallery-3-800.jpg 2x" alt="">
-                            </div>
-                        </div>
+                    <div class="entry__thumb">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                        <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
+                        </a>
                     </div>
 
                     <div class="entry__text">
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-gallery.html">December 10, 2017</a>
+                                <a href="single-gallery.html"><?php echo $repository->getDataById($previous8); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-gallery.html">Workspace Design Trends and
-                                    Ideas.</a></h1>
+                            <h1 class="entry__title"><a href="single-gallery.html"><?php echo $repository->getTituloById($previous8); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous8); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Work</a>
-                                <a href="category.html">Management</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous8); ?></a>
                             </span>
                         </div>
                     </div>
