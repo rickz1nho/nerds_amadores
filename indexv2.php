@@ -25,6 +25,10 @@
     <script src="js/post/modernizr.js"></script>
     <script src="js/post/pace.min.js"></script>
 
+    <!-- Codigo copiado-->
+
+    <!-- Termino do codigo copiado-->
+
 </head>
 
 
@@ -35,13 +39,35 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
 ?>
 
+<body>
+
+<div id="wrapper" class="wrapper clearfix ignore-css" style="all:unset;">
+        <div id="top-bar" class="top-bar bitcoin-tracker-dark">
+            <div class="container-fluid pr-0 pl-0">
+                <div class="row clearfix">
+                    <div class="topbarBitcoinTracker"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/bitcoinPriceWidgets.js"></script>
+            <script src="assets/js/bitcoinPrice.js"></script>
+            <script src="assets/js/bitcoinTracker.js"></script>
+
+</body>
+
 <body id="top">
 
     <!-- pageheader
 ================================================== -->
-    <div class="s-pageheader">
 
+    <div class="s-pageheader">
+    
         <header class="header">
+            
             <div class="header__content row">
 
                 <div class="header__logo">
