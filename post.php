@@ -6,7 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Gallery Post Format - Philosophy</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -124,18 +124,25 @@ $id = $_GET['id'];
 
                 <div class="s-content__pagenav">
                     <div class="s-content__nav col-full">
-                        <div class="s-content__prev">
-                            <a href="#0" rel="prev">
+                    <?php if(!empty($repository->getPreviousPostId($id))){ ?> 
+                    <div class="s-content__prev">
+                        <?php
+                        $prev = $repository->getPreviousPostId($id);
+                        echo "<a href=post.php?id=$prev>" ?>
                                 <span>Previous Post</span>
-                                Tips on Minimalist Design
+                                <?php $repository->ViewTituloById($prev) ?>
                             </a>
-                        </div>
-                        <div class="s-content__next">
-                            <a href="#0" rel="next">
+                        </div> <?php } ?>
+
+                    <?php if(!empty($repository->getNextPostId($id))){ ?> 
+                    <div class="s-content__next">
+                        <?php
+                        $next = $repository->getNextPostId($id);
+                        echo "<a href=post.php?id=$next>" ?>
                                 <span>Next Post</span>
-                                Less Is More
+                                <?php $repository->ViewTituloById($next) ?>
                             </a>
-                        </div>
+                        </div> <?php } ?>
                     </div>
                 </div> <!-- end s-content__pagenav -->
 
