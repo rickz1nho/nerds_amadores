@@ -71,7 +71,7 @@ if (valida_nivel() == 2) {
 
     ?>
 
-    <form action="app/controllers/controllerForm.php?action=save" method="POST" enctype="multipart/form-data">
+    <form action="app/controllers/controllerForm.php?action=save" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label>Titulo*:</label>
         <input required pattern="[A-Za-z[^0-9]*{0,50}" class="col-sm-6" type="text" name="titulo"><br><br>
@@ -83,7 +83,6 @@ if (valida_nivel() == 2) {
           <option>Hardware</option>
           <option>Tecnologias em Geral</option>
         </datalist>
-
       </div>
       Selecione uma imagem para o Banner do post:
       <input required type="file" value="Selecione o arquivo" name="fileToUpload" id="fileToUpload">

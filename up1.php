@@ -3,7 +3,7 @@
 
 <body>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="app/controllers/controllerForm.php?action=save" method="post" enctype="multipart/form-data">
         Selecione uma imagem para o Banner do post:
         <input required type="file" value="Selecione o arquivo" name="fileToUpload" id="fileToUpload">
         <br>
