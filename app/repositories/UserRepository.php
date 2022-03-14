@@ -152,15 +152,15 @@ class UserRepository
         $link2 = $conteudoTexto[1]['id'];
         $link3 = $conteudoTexto[2]['id'];
         if (!empty($conteudoTexto[0]) && $comando == 1) {
-            echo "<a href=post.php?id=$link1>".$conteudoTexto[0]['titulo']."</a>";
+            echo "<a href=post.php?id=$link1>" . $conteudoTexto[0]['titulo'] . "</a>";
             echo $conteudoTexto[0]['conteudo'];
         }
         if (!empty($conteudoTexto[1]) && $comando == 1) {
-            echo "<a href=post.php?id=$link2>".$conteudoTexto[1]['titulo']."</a>";
+            echo "<a href=post.php?id=$link2>" . $conteudoTexto[1]['titulo'] . "</a>";
             echo $conteudoTexto[1]['conteudo'];
         }
         if (!empty($conteudoTexto[2]) && $comando == 1) {
-            echo "<a href=post.php?id=$link3>".$conteudoTexto[2]['titulo']."</a>";
+            echo "<a href=post.php?id=$link3>" . $conteudoTexto[2]['titulo'] . "</a>";
             echo $conteudoTexto[2]['conteudo'];
         }
         if (!empty($conteudoTexto)) {
@@ -174,6 +174,14 @@ class UserRepository
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         echo $conteudo['titulo'];
+    }
+    function viewCategoriaById($id)
+    {
+        $sql = "SELECT `categoria` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        echo $conteudo['categoria'];
     }
     function viewConteudoById($id)
     {
@@ -207,19 +215,18 @@ class UserRepository
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         $conteudoId['publi'] = $conteudo;
-        if(!empty($conteudoId['publi']['id'])){
+        if (!empty($conteudoId['publi']['id'])) {
 
-        return $conteudoId['publi']['id'];
-
-        }else exit;
+            return $conteudoId['publi']['id'];
+        } else exit;
     }
 
     function deletePubli($id)
     {
-        if($_GET['session']['nivel']==4){
-        $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
-        }else return 1;
+        if ($_GET['session']['nivel'] == 4) {
+            $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();
+        } else return 1;
     }
 }
