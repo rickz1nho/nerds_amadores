@@ -46,7 +46,7 @@ $repository = new UserRepository();
 
                 <div class="header__logo">
                     <a class="logo" href="index.html">
-                        <img src="images/logo.png" alt="Homepage">
+                        <img src="app/controllers/images/logo.png" alt="Homepage">
                     </a>
                 </div> <!-- end header__logo -->
 
@@ -110,13 +110,8 @@ $repository = new UserRepository();
         $img8 = $repository->getImagemById($previous7);
 
         $previous8 = $repository->getPreviousPostId($previous7);
-<<<<<<< HEAD
         $img9 = $repository->getImagemById($previous8);
-    ?>
-=======
-        $img6 = $repository->getImagemById($previous8);
-        ?>
->>>>>>> b0d172b6333e3db52843cf2572f6a19b284be1b3
+    ?> 
         <div class="col-full">
 
             <div class="featured">
@@ -222,9 +217,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous3); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -255,9 +248,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous4); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -288,9 +279,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous5); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -321,9 +310,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous6); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -355,9 +342,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous7); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -389,9 +374,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                                incididunt velit sint in aliqua...
+                            <?php echo $repository->getAutorById($previous8); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
