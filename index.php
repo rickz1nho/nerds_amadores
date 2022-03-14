@@ -5,23 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="https://kit.fontawesome.com/0a30d20add.js" crossorigin="anonymous"></script>
-
     <!-- Codigo copiado-->
-    <link href="assets/images/favicon/favicon.png" rel="icon">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+2:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i%7CWork+Sans:300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
     <link href="assets/css/external.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
-
     <!-- Termino do codigo copiado-->
 
-    <title>Home</title>
+    <title>Notícias de Tecnlogia</title>
 </head>
 
 <body>
@@ -41,29 +34,17 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-dark">
+    <div class="container-fluid bg-dark py-4 h-25">
         <div class="row">
             <div class="col">
-                <h1 class="text-white">Home page</h1>
+                <h3 class="text-white">Notícias de Tecnlogia</h1>
 
             </div>
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/bitcoinPriceWidgets.js"></script>
-    <script src="assets/js/bitcoinPrice.js"></script>
-    <script src="assets/js/bitcoinTracker.js"></script>
-    <script src="assets/js/functions.js"></script>
-    <script src="assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
-    <script src="assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="assets/js/rsconfig.js"></script>
+            <script src="assets/js/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/bitcoinPriceWidgets.js"></script>
+            <script src="assets/js/bitcoinPrice.js"></script>
+            <script src="assets/js/bitcoinTracker.js"></script>
             <?php
 
             require_once __DIR__ . "/config.php";

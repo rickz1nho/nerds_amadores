@@ -1,18 +1,8 @@
 <?php
+            if (!empty($repository->getPubliId($titulo))) {
 
-$ch = curl_init('https://api.twitch.tv/helix/streams?user_login=Channel_name');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Client-ID: MyClientId'
-));
+                echo '<form action="app/controllers/controllerForm.php?action=delete&msg=' . $titulo . '" method="POST">
+                <button type="submit" class="button-67" onclick="return confirm(`Tem certeza que deseja deletar essa publicacao?`)">Deletar pulicação</button>
 
-$data = curl_exec($ch);
-$info = curl_getinfo($ch);
-curl_close($ch);
-
-if ($info['http_code'] == 200) {
-    $data = json_decode($data);
-    var_dump($data);
-} else {
-    echo 'Failed with ' . $info['http_code'];
-}
+                </form>';
+            }
