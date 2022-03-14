@@ -1,11 +1,13 @@
 <?php
+            if (!empty($repository->getPubliId($titulo))) {
 
-$ch = curl_init('https://api.twitch.tv/helix/streams?user_login=Channel_name');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Client-ID: MyClientId'
-));
+                echo '<form action="app/controllers/controllerForm.php?action=delete&msg=' . $titulo . '" method="POST">
+                <button type="submit" class="button-67" onclick="return confirm(`Tem certeza que deseja deletar essa publicacao?`)">Deletar pulicação</button>
 
+<<<<<<< HEAD
+                </form>';
+            }
+=======
 $data = curl_exec($ch);
 $info = curl_getinfo($ch);
 curl_close($ch);
@@ -24,3 +26,4 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 echo "--------------------------";
 $repository = new UserRepository();
 $repository->view(1);
+>>>>>>> 2b4089b5cb7268d89b02076d640917fad0e80a5a
