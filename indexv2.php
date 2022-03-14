@@ -94,7 +94,7 @@ $repository = new UserRepository();
         $previous2 = $repository->getPreviousPostId($previous1);
         $img3 = $repository->getImagemById($previous2);
 
-        $previous3 = $repository->getPreviousPostId($previous2); 
+        $previous3 = $repository->getPreviousPostId($previous2);
         $img4 = $repository->getImagemById($previous3);
 
         $previous4 = $repository->getPreviousPostId($previous3);
@@ -110,8 +110,13 @@ $repository = new UserRepository();
         $img8 = $repository->getImagemById($previous7);
 
         $previous8 = $repository->getPreviousPostId($previous7);
+<<<<<<< HEAD
         $img9 = $repository->getImagemById($previous8);
     ?>
+=======
+        $img6 = $repository->getImagemById($previous8);
+        ?>
+>>>>>>> b0d172b6333e3db52843cf2572f6a19b284be1b3
         <div class="col-full">
 
             <div class="featured">
@@ -419,20 +424,13 @@ $repository = new UserRepository();
 
         <div class="row bottom tags-wrap">
             <div class="col-full tags">
-                <h3>Tags</h3>
+                <h3>Categorias</h3>
 
                 <div class="tagcloud">
-                    <a href="#0">Salad</a>
-                    <a href="#0">Recipe</a>
-                    <a href="#0">Places</a>
-                    <a href="#0">Tips</a>
-                    <a href="#0">Friends</a>
-                    <a href="#0">Travel</a>
-                    <a href="#0">Exercise</a>
-                    <a href="#0">Reading</a>
-                    <a href="#0">Running</a>
-                    <a href="#0">Self-Help</a>
-                    <a href="#0">Vacation</a>
+                    <a href="#0">Criptomoedas</a>
+                    <a href="#0">Software</a>
+                    <a href="#0">Hardware</a>
+                    <a href="#0">Tecnologias no Geral</a>
                 </div> <!-- end tagcloud -->
             </div> <!-- end tags -->
         </div> <!-- end tags-wrap -->

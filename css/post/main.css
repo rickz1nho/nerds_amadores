@@ -1772,7 +1772,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
    margin: 0;
    padding: 0;
    z-index: 501;
-   
 }
 
 .header__logo a {
@@ -1786,7 +1785,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header__logo img {
-   width: 100%;
+   width: 265px;
    height: 48px;
 }
 
@@ -1795,7 +1794,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ## header social
  * ------------------------------------------------------------------- */
 .header__social {
-
    list-style: none;
    font-size: 23px;
    line-height: 1;
