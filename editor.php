@@ -2,8 +2,6 @@
 
 require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
-$repository = new UserRepository();
-$id = $_GET['id'];
 
 if (valida_nivel() == 2) {
 
