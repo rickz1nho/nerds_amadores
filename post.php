@@ -119,13 +119,6 @@ $id = $_GET['id'];
 
                         <p>Descrição do Autor
                         </p>
-
-                        <ul class="s-content__author-social">
-                            <li><a href="#0">Facebook</a></li>
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">GooglePlus</a></li>
-                            <li><a href="#0">Instagram</a></li>
-                        </ul>
                     </div>
                 </div>
 
