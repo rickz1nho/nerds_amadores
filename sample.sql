@@ -20,4 +20,5 @@ CREATE TABLE IF NOT EXISTS `publicacao` (
       `autor` VARCHAR(26) NOT NULL,
       `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
       `conteudo` text NOT NULL,
+      `imagem` text NOT NULL,
       PRIMARY KEY (`id`));
