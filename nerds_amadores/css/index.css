@@ -1,0 +1,64 @@
+/* button-37 CSS */
+
+.button-67{
+    display: inline-block;
+    padding: 10px 40px;
+    margin-right:70px;
+    border:none;
+    cursor:pointer;
+    position: relative;
+    z-index: 1;
+    text-decoration:none;
+    color: #ecf0f1;
+    border-radius: 20px;
+  }
+  
+  
+  .button-67{
+    background-color: #34495e;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-perspective: 100px;
+    -moz-perspective: 100px;
+    -ms-perspective: 100px;
+    perspective: 100px;
+    -webkit-perspective-origin: right;
+    -moz-perspective-origin: right;
+    -ms-perspective-origin: right;
+    perspective-origin: right;
+  }
+  .button-67:hover {
+      color: #ecf0f1;
+      background-color: #34495e;
+  }
+  .button-67:after{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f1f8";
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 60px;
+    height: 100%;
+    background-color: #34495e;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -ms-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+    border-radius: 20px;
+  }
+  
+  .button-67:hover:after{
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
