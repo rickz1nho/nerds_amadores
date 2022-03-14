@@ -25,15 +25,14 @@
     <script src="js/post/modernizr.js"></script>
     <script src="js/post/pace.min.js"></script>
 
-<<<<<<< HEAD
-    <!-- WGCodigo copiado-->
-    <link href="assets/css/external.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Termino do codigo copiado-->
-=======
-    <!-- Codigo copiado-->
+    <<<<<<< HEAD <!-- WGCodigo copiado-->
+        <link href="assets/css/external.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <!-- Termino do codigo copiado-->
+        =======
+        <!-- Codigo copiado-->
 
-    <!-- Termino do codigo copiado-->
+        <!-- Termino do codigo copiado-->
 
 </head>
 >>>>>>> 702841452d5626635618700aa742bc5252335577
@@ -75,7 +74,7 @@ $img6 = $repository->getImagemById($previous8);
 
 <body>
 
-<div id="wrapper" class="wrapper clearfix ignore-css" style="all:unset;">
+    <div id="wrapper" class="wrapper clearfix ignore-css" style="all:unset;">
         <div id="top-bar" class="top-bar bitcoin-tracker-dark">
             <div class="container-fluid pr-0 pl-0">
                 <div class="row clearfix">
@@ -86,35 +85,27 @@ $img6 = $repository->getImagemById($previous8);
     </div>
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
-            <script src="assets/js/plugins.js"></script>
-            <script src="assets/js/bitcoinPriceWidgets.js"></script>
-            <script src="assets/js/bitcoinPrice.js"></script>
-            <script src="assets/js/bitcoinTracker.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bitcoinPriceWidgets.js"></script>
+    <script src="assets/js/bitcoinPrice.js"></script>
+    <script src="assets/js/bitcoinTracker.js"></script>
 
 </body>
 
 <body id="top">
 
-<<<<<<< HEAD
-    <section class="s-pageheader s-pageheader--home">
-=======
     <!-- pageheader
 ================================================== -->
->>>>>>> 702841452d5626635618700aa742bc5252335577
 
     <div class="s-pageheader">
-    
+
         <header class="header">
-            
+
             <div class="header__content row">
 
                 <div class="header__logo">
                     <a class="logo" href="index.html">
-<<<<<<< HEAD
-                        <img src="images/logo.svg" alt="Homepage">
-=======
                         <img src="app/controllers/images/logo.png" alt="Homepage">
->>>>>>> 702841452d5626635618700aa742bc5252335577
                     </a>
                 </div> <!-- end header__logo -->
                 </ul> <!-- end header__social -->
@@ -170,11 +161,10 @@ $img6 = $repository->getImagemById($previous8);
                                         <img class="avatar" src="images/avatars/user-03.jpg" alt="">
                                     </a>
 
-<<<<<<< HEAD
-                                    <ul class="entry__meta">
+                                    <<<<<<< HEAD <ul class="entry__meta">
                                         <li><a href="#0">John Doe</a></li>
                                         <li>December 29, 2017</li>
-                                    </ul>
+                                        </ul>
                                 </div>
                             </div> <!-- end entry__content -->
 
@@ -182,344 +172,344 @@ $img6 = $repository->getImagemById($previous8);
                     </div> <!-- end featured__big -->
 
                     <div class="featured__column featured__column--small">
-=======
-        $previous6 = $repository->getPreviousPostId($previous5);
-        $img7 = $repository->getImagemById($previous6);
+                        =======
+                        $previous6 = $repository->getPreviousPostId($previous5);
+                        $img7 = $repository->getImagemById($previous6);
 
-        $previous7 = $repository->getPreviousPostId($previous6);
-        $img8 = $repository->getImagemById($previous7);
+                        $previous7 = $repository->getPreviousPostId($previous6);
+                        $img8 = $repository->getImagemById($previous7);
 
-        $previous8 = $repository->getPreviousPostId($previous7);
-        $img9 = $repository->getImagemById($previous8);
-    ?> 
-        <div class="col-full">
->>>>>>> 702841452d5626635618700aa742bc5252335577
+                        $previous8 = $repository->getPreviousPostId($previous7);
+                        $img9 = $repository->getImagemById($previous8);
+                        ?>
+                        <div class="col-full">
+                            >>>>>>> 702841452d5626635618700aa742bc5252335577
 
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
+                            <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
 
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Management</a></span>
+                                <div class="entry__content">
+                                    <span class="entry__category"><a href="#0">Management</a></span>
 
-                                <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
+                                    <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
 
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
+                                    <div class="entry__info">
+                                        <a href="#0" class="entry__profile-pic">
+                                            <img class="avatar" src="images/avatars/user-03.jpg" alt="">
+                                        </a>
 
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 27, 2017</li>
-                                    </ul>
+                                        <ul class="entry__meta">
+                                            <li><a href="#0">John Doe</a></li>
+                                            <li>December 27, 2017</li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end entry__content -->
+
+                            </div> <!-- end entry -->
+
+                            <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
+
+                                <div class="entry__content">
+                                    <span class="entry__category"><a href="#0">LifeStyle</a></span>
+
+                                    <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
+
+                                    <div class="entry__info">
+                                        <a href="#0" class="entry__profile-pic">
+                                            <img class="avatar" src="images/avatars/user-03.jpg" alt="">
+                                        </a>
+
+                                        <ul class="entry__meta">
+                                            <li><a href="#0">John Doe</a></li>
+                                            <li>December 21, 2017</li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end entry__content -->
+
+                            </div> <!-- end entry -->
+
+                        </div> <!-- end featured__small -->
+                    </div> <!-- end featured -->
+
+                </div> <!-- end col-full -->
+            </div> <!-- end pageheader-content row -->
+
+            </section> <!-- end s-pageheader -->
+
+            <section class="s-content">
+
+                <div class="row masonry-wrap">
+                    <div class="masonry">
+
+                        <div class="grid-sizer"></div>
+
+                        <article class="masonry__brick entry format-standard" data-aos="fade-up">
+
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="<?php echo $img4 ?>" srcset="<?php echo $img4 ?> 1x, <?php echo $img4 ?> 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="entry__text">
+                                <div class="entry__header">
+
+                                    <div class="entry__date">
+                                        <a href="single-standard.html"><?php echo $repository->getDataById($previous3); ?></a>
+                                    </div>
+                                    <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous3); ?></a>
+                                    </h1>
+
                                 </div>
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
-
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
-
-                                <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
-
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
-
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 21, 2017</li>
-                                    </ul>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        <?php echo $repository->getAutorById($previous3); ?>
+                                    </p>
                                 </div>
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-
-                    </div> <!-- end featured__small -->
-                </div> <!-- end featured -->
-
-            </div> <!-- end col-full -->
-        </div> <!-- end pageheader-content row -->
-
-    </section> <!-- end s-pageheader -->
-
-    <section class="s-content">
-
-        <div class="row masonry-wrap">
-            <div class="masonry">
-
-                <div class="grid-sizer"></div>
-
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="<?php echo $img4 ?>" srcset="<?php echo $img4 ?> 1x, <?php echo $img4 ?> 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="entry__text">
-                        <div class="entry__header">
-
-                            <div class="entry__date">
-                                <a href="single-standard.html"><?php echo $repository->getDataById($previous3); ?></a>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-links">
+                                        <a href="category.html"><?php echo $repository->getCategoriaById($previous3); ?></a>
+                                    </span>
+                                </div>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous3); ?></a>
-                            </h1>
 
-                        </div>
-                        <div class="entry__excerpt">
-                            <p>
-                            <?php echo $repository->getAutorById($previous3); ?>
-                            </p>
-                        </div>
-                        <div class="entry__meta">
-                            <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous3); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                        </article> <!-- end article -->
 
-                </article> <!-- end article -->
+                        <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="entry__text">
-                        <div class="entry__header">
-
-                            <div class="entry__date">
-                                <a href="single-standard.html"><?php echo $repository->getDataById($previous4); ?></a>
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
+                                </a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
-                        </div>
-                        <div class="entry__excerpt">
-                            <p>
-                            <?php echo $repository->getAutorById($previous4); ?>
-                            </p>
-                        </div>
-                        <div class="entry__meta">
-                            <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous4); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                            <div class="entry__text">
+                                <div class="entry__header">
 
-                </article> <!-- end article -->
+                                    <div class="entry__date">
+                                        <a href="single-standard.html"><?php echo $repository->getDataById($previous4); ?></a>
+                                    </div>
+                                    <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="entry__text">
-                        <div class="entry__header">
-
-                            <div class="entry__date">
-                                <a href="single-standard.html"><?php echo $repository->getDataById($previous5); ?></a>
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        <?php echo $repository->getAutorById($previous4); ?>
+                                    </p>
+                                </div>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-links">
+                                        <a href="category.html"><?php echo $repository->getCategoriaById($previous4); ?></a>
+                                    </span>
+                                </div>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
-                        </div>
-                        <div class="entry__excerpt">
-                            <p>
-                            <?php echo $repository->getAutorById($previous5); ?>
-                            </p>
-                        </div>
-                        <div class="entry__meta">
-                            <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous5); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                        </article> <!-- end article -->
 
-                </article> <!-- end article -->
+                        <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="entry__text">
-                        <div class="entry__header">
-
-                            <div class="entry__date">
-                                <a href="single-standard.html"><?php echo $repository->getDataById($previous6); ?></a>
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
+                                </a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
-                        </div>
-                        <div class="entry__excerpt">
-                            <p>
-                            <?php echo $repository->getAutorById($previous6); ?>
-                            </p>
-                        </div>
-                        <div class="entry__meta">
-                            <span class="entry__meta-links">
-                                <a href="#"><?php echo $repository->getCategoriaById($previous6); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                            <div class="entry__text">
+                                <div class="entry__header">
 
-                </article> <!-- end article -->
+                                    <div class="entry__date">
+                                        <a href="single-standard.html"><?php echo $repository->getDataById($previous5); ?></a>
+                                    </div>
+                                    <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="entry__text">
-                        <div class="entry__header">
-
-                            <div class="entry__date">
-                                <a href="single-video.html"><?php echo $repository->getDataById($previous7); ?></a>
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        <?php echo $repository->getAutorById($previous5); ?>
+                                    </p>
+                                </div>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-links">
+                                        <a href="category.html"><?php echo $repository->getCategoriaById($previous5); ?></a>
+                                    </span>
+                                </div>
                             </div>
-                            <h1 class="entry__title"><a href="single-video.html"><?php echo $repository->getTituloById($previous7); ?></a>
-                            </h1>
 
-                        </div>
-                        <div class="entry__excerpt">
-                            <p>
-                            <?php echo $repository->getAutorById($previous7); ?>
-                            </p>
-                        </div>
-                        <div class="entry__meta">
-                            <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous7); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                        </article> <!-- end article -->
 
-                </article> <!-- end article -->
+                        <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="entry__text">
-                        <div class="entry__header">
-
-                            <div class="entry__date">
-                                <a href="single-gallery.html"><?php echo $repository->getDataById($previous8); ?></a>
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
+                                </a>
                             </div>
-                            <h1 class="entry__title"><a href="single-gallery.html"><?php echo $repository->getTituloById($previous8); ?></a></h1>
 
-                        </div>
-                        <div class="entry__excerpt">
-                            <p>
-                            <?php echo $repository->getAutorById($previous8); ?>
-                            </p>
-                        </div>
-                        <div class="entry__meta">
-                            <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous8); ?></a>
-                            </span>
-                        </div>
-                    </div>
+                            <div class="entry__text">
+                                <div class="entry__header">
 
-                </article> <!-- end article -->
+                                    <div class="entry__date">
+                                        <a href="single-standard.html"><?php echo $repository->getDataById($previous6); ?></a>
+                                    </div>
+                                    <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
-            </div> <!-- end masonry -->
-        </div> <!-- end masonry-wrap -->
-    </section> <!-- s-content -->
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        <?php echo $repository->getAutorById($previous6); ?>
+                                    </p>
+                                </div>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-links">
+                                        <a href="#"><?php echo $repository->getCategoriaById($previous6); ?></a>
+                                    </span>
+                                </div>
+                            </div>
 
-    <!-- s-extra
+                        </article> <!-- end article -->
+
+                        <article class="masonry__brick entry format-standard" data-aos="fade-up">
+
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="entry__text">
+                                <div class="entry__header">
+
+                                    <div class="entry__date">
+                                        <a href="single-video.html"><?php echo $repository->getDataById($previous7); ?></a>
+                                    </div>
+                                    <h1 class="entry__title"><a href="single-video.html"><?php echo $repository->getTituloById($previous7); ?></a>
+                                    </h1>
+
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        <?php echo $repository->getAutorById($previous7); ?>
+                                    </p>
+                                </div>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-links">
+                                        <a href="category.html"><?php echo $repository->getCategoriaById($previous7); ?></a>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </article> <!-- end article -->
+
+
+                        <article class="masonry__brick entry format-standard" data-aos="fade-up">
+
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="entry__text">
+                                <div class="entry__header">
+
+                                    <div class="entry__date">
+                                        <a href="single-gallery.html"><?php echo $repository->getDataById($previous8); ?></a>
+                                    </div>
+                                    <h1 class="entry__title"><a href="single-gallery.html"><?php echo $repository->getTituloById($previous8); ?></a></h1>
+
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        <?php echo $repository->getAutorById($previous8); ?>
+                                    </p>
+                                </div>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-links">
+                                        <a href="category.html"><?php echo $repository->getCategoriaById($previous8); ?></a>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </article> <!-- end article -->
+
+                    </div> <!-- end masonry -->
+                </div> <!-- end masonry-wrap -->
+            </section> <!-- s-content -->
+
+            <!-- s-extra
     ================================================== -->
-    <section class="s-extra">
+            <section class="s-extra">
 
-        <div class="row top">
-            <div class="col-full text-center md-six tab-full about">
-                <h3>Sobre Nerds Amadores...</h3>
+                <div class="row top">
+                    <div class="col-full text-center md-six tab-full about">
+                        <h3>Sobre Nerds Amadores...</h3>
 
-                <p>
-                    Um blog feito com muito carinho, especialmente para a professora Marcela Turim Koshevic.
-                </p>
-            </div> <!-- end about -->
+                        <p>
+                            Um blog feito com muito carinho, especialmente para a professora Marcela Turim Koshevic.
+                        </p>
+                    </div> <!-- end about -->
 
-        </div> <!-- end row -->
+                </div> <!-- end row -->
 
-        <div class="row bottom tags-wrap">
-            <div class="col-full tags">
-                <h3>Categorias</h3>
+                <div class="row bottom tags-wrap">
+                    <div class="col-full tags">
+                        <h3>Categorias</h3>
 
-                <div class="tagcloud">
-                    <a href="#0">Criptomoedas</a>
-                    <a href="#0">Software</a>
-                    <a href="#0">Hardware</a>
-                    <a href="#0">Tecnologias no Geral</a>
-                </div> <!-- end tagcloud -->
-            </div> <!-- end tags -->
-        </div> <!-- end tags-wrap -->
+                        <div class="tagcloud">
+                            <a href="#0">Criptomoedas</a>
+                            <a href="#0">Software</a>
+                            <a href="#0">Hardware</a>
+                            <a href="#0">Tecnologias no Geral</a>
+                        </div> <!-- end tagcloud -->
+                    </div> <!-- end tags -->
+                </div> <!-- end tags-wrap -->
 
-    </section> <!-- end s-extra -->
+            </section> <!-- end s-extra -->
 
 
 
-    <!-- s-footer
+            <!-- s-footer
 ================================================== -->
-    <footer class="s-footer">
-        <div class="s-footer__bottom">
-            <div class="row">
-                <div class="col-full">
-                    <div class="s-footer__copyright">
-                        <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
-                        </span>
-                    </div>
+            <footer class="s-footer">
+                <div class="s-footer__bottom">
+                    <div class="row">
+                        <div class="col-full">
+                            <div class="s-footer__copyright">
+                                <span>© Macholandia 2022</span>
+                                <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
+                                </span>
+                            </div>
 
-                    <div class="go-top">
-                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                            <div class="go-top">
+                                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end s-footer__bottom -->
+
+
+            </footer> <!-- end s-footer -->
+
+
+            <!-- preloader
+================================================== -->
+            <div id="preloader">
+                <div id="loader">
+                    <div class="line-scale">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
             </div>
-        </div> <!-- end s-footer__bottom -->
 
 
-    </footer> <!-- end s-footer -->
-
-
-    <!-- preloader
+            <!-- Java Script
 ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-            <div class="line-scale">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Java Script
-================================================== -->
-    <script src="js/post/jquery-3.2.1.min.js"></script>
-    <script src="js/post/plugins.js"></script>
-    <script src="js/post/main.js"></script>
+            <script src="js/post/jquery-3.2.1.min.js"></script>
+            <script src="js/post/plugins.js"></script>
+            <script src="js/post/main.js"></script>
 
 </body>
 
