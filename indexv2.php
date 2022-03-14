@@ -89,10 +89,30 @@ $id = $_GET['id'];
     <div class="pageheader-content row">
     <?php $lastPost = $repository->getLastPostId(); 
         $img = $repository->getImagemById($lastPost);
+
         $previous1 = $repository->getPreviousPostId($lastPost);
         $img2 = $repository->getImagemById($previous1);
+
         $previous2 = $repository->getPreviousPostId($previous1);
         $img3 = $repository->getImagemById($previous2);
+
+        $previous3 = $repository->getPreviousPostId($previous2); 
+        $img4 = $repository->getImagemById($previous3);
+
+        $previous4 = $repository->getPreviousPostId($previous3);
+        $img5 = $repository->getImagemById($previous4);
+
+        $previous5 = $repository->getPreviousPostId($previous4);
+        $img6 = $repository->getImagemById($previous5);
+
+        $previous6 = $repository->getPreviousPostId($previous5);
+        $img6 = $repository->getImagemById($previous6);
+
+        $previous7 = $repository->getPreviousPostId($previous6);
+        $img6 = $repository->getImagemById($previous7);
+
+        $previous8 = $repository->getPreviousPostId($previous7);
+        $img6 = $repository->getImagemById($previous8);
     ?>
         <div class="col-full">
 
