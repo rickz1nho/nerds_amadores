@@ -27,6 +27,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <!-- WGCodigo copiado-->
@@ -43,43 +44,17 @@
 
     <!-- Termino do codigo copiado-->
 >>>>>>> parent of 87ac19a (hrefs)
+=======
+>>>>>>> parent of 61620ec (hrefs)
 
 </head>
->>>>>>> 702841452d5626635618700aa742bc5252335577
 
-</head>
 
 
 <?php
 require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
-$lastPost = $repository->getLastPostId();
-$img = $repository->getImagemById($lastPost);
-
-$previous1 = $repository->getPreviousPostId($lastPost);
-$img2 = $repository->getImagemById($previous1);
-
-$previous2 = $repository->getPreviousPostId($previous1);
-$img3 = $repository->getImagemById($previous2);
-
-$previous3 = $repository->getPreviousPostId($previous2);
-$img4 = $repository->getImagemById($previous3);
-
-$previous4 = $repository->getPreviousPostId($previous3);
-$img5 = $repository->getImagemById($previous4);
-
-$previous5 = $repository->getPreviousPostId($previous4);
-$img6 = $repository->getImagemById($previous5);
-
-$previous6 = $repository->getPreviousPostId($previous5);
-$img6 = $repository->getImagemById($previous6);
-
-$previous7 = $repository->getPreviousPostId($previous6);
-$img6 = $repository->getImagemById($previous7);
-
-$previous8 = $repository->getPreviousPostId($previous7);
-$img6 = $repository->getImagemById($previous8);
 ?>
 
 <body>
@@ -104,18 +79,14 @@ $img6 = $repository->getImagemById($previous8);
 
 <body id="top">
 
-<<<<<<< HEAD
-    <section class="s-pageheader s-pageheader--home">
-=======
     <!-- pageheader
 ================================================== -->
 <<<<<<< HEAD
 <<<<<<< HEAD
-<div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size: 40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div></div>
+<<<<<<< HEAD
 =======
->>>>>>> 702841452d5626635618700aa742bc5252335577
-
->>>>>>> b3f1afa6f0394c54f32fa2326cd42f762021ebdc
+>>>>>>> parent of 61620ec (hrefs)
+<div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size: 40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div></div>
     <div class="s-pageheader">
 =======
 >>>>>>> parent of 87ac19a (hrefs)
@@ -128,14 +99,10 @@ $img6 = $repository->getImagemById($previous8);
 
                 <div class="header__logo">
                     <a class="logo" href="index.html">
-<<<<<<< HEAD
-                        <img src="images/logo.svg" alt="Homepage">
-=======
                         <img src="app/controllers/images/logo.png" alt="Homepage">
->>>>>>> 702841452d5626635618700aa742bc5252335577
                     </a>
                 </div> <!-- end header__logo -->
-                </ul> <!-- end header__social -->
+
 
                 <div class="header__search">
                 </div> <!-- end header__search -->
@@ -148,7 +115,7 @@ $img6 = $repository->getImagemById($previous8);
                     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
                     <ul class="header__nav">
-                        <li class="current"><a href="index.html" title="">Home</a></li>
+                        <li><a href="index.php" title="">Página Principal</a></li>
                         <li class="has-children">
                             <a href="#0" title="">Categorias</a>
                             <ul class="sub-menu">
@@ -168,39 +135,27 @@ $img6 = $repository->getImagemById($previous8);
             </div> <!-- header-content -->
         </header> <!-- header -->
 
+    </div> <!-- end s-pageheader -->
 
-        <div class="pageheader-content row">
-            <div class="col-full">
+    <div class="pageheader-content row">
+        <?php $lastPost = $repository->getLastPostId();
+        $img = $repository->getImagemById($lastPost);
 
-                <div class="featured">
+        $previous1 = $repository->getPreviousPostId($lastPost);
+        $img2 = $repository->getImagemById($previous1);
 
-                    <div class="featured__column featured__column--big">
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');">
+        $previous2 = $repository->getPreviousPostId($previous1);
+        $img3 = $repository->getImagemById($previous2);
 
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Music</a></span>
+        $previous3 = $repository->getPreviousPostId($previous2);
+        $img4 = $repository->getImagemById($previous3);
 
-                                <h1><a href="#0" title="">What Your Music Preference Says About You and Your
-                                        Personality.</a></h1>
+        $previous4 = $repository->getPreviousPostId($previous3);
+        $img5 = $repository->getImagemById($previous4);
 
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
+        $previous5 = $repository->getPreviousPostId($previous4);
+        $img6 = $repository->getImagemById($previous5);
 
-<<<<<<< HEAD
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 29, 2017</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__big -->
-
-                    <div class="featured__column featured__column--small">
-=======
         $previous6 = $repository->getPreviousPostId($previous5);
         $img7 = $repository->getImagemById($previous6);
 
@@ -211,57 +166,82 @@ $img6 = $repository->getImagemById($previous8);
         $img9 = $repository->getImagemById($previous8);
     ?> 
         <div class="col-full">
->>>>>>> 702841452d5626635618700aa742bc5252335577
 
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
+            <div class="featured">
 
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Management</a></span>
+                <div class="featured__column featured__column--big">
 
-                                <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
+                    <div class="entry" style="background-image:url('<?php echo $img ?>');">
 
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
+                        <div class="entry__content">
+                            <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
 
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 27, 2017</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
+                            <h1><a href="post.php?id=<?php echo $lastPost ?>" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
 
-                        </div> <!-- end entry -->
+                            <div class="entry__info">
+                                <a href="#0" class="entry__profile-pic">
+                                    <img class="avatar" src="images/avatars/user-03.jpg" alt="">
+                                </a>
 
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
+                                <ul class="entry__meta">
+                                    <li><a href="#0"><?php echo $repository->getAutorById($lastPost); ?></a></li>
+                                    <li><?php echo $repository->getDataById($lastPost); ?></li>
+                                </ul>
+                            </div>
+                        </div> <!-- end entry__content -->
 
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
+                    </div> <!-- end entry -->
+                </div> <!-- end featured__big -->
 
-                                <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
+                <div class="featured__column featured__column--small">
 
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
+                    <div class="entry" style="background-image:url('<?php echo $img2 ?>');">
 
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 21, 2017</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
+                        <div class="entry__content">
+                            <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
 
-                        </div> <!-- end entry -->
+                            <h1><a href="post.php?id=<?php echo $previous1 ?>" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
 
-                    </div> <!-- end featured__small -->
-                </div> <!-- end featured -->
+                            <div class="entry__info">
+                                <a href="#0" class="entry__profile-pic">
+                                    <img class="avatar" src="images/avatars/user-03.jpg" alt="">
+                                </a>
 
-            </div> <!-- end col-full -->
-        </div> <!-- end pageheader-content row -->
+                                <ul class="entry__meta">
+                                    <li><a href="#0"><?php echo $repository->getAutorById($previous1); ?></a></li>
+                                    <li><?php echo $repository->getDataById($previous1); ?></li>
+                                </ul>
+                            </div>
+                        </div> <!-- end entry__content -->
 
-    </section> <!-- end s-pageheader -->
+                    </div> <!-- end entry -->
+
+                    <div class="entry" style="background-image:url('<?php echo $img3 ?>');">
+
+                        <div class="entry__content">
+                            <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
+
+                            <h1><a href="post.php?id=<?php echo $previous2 ?>" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
+
+                            <div class="entry__info">
+                                <a href="#0" class="entry__profile-pic">
+                                    <img class="avatar" src="images/avatars/user-03.jpg" alt="">
+                                </a>
+
+                                <ul class="entry__meta">
+                                    <li><a href="#0"><?php echo $repository->getAutorById($previous2); ?></a></li>
+                                    <li><?php echo $repository->getDataById($previous2); ?></li>
+                                </ul>
+                            </div>
+                        </div> <!-- end entry__content -->
+
+                    </div> <!-- end entry -->
+
+                </div> <!-- end featured__small -->
+            </div> <!-- end featured -->
+
+        </div> <!-- end col-full -->
+    </div> <!-- end pageheader-content row -->
 
     <section class="s-content">
 
