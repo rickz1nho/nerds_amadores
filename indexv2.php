@@ -25,23 +25,8 @@
     <script src="js/post/modernizr.js"></script>
     <script src="js/post/pace.min.js"></script>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <!-- WGCodigo copiado-->
-    <link href="assets/css/external.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Termino do codigo copiado-->
-=======
-    <!-- Codigo copiado-->
-
-    <!-- Termino do codigo copiado-->
->>>>>>> b3f1afa6f0394c54f32fa2326cd42f762021ebdc
-
 </head>
->>>>>>> 702841452d5626635618700aa742bc5252335577
 
-</head>
 
 
 <?php
@@ -67,101 +52,87 @@ $previous5 = $repository->getPreviousPostId($previous4);
 $img6 = $repository->getImagemById($previous5);
 
 $previous6 = $repository->getPreviousPostId($previous5);
-$img6 = $repository->getImagemById($previous6);
+$img7 = $repository->getImagemById($previous6);
 
 $previous7 = $repository->getPreviousPostId($previous6);
-$img6 = $repository->getImagemById($previous7);
+$img8 = $repository->getImagemById($previous7);
 
 $previous8 = $repository->getPreviousPostId($previous7);
 $img6 = $repository->getImagemById($previous8);
 ?>
 
-
 <body id="top">
-
-<<<<<<< HEAD
     <section class="s-pageheader s-pageheader--home">
-=======
-    <!-- pageheader
+        <!-- pageheader
 ================================================== -->
-<<<<<<< HEAD
-<div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size: 40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div></div>
-=======
->>>>>>> 702841452d5626635618700aa742bc5252335577
+        <div class="s-pageheader">
 
->>>>>>> b3f1afa6f0394c54f32fa2326cd42f762021ebdc
-    <div class="s-pageheader">
+            <header class="header">
+                <div class="header__content row">
 
-        <header class="header">
-            
-            <div class="header__content row">
-
-                <div class="header__logo">
-                    <a class="logo" href="index.html">
-<<<<<<< HEAD
-                        <img src="images/logo.svg" alt="Homepage">
-=======
-                        <img src="app/controllers/images/logo.png" alt="Homepage">
->>>>>>> 702841452d5626635618700aa742bc5252335577
-                    </a>
-                </div> <!-- end header__logo -->
-                </ul> <!-- end header__social -->
-
-                <div class="header__search">
-                </div> <!-- end header__search -->
+                    <div class="header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.png" alt="Homepage">
+                        </a>
+                    </div> <!-- end header__logo -->
 
 
-                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+                    <div class="header__search">
+                    </div> <!-- end header__search -->
 
-                <nav class="header__nav-wrap">
 
-                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+                    <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
-                    <ul class="header__nav">
-                        <li class="current"><a href="index.html" title="">Home</a></li>
-                        <li class="has-children">
-                            <a href="#0" title="">Categorias</a>
-                            <ul class="sub-menu">
-                                <li><a href="category.html">Cripto</a></li>
-                                <li><a href="category.html">Software</a></li>
-                                <li><a href="category.html">Hardware</a></li>
-                                <li><a href="category.html">Tecnlogias em Geral</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html" title="">About</a></li>
-                    </ul> <!-- end header__nav -->
+                    <nav class="header__nav-wrap">
 
-                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+                        <h2 class="header__nav-heading h6">Site Navigation</h2>
 
-                </nav> <!-- end header__nav-wrap -->
+                        <ul class="header__nav">
+                            <li><a href="index.php" title="">Página Principal</a></li>
+                            <li class="has-children">
+                                <a href="#0" title="">Categorias</a>
+                                <ul class="sub-menu">
+                                    <li><a href="category.html">Cripto</a></li>
+                                    <li><a href="category.html">Software</a></li>
+                                    <li><a href="category.html">Hardware</a></li>
+                                    <li><a href="category.html">Tecnlogias em Geral</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html" title="">About</a></li>
+                        </ul> <!-- end header__nav -->
 
-            </div> <!-- header-content -->
-        </header> <!-- header -->
+                        <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
+                    </nav> <!-- end header__nav-wrap -->
+
+                </div> <!-- header-content -->
+            </header> <!-- header -->
+
+        </div> <!-- end s-pageheader -->
 
         <div class="pageheader-content row">
+
             <div class="col-full">
 
                 <div class="featured">
 
                     <div class="featured__column featured__column--big">
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');">
+
+                        <div class="entry" style="background-image:url('<?php echo $img ?>');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Music</a></span>
+                                <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
 
-                                <h1><a href="#0" title="">What Your Music Preference Says About You and Your
-                                        Personality.</a></h1>
+                                <h1><a href="post.php?id=<?php echo $lastPost ?>" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
                                         <img class="avatar" src="images/avatars/user-03.jpg" alt="">
                                     </a>
 
-<<<<<<< HEAD
                                     <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 29, 2017</li>
+                                        <li><a href="#0"><?php echo $repository->getAutorById($lastPost); ?></a></li>
+                                        <li><?php echo $repository->getDataById($lastPost); ?></li>
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
@@ -170,25 +141,13 @@ $img6 = $repository->getImagemById($previous8);
                     </div> <!-- end featured__big -->
 
                     <div class="featured__column featured__column--small">
-=======
-        $previous6 = $repository->getPreviousPostId($previous5);
-        $img7 = $repository->getImagemById($previous6);
 
-        $previous7 = $repository->getPreviousPostId($previous6);
-        $img8 = $repository->getImagemById($previous7);
-
-        $previous8 = $repository->getPreviousPostId($previous7);
-        $img9 = $repository->getImagemById($previous8);
-    ?> 
-        <div class="col-full">
->>>>>>> 702841452d5626635618700aa742bc5252335577
-
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
+                        <div class="entry" style="background-image:url('<?php echo $img2 ?>');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Management</a></span>
+                                <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
 
-                                <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
+                                <h1><a href="post.php?id=<?php echo $previous1 ?>" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
@@ -196,20 +155,20 @@ $img6 = $repository->getImagemById($previous8);
                                     </a>
 
                                     <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 27, 2017</li>
+                                        <li><a href="#0"><?php echo $repository->getAutorById($previous1); ?></a></li>
+                                        <li><?php echo $repository->getDataById($previous1); ?></li>
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
 
                         </div> <!-- end entry -->
 
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
+                        <div class="entry" style="background-image:url('<?php echo $img3 ?>');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
+                                <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
 
-                                <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
+                                <h1><a href="post.php?id=<?php echo $previous2 ?>" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
@@ -217,8 +176,8 @@ $img6 = $repository->getImagemById($previous8);
                                     </a>
 
                                     <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 21, 2017</li>
+                                        <li><a href="#0"><?php echo $repository->getAutorById($previous2); ?></a></li>
+                                        <li><?php echo $repository->getDataById($previous2); ?></li>
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
@@ -230,7 +189,6 @@ $img6 = $repository->getImagemById($previous8);
 
             </div> <!-- end col-full -->
         </div> <!-- end pageheader-content row -->
-
     </section> <!-- end s-pageheader -->
 
     <section class="s-content">
@@ -243,7 +201,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous3 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                             <img src="<?php echo $img4 ?>" srcset="<?php echo $img4 ?> 1x, <?php echo $img4 ?> 2x" alt="">
                         </a>
                     </div>
@@ -252,15 +210,17 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous3 ?>"><?php echo $repository->getDataById($previous3); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous3); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous3 ?>"><?php echo $repository->getTituloById($previous3); ?></a>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous3); ?></a>
                             </h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous3); ?>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                                incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -275,8 +235,8 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous4 ?>" class="entry__thumb-link">
-                        <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                            <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -284,14 +244,16 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous4 ?>"><?php echo $repository->getDataById($previous4); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous4); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous4 ?>"><?php echo $repository->getTituloById($previous4); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous4); ?>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                                incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -306,8 +268,8 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous5 ?>" class="entry__thumb-link">
-                        <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                            <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -315,14 +277,16 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous5 ?>"><?php echo $repository->getDataById($previous5); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous5); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous5 ?>"><?php echo $repository->getTituloById($previous5); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous5); ?>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                                incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -337,8 +301,8 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href=href="post.php?id=<?php echo $previous6 ?>" class="entry__thumb-link">
-                        <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                            <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -346,14 +310,16 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous6 ?>"><?php echo $repository->getDataById($previous6); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous6); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous6 ?>"><?php echo $repository->getTituloById($previous6); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous6); ?>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                                incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -368,8 +334,8 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous7 ?>" class="entry__thumb-link">
-                        <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                            <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -377,15 +343,17 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous7 ?>"><?php echo $repository->getDataById($previous7); ?></a>
+                                <a href="single-video.html"><?php echo $repository->getDataById($previous7); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous7 ?>"><?php echo $repository->getTituloById($previous7); ?></a>
+                            <h1 class="entry__title"><a href="single-video.html"><?php echo $repository->getTituloById($previous7); ?></a>
                             </h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous7); ?>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                                incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -401,8 +369,8 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous8 ?>" class="entry__thumb-link">
-                        <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                            <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -410,14 +378,16 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous8 ?>"><?php echo $repository->getDataById($previous8); ?></a>
+                                <a href="single-gallery.html"><?php echo $repository->getDataById($previous8); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous8 ?>"><?php echo $repository->getTituloById($previous8); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-gallery.html"><?php echo $repository->getTituloById($previous8); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous8); ?>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
+                                proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
+                                incididunt velit sint in aliqua...
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -473,7 +443,7 @@ $img6 = $repository->getImagemById($previous8);
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a> e <a href="https://twitter.com/rickz1nho" target="_blank">rickz1nho</a>
+                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
                         </span>
                     </div>
 
