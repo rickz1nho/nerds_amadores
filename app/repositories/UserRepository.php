@@ -132,10 +132,9 @@ class UserRepository
         return $usuario_do_banco;
     }
 
-    function salvarPublicacao($text, $autor, $titulo, $categoria)
+    function salvarPublicacao($text, $autor, $titulo, $categoria, $imagem)
     {
-
-        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`, `titulo`, `categoria`) VALUES (' " . $text . " ', ' " . $autor . "', ' " . $titulo . "', ' " . $categoria . "')";
+        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`, `titulo`, `categoria`, `imagem`) VALUES (' " . $text . " ', ' " . $autor . "', ' " . $titulo . "', ' " . $categoria . "', ' ". $imagem ."')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         header("location: {$this->base_path}/index.php?msg=publicacaocriada");
