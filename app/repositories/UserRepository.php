@@ -1,4 +1,8 @@
 <?php
+error_reporting(0);
+?>
+
+<?php
 
 require_once __DIR__ . "/../../config.php";
 require __DIR__ . "/../database/connection.php";
@@ -10,8 +14,6 @@ class UserRepository
 
     private $connection;
     private $base_path = "http://localhost/nerds_amadores";
-
-
     public function __construct()
     {
         $this->connection = Connection::getConnection();
@@ -152,11 +154,15 @@ class UserRepository
         $link1 = $conteudoTexto[0]['id'];
         $link2 = $conteudoTexto[1]['id'];
         $link3 = $conteudoTexto[2]['id'];
-        if (!empty($conteudoTexto) && $comando == 1) {
+        if (!empty($conteudoTexto[0]) && $comando == 1) {
             echo "<a href=post.php?id=$link1>".$conteudoTexto[0]['titulo']."</a>";
             echo $conteudoTexto[0]['conteudo'];
+        }
+        if (!empty($conteudoTexto[1]) && $comando == 1) {
             echo "<a href=post.php?id=$link2>".$conteudoTexto[1]['titulo']."</a>";
             echo $conteudoTexto[1]['conteudo'];
+        }
+        if (!empty($conteudoTexto[2]) && $comando == 1) {
             echo "<a href=post.php?id=$link3>".$conteudoTexto[2]['titulo']."</a>";
             echo $conteudoTexto[2]['conteudo'];
         }
