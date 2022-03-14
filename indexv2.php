@@ -93,9 +93,6 @@ $repository = new UserRepository();
 
         $previous2 = $repository->getPreviousPostId($previous1);
         $img3 = $repository->getImagemById($previous2);
-<<<<<<< HEAD
-        ?>
-=======
 
         $previous3 = $repository->getPreviousPostId($previous2); 
         $img4 = $repository->getImagemById($previous3);
@@ -107,15 +104,14 @@ $repository = new UserRepository();
         $img6 = $repository->getImagemById($previous5);
 
         $previous6 = $repository->getPreviousPostId($previous5);
-        $img6 = $repository->getImagemById($previous6);
+        $img7 = $repository->getImagemById($previous6);
 
         $previous7 = $repository->getPreviousPostId($previous6);
-        $img6 = $repository->getImagemById($previous7);
+        $img8 = $repository->getImagemById($previous7);
 
         $previous8 = $repository->getPreviousPostId($previous7);
-        $img6 = $repository->getImagemById($previous8);
+        $img9 = $repository->getImagemById($previous8);
     ?>
->>>>>>> 802c153332e5ecd93484b0aa8d9ef00e98c72c0c
         <div class="col-full">
 
             <div class="featured">
@@ -205,7 +201,7 @@ $repository = new UserRepository();
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/lamp-400.jpg" srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x" alt="">
+                            <img src="<?php echo $img4 ?>" srcset="<?php echo $img4 ?> 1x, <?php echo $img4 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -213,9 +209,9 @@ $repository = new UserRepository();
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous3); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Just a Standard Format Post.</a>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous3); ?></a>
                             </h1>
 
                         </div>
@@ -228,8 +224,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Design</a>
-                                <a href="category.html">Photography</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous3); ?></a>
                             </span>
                         </div>
                     </div>
@@ -240,7 +235,7 @@ $repository = new UserRepository();
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/tulips-400.jpg" srcset="images/thumbs/masonry/tulips-400.jpg 1x, images/thumbs/masonry/tulips-800.jpg 2x" alt="">
+                        <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -248,10 +243,9 @@ $repository = new UserRepository();
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous4); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">10 Interesting Facts About
-                                    Caffeine.</a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -263,7 +257,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Health</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous4); ?></a>
                             </span>
                         </div>
                     </div>
@@ -274,7 +268,7 @@ $repository = new UserRepository();
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/cookies-400.jpg" srcset="images/thumbs/masonry/cookies-400.jpg 1x, images/thumbs/masonry/cookies-800.jpg 2x" alt="">
+                        <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -282,9 +276,9 @@ $repository = new UserRepository();
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous5); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">No Sugar Oatmeal Cookies.</a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -296,8 +290,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Cooking</a>
-                                <a href="category.html">Health</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous5); ?></a>
                             </span>
                         </div>
                     </div>
@@ -308,7 +301,7 @@ $repository = new UserRepository();
 
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/wheel-400.jpg" srcset="images/thumbs/masonry/wheel-400.jpg 1x, images/thumbs/masonry/wheel-800.jpg 2x" alt="">
+                        <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -316,10 +309,9 @@ $repository = new UserRepository();
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 10, 2017</a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous6); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-standard.html">Visiting Theme Parks Improves Your
-                                    Health.</a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -331,19 +323,18 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="#">Health</a>
-                                <a href="#">Lifestyle</a>
+                                <a href="#"><?php echo $repository->getCategoriaById($previous6); ?></a>
                             </span>
                         </div>
                     </div>
 
                 </article> <!-- end article -->
 
-                <article class="masonry__brick entry format-video" data-aos="fade-up">
+                <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                    <div class="entry__thumb video-image">
-                        <a href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0" data-lity>
-                            <img src="images/thumbs/masonry/shutterbug-400.jpg" srcset="images/thumbs/masonry/shutterbug-400.jpg 1x, images/thumbs/masonry/shutterbug-800.jpg 2x" alt="">
+                    <div class="entry__thumb">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                        <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
                         </a>
                     </div>
 
@@ -351,9 +342,9 @@ $repository = new UserRepository();
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-video.html">December 10, 2017</a>
+                                <a href="single-video.html"><?php echo $repository->getDataById($previous7); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-video.html">Key Benefits Of Family Photography.</a>
+                            <h1 class="entry__title"><a href="single-video.html"><?php echo $repository->getTituloById($previous7); ?></a>
                             </h1>
 
                         </div>
@@ -366,8 +357,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Family</a>
-                                <a href="category.html">Photography</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous7); ?></a>
                             </span>
                         </div>
                     </div>
@@ -375,30 +365,21 @@ $repository = new UserRepository();
                 </article> <!-- end article -->
 
 
-                <article class="masonry__brick entry format-gallery" data-aos="fade-up">
+                <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                    <div class="entry__thumb slider">
-                        <div class="slider__slides">
-                            <div class="slider__slide">
-                                <img src="images/thumbs/masonry/gallery/gallery-1-400.jpg" srcset="images/thumbs/masonry/gallery/gallery-1-400.jpg 1x, images/thumbs/masonry/gallery/gallery-1-800.jpg 2x" alt="">
-                            </div>
-                            <div class="slider__slide">
-                                <img src="images/thumbs/masonry/gallery/gallery-2-400.jpg" srcset="images/thumbs/masonry/gallery/gallery-2-400.jpg 1x, images/thumbs/masonry/gallery/gallery-2-800.jpg 2x" alt="">
-                            </div>
-                            <div class="slider__slide">
-                                <img src="images/thumbs/masonry/gallery/gallery-3-400.jpg" srcset="images/thumbs/masonry/gallery/gallery-3-400.jpg 1x, images/thumbs/masonry/gallery/gallery-3-800.jpg 2x" alt="">
-                            </div>
-                        </div>
+                    <div class="entry__thumb">
+                        <a href="single-standard.html" class="entry__thumb-link">
+                        <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
+                        </a>
                     </div>
 
                     <div class="entry__text">
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-gallery.html">December 10, 2017</a>
+                                <a href="single-gallery.html"><?php echo $repository->getDataById($previous8); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="single-gallery.html">Workspace Design Trends and
-                                    Ideas.</a></h1>
+                            <h1 class="entry__title"><a href="single-gallery.html"><?php echo $repository->getTituloById($previous8); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -410,8 +391,7 @@ $repository = new UserRepository();
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Work</a>
-                                <a href="category.html">Management</a>
+                                <a href="category.html"><?php echo $repository->getCategoriaById($previous8); ?></a>
                             </span>
                         </div>
                     </div>
