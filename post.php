@@ -47,7 +47,7 @@ $id = $_GET['id'];
 
                 <div class="header__logo">
                     <a class="logo" href="index.php">
-                        <img src="" alt="Homepage">
+                        <img src="nos4.png" alt="Homepage">
                     </a>
 
                 </div> <!-- end header__logo -->
