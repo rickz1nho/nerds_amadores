@@ -33,7 +33,6 @@
 require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
-$id = $_GET['id'];
 ?>
 
 <body id="top">
@@ -46,10 +45,9 @@ $id = $_GET['id'];
             <div class="header__content row">
 
                 <div class="header__logo">
-                    <a class="logo" href="index.php">
-                        <img src="" alt="Homepage">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.svg" alt="Homepage">
                     </a>
-
                 </div> <!-- end header__logo -->
 
 
