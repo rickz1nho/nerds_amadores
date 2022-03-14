@@ -148,21 +148,21 @@ class UserRepository
         $statement->execute();
         $conteudo = $statement->fetchAll(PDO::FETCH_ASSOC);
         $conteudoTexto = $conteudo;
-        $link1 = $conteudoTexto[0]['id'];
-        $link2 = $conteudoTexto[1]['id'];
-        $link3 = $conteudoTexto[2]['id'];
+        if(!empty($conteudoTexto[0])){$link1 = $conteudoTexto[0]['id'];};
+        if(!empty($conteudoTexto[1])){$link2 = $conteudoTexto[1]['id'];};
+        if(!empty($conteudoTexto[2])){$link3 = $conteudoTexto[2]['id'];};
         if (!empty($conteudoTexto[0]) && $comando == 1) {
             echo "<a href=post.php?id=$link1>" . $conteudoTexto[0]['titulo'] . "</a>";
             echo $conteudoTexto[0]['conteudo'];
-        }
+        }else return null;
         if (!empty($conteudoTexto[1]) && $comando == 1) {
             echo "<a href=post.php?id=$link2>" . $conteudoTexto[1]['titulo'] . "</a>";
             echo $conteudoTexto[1]['conteudo'];
-        }
+        }else return null;
         if (!empty($conteudoTexto[2]) && $comando == 1) {
             echo "<a href=post.php?id=$link3>" . $conteudoTexto[2]['titulo'] . "</a>";
             echo $conteudoTexto[2]['conteudo'];
-        }
+        }else return null;
         if (!empty($conteudoTexto)) {
         }
     }
@@ -174,6 +174,14 @@ class UserRepository
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         echo $conteudo['titulo'];
+    }
+    function getTituloById($id)
+    {
+        $sql = "SELECT `titulo` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        return $conteudo['titulo'];
     }
     function viewCategoriaById($id)
     {
@@ -221,12 +229,32 @@ class UserRepository
         } else exit;
     }
 
-    function deletePubli($id)
-    {
+    function deletePubli($id){
         if ($_GET['session']['nivel'] == 4) {
             $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
             $statement = $this->connection->prepare($sql);
             $statement->execute();
         } else return 1;
     }
+
+    function getNextPostId($id){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `id` > $id ORDER BY `id` ASC";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $id = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($id)){
+        return $id['id'];
+        }else return null;
+    }
+
+    function getPreviousPostId($id){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `id` < $id ORDER BY `id` DESC";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $id = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($id)){
+        return $id['id'];
+        }else return null;
+    }
+
 }
