@@ -26,6 +26,7 @@
     <script src="js/post/pace.min.js"></script>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <!-- WGCodigo copiado-->
@@ -37,6 +38,11 @@
 
     <!-- Termino do codigo copiado-->
 >>>>>>> b3f1afa6f0394c54f32fa2326cd42f762021ebdc
+=======
+    <!-- Codigo copiado-->
+
+    <!-- Termino do codigo copiado-->
+>>>>>>> parent of 87ac19a (hrefs)
 
 </head>
 >>>>>>> 702841452d5626635618700aa742bc5252335577
@@ -76,6 +82,25 @@ $previous8 = $repository->getPreviousPostId($previous7);
 $img6 = $repository->getImagemById($previous8);
 ?>
 
+<body>
+
+<div id="wrapper" class="wrapper clearfix ignore-css" style="all:unset;">
+        <div id="top-bar" class="top-bar bitcoin-tracker-dark">
+            <div class="container-fluid pr-0 pl-0">
+                <div class="row clearfix">
+                    <div class="topbarBitcoinTracker"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/bitcoinPriceWidgets.js"></script>
+            <script src="assets/js/bitcoinPrice.js"></script>
+            <script src="assets/js/bitcoinTracker.js"></script>
+
+</body>
 
 <body id="top">
 
@@ -85,13 +110,18 @@ $img6 = $repository->getImagemById($previous8);
     <!-- pageheader
 ================================================== -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size: 40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div></div>
 =======
 >>>>>>> 702841452d5626635618700aa742bc5252335577
 
 >>>>>>> b3f1afa6f0394c54f32fa2326cd42f762021ebdc
     <div class="s-pageheader">
+=======
+>>>>>>> parent of 87ac19a (hrefs)
 
+    <div class="s-pageheader">
+    
         <header class="header">
             
             <div class="header__content row">
@@ -243,7 +273,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous3 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                             <img src="<?php echo $img4 ?>" srcset="<?php echo $img4 ?> 1x, <?php echo $img4 ?> 2x" alt="">
                         </a>
                     </div>
@@ -252,9 +282,9 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous3 ?>"><?php echo $repository->getDataById($previous3); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous3); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous3 ?>"><?php echo $repository->getTituloById($previous3); ?></a>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous3); ?></a>
                             </h1>
 
                         </div>
@@ -275,7 +305,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous4 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                         <img src="<?php echo $img5 ?>" srcset="<?php echo $img5 ?> 1x, <?php echo $img5 ?> 2x" alt="">
                         </a>
                     </div>
@@ -284,9 +314,9 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous4 ?>"><?php echo $repository->getDataById($previous4); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous4); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous4 ?>"><?php echo $repository->getTituloById($previous4); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -306,7 +336,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous5 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                         <img src="<?php echo $img6 ?>" srcset="<?php echo $img6 ?> 1x, <?php echo $img6 ?> 2x" alt="">
                         </a>
                     </div>
@@ -315,9 +345,9 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous5 ?>"><?php echo $repository->getDataById($previous5); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous5); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous5 ?>"><?php echo $repository->getTituloById($previous5); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -337,7 +367,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href=href="post.php?id=<?php echo $previous6 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                         <img src="<?php echo $img7 ?>" srcset="<?php echo $img7 ?> 1x, <?php echo $img7 ?> 2x" alt="">
                         </a>
                     </div>
@@ -346,9 +376,9 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous6 ?>"><?php echo $repository->getDataById($previous6); ?></a>
+                                <a href="single-standard.html"><?php echo $repository->getDataById($previous6); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous6 ?>"><?php echo $repository->getTituloById($previous6); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-standard.html"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -368,7 +398,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous7 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                         <img src="<?php echo $img8 ?>" srcset="<?php echo $img8 ?> 1x, <?php echo $img8 ?> 2x" alt="">
                         </a>
                     </div>
@@ -377,9 +407,9 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous7 ?>"><?php echo $repository->getDataById($previous7); ?></a>
+                                <a href="single-video.html"><?php echo $repository->getDataById($previous7); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous7 ?>"><?php echo $repository->getTituloById($previous7); ?></a>
+                            <h1 class="entry__title"><a href="single-video.html"><?php echo $repository->getTituloById($previous7); ?></a>
                             </h1>
 
                         </div>
@@ -401,7 +431,7 @@ $img6 = $repository->getImagemById($previous8);
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="post.php?id=<?php echo $previous8 ?>" class="entry__thumb-link">
+                        <a href="single-standard.html" class="entry__thumb-link">
                         <img src="<?php echo $img9 ?>" srcset="<?php echo $img9 ?> 1x, <?php echo $img9 ?> 2x" alt="">
                         </a>
                     </div>
@@ -410,9 +440,9 @@ $img6 = $repository->getImagemById($previous8);
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous8 ?>"><?php echo $repository->getDataById($previous8); ?></a>
+                                <a href="single-gallery.html"><?php echo $repository->getDataById($previous8); ?></a>
                             </div>
-                            <h1 class="entry__title"><a href="post.php?id=<?php echo $previous8 ?>"><?php echo $repository->getTituloById($previous8); ?></a></h1>
+                            <h1 class="entry__title"><a href="single-gallery.html"><?php echo $repository->getTituloById($previous8); ?></a></h1>
 
                         </div>
                         <div class="entry__excerpt">
@@ -473,7 +503,7 @@ $img6 = $repository->getImagemById($previous8);
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a> e <a href="https://twitter.com/rickz1nho" target="_blank">rickz1nho</a>
+                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
                         </span>
                     </div>
 
