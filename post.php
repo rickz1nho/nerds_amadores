@@ -46,10 +46,12 @@ $id = $_GET['id'];
             <div class="header__content row">
 
                 <div class="header__logo">
-                    <a class="logo" href="index.html">
-                        <img src="images/logo.svg" alt="Homepage">
+                    <a class="logo" href="index.php">
+                        <img src="" alt="Homepage">
                     </a>
+
                 </div> <!-- end header__logo -->
+
 
                 <div class="header__search">
                 </div> <!-- end header__search -->
@@ -62,16 +64,14 @@ $id = $_GET['id'];
                     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
                     <ul class="header__nav">
-                        <li><a href="index.html" title="">Home</a></li>
+                        <li><a href="index.html" title="">Página Principal</a></li>
                         <li class="has-children">
-                            <a href="#0" title="">Categories</a>
+                            <a href="#0" title="">Categorias</a>
                             <ul class="sub-menu">
-                                <li><a href="category.html">Lifestyle</a></li>
-                                <li><a href="category.html">Health</a></li>
-                                <li><a href="category.html">Family</a></li>
-                                <li><a href="category.html">Management</a></li>
-                                <li><a href="category.html">Travel</a></li>
-                                <li><a href="category.html">Work</a></li>
+                                <li><a href="category.html">Cripto</a></li>
+                                <li><a href="category.html">Software</a></li>
+                                <li><a href="category.html">Hardware</a></li>
+                                <li><a href="category.html">Tecnlogias em Geral</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html" title="">About</a></li>
@@ -91,7 +91,7 @@ $id = $_GET['id'];
 ================================================== -->
     <section class="s-content s-content--narrow s-content--no-padding-bottom">
 
-        <article class="row format-gallery">
+        <article class="row format-standard">
 
             <div class="s-content__header col-full">
                 <h1 class="s-content__header-title">
@@ -107,8 +107,6 @@ $id = $_GET['id'];
             </div> <!-- end s-content__header -->
 
             <div class="col-full s-content__main">
-
-                <p class="lead"><?php $repository->viewConteudoById($id); ?></p>
 
                 <p> <?php $repository->viewConteudoById($id); ?> </p>
 
@@ -132,7 +130,7 @@ $id = $_GET['id'];
                 </div>
 
                 <div class="s-content__pagenav">
-                    <div class="s-content__nav">
+                    <div class="s-content__nav col-full">
                         <div class="s-content__prev">
                             <a href="#0" rel="prev">
                                 <span>Previous Post</span>
@@ -152,6 +150,9 @@ $id = $_GET['id'];
 
         </article>
 
+        <div class="comments-wrap">
+        </div>
+
     </section> <!-- s-content -->
 
 
@@ -159,6 +160,21 @@ $id = $_GET['id'];
     <!-- s-footer
 ================================================== -->
     <footer class="s-footer">
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>© Macholandia 2022</span>
+                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
+                        </span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
 
 
     </footer> <!-- end s-footer -->
