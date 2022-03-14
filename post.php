@@ -19,7 +19,11 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 
 $repository = new UserRepository();
 $id = $_GET['id'];
-echo "<h1>" . $repository->viewById(2, $id) . "</h1>";
-$repository->viewById(1, $id);
-
+$repository->viewTituloById($id);
+echo  nl2br("\n");
+$repository->viewConteudoById($id);
+echo  nl2br("\n");
+$repository->viewDataById($id);
+echo  nl2br("\n");
+$repository->viewAutorById($id);
 ?>

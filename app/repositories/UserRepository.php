@@ -1,6 +1,3 @@
-<?php
-error_reporting(0);
-?>
 
 <?php
 
@@ -170,19 +167,37 @@ class UserRepository
         }
     }
 
-    function viewById($comando, $id)
+    function viewTituloById($id)
     {
-        $sql = "SELECT `conteudo`, `titulo` FROM `publicacao` WHERE `id` = $id";
+        $sql = "SELECT `titulo` FROM `publicacao` WHERE `id` = $id";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
-        $conteudoTexto['texto'] = $conteudo;
-        if (!empty($conteudoTexto['texto']['conteudo']) && $comando == 1) {
-            echo $conteudoTexto['texto']['conteudo'];
-        }
-        if (!empty($conteudoTexto['texto']['conteudo'])) {
-            return $conteudoTexto['texto']['titulo'];
-        }
+        echo $conteudo['titulo'];
+    }
+    function viewConteudoById($id)
+    {
+        $sql = "SELECT `conteudo` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        echo $conteudo['conteudo'];
+    }
+    function viewDataById($id)
+    {
+        $sql = "SELECT `postagem` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        echo $conteudo['postagem'];
+    }
+    function viewAutorById($id)
+    {
+        $sql = "SELECT `autor` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        echo $conteudo['autor'];
     }
 
     function getPubliId($titulo)
