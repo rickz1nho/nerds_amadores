@@ -23,7 +23,7 @@
     }
 
     if(!empty($_GET['msg'])){
-    $link = $_GET['msg']; //ESSA VARÍAVEL QUANDO FICA VAZIA RETORNA UM WARNING NA PAGINA DE LOGIN
+    $link = $_GET['msg'];
     if ($link == 1) {
     ?><p class="alert-danger text-center">Usuário ou senha Inválido!</a><?php
                                                                     } elseif ($link == 2) {
