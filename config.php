@@ -16,7 +16,7 @@ define("BASE_URL", "http://localhost/nerds_amadores");
 function valida_login()
 {
 
-    if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] == null || $_SESSION['usuario'] == "") {
+    if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] == null || $_SESSION['usuario'] == "" || empty($_SESSION['usuario'])) {
         echo "sem permissão";
         exit;
     } else return 1;
