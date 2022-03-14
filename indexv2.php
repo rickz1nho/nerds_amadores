@@ -105,7 +105,7 @@ $id = $_GET['id'];
                         <div class="entry__content">
                             <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
 
-                            <h1><a href="#0" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
+                            <h1><a href="post.php?id=<?php echo $lastPost ?>" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
 
                             <div class="entry__info">
                                 <a href="#0" class="entry__profile-pic">
@@ -129,7 +129,7 @@ $id = $_GET['id'];
                         <div class="entry__content">
                             <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
 
-                            <h1><a href="#0" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
+                            <h1><a href="post.php?id=<?php echo $previous1 ?>" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
 
                             <div class="entry__info">
                                 <a href="#0" class="entry__profile-pic">
@@ -150,7 +150,7 @@ $id = $_GET['id'];
                         <div class="entry__content">
                             <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
 
-                            <h1><a href="#0" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
+                            <h1><a href="post.php?id=<?php echo $previous2 ?>" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
 
                             <div class="entry__info">
                                 <a href="#0" class="entry__profile-pic">
