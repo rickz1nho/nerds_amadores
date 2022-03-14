@@ -64,7 +64,7 @@ $id = $_GET['id'];
                     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
                     <ul class="header__nav">
-                        <li><a href="index.html" title="">Página Principal</a></li>
+                        <li><a href="index.php" title="">Página Principal</a></li>
                         <li class="has-children">
                             <a href="#0" title="">Categorias</a>
                             <ul class="sub-menu">
