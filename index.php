@@ -14,7 +14,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Termino do codigo copiado-->
 
-    <title>Notícias de Tecnlogia</title>
+    <title>Nerds Amadores</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
     <div class="container-fluid bg-dark py-4 h-25">
         <div class="row">
             <div class="col">
-                <h3 class="text-white">Notícias de Tecnlogia</h1>
+                <h3 class="text-white">Nerds Amadores</h1>
 
             </div>
             <script src="assets/js/jquery-3.3.1.min.js"></script>

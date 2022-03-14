@@ -47,7 +47,7 @@ $id = $_GET['id'];
 
                 <div class="header__logo">
                     <a class="logo" href="index.php">
-                        <img src="" alt="Homepage">
+                        <img src="nos4.png" alt="Homepage">
                     </a>
 
                 </div> <!-- end header__logo -->
@@ -165,7 +165,7 @@ $id = $_GET['id'];
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
+                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_" target="_blank">Gabriel Deniz</a>
                         </span>
                     </div>
 
