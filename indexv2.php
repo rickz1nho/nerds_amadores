@@ -87,19 +87,25 @@ $id = $_GET['id'];
     </div> <!-- end s-pageheader -->
 
     <div class="pageheader-content row">
+    <?php $lastPost = $repository->getLastPostId(); 
+        $img = $repository->getImagemById($lastPost);
+        $previous1 = $repository->getPreviousPostId($lastPost);
+        $img2 = $repository->getImagemById($previous1);
+        $previous2 = $repository->getPreviousPostId($previous1);
+        $img3 = $repository->getImagemById($previous2);
+    ?>
         <div class="col-full">
 
             <div class="featured">
 
                 <div class="featured__column featured__column--big">
 
-                    <div class="entry" style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');">
+                    <div class="entry" style="background-image:url('<?php echo $img ?>');">
 
                         <div class="entry__content">
-                            <span class="entry__category"><a href="#0">Music</a></span>
+                            <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
 
-                            <h1><a href="#0" title="">What Your Music Preference Says About You and Your
-                                    Personality.</a></h1>
+                            <h1><a href="#0" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
 
                             <div class="entry__info">
                                 <a href="#0" class="entry__profile-pic">
@@ -107,8 +113,8 @@ $id = $_GET['id'];
                                 </a>
 
                                 <ul class="entry__meta">
-                                    <li><a href="#0">John Doe</a></li>
-                                    <li>December 29, 2017</li>
+                                    <li><a href="#0"><?php echo $repository->getAutorById($lastPost); ?></a></li>
+                                    <li><?php echo $repository->getDataById($lastPost); ?></li>
                                 </ul>
                             </div>
                         </div> <!-- end entry__content -->
@@ -118,12 +124,12 @@ $id = $_GET['id'];
 
                 <div class="featured__column featured__column--small">
 
-                    <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
+                    <div class="entry" style="background-image:url('<?php echo $img2 ?>');">
 
                         <div class="entry__content">
-                            <span class="entry__category"><a href="#0">Management</a></span>
+                            <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
 
-                            <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
+                            <h1><a href="#0" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
 
                             <div class="entry__info">
                                 <a href="#0" class="entry__profile-pic">
@@ -131,20 +137,20 @@ $id = $_GET['id'];
                                 </a>
 
                                 <ul class="entry__meta">
-                                    <li><a href="#0">John Doe</a></li>
-                                    <li>December 27, 2017</li>
+                                    <li><a href="#0"><?php echo $repository->getAutorById($previous1); ?></a></li>
+                                    <li><?php echo $repository->getDataById($previous1); ?></li>
                                 </ul>
                             </div>
                         </div> <!-- end entry__content -->
 
                     </div> <!-- end entry -->
 
-                    <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
+                    <div class="entry" style="background-image:url('<?php echo $img3 ?>');">
 
                         <div class="entry__content">
-                            <span class="entry__category"><a href="#0">LifeStyle</a></span>
+                            <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
 
-                            <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
+                            <h1><a href="#0" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
 
                             <div class="entry__info">
                                 <a href="#0" class="entry__profile-pic">
@@ -152,8 +158,8 @@ $id = $_GET['id'];
                                 </a>
 
                                 <ul class="entry__meta">
-                                    <li><a href="#0">John Doe</a></li>
-                                    <li>December 21, 2017</li>
+                                    <li><a href="#0"><?php echo $repository->getAutorById($previous2); ?></a></li>
+                                    <li><?php echo $repository->getDataById($previous2); ?></li>
                                 </ul>
                             </div>
                         </div> <!-- end entry__content -->

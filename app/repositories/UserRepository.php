@@ -188,6 +188,14 @@ class UserRepository
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         echo $conteudo['categoria'];
     }
+    function getCategoriaById($id)
+    {
+        $sql = "SELECT `categoria` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        return $conteudo['categoria'];
+    }
     function viewConteudoById($id)
     {
         $sql = "SELECT `conteudo` FROM `publicacao` WHERE `id` = $id";
@@ -204,6 +212,14 @@ class UserRepository
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         echo $conteudo['postagem'];
     }
+    function getDataById($id)
+    {
+        $sql = "SELECT `postagem` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        return $conteudo['postagem'];
+    }
     function viewAutorById($id)
     {
         $sql = "SELECT `autor` FROM `publicacao` WHERE `id` = $id";
@@ -212,7 +228,14 @@ class UserRepository
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         echo $conteudo['autor'];
     }
-
+    function getAutorById($id)
+    {
+        $sql = "SELECT `autor` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        return $conteudo['autor'];
+    }
     function getPubliId($titulo)
     {
         $sql = "SELECT `id` FROM `publicacao` WHERE `titulo` = '$titulo'";
@@ -243,9 +266,17 @@ class UserRepository
         return $id['id'];
         }else return null;
     }
-
     function getPreviousPostId($id){
         $sql = "SELECT `id` FROM `publicacao` WHERE `id` < $id ORDER BY `id` DESC";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $id = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($id)){
+        return $id['id'];
+        }else return null;
+    }
+    function getLastPostId(){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $id = $statement->fetch(PDO::FETCH_ASSOC);
@@ -257,5 +288,13 @@ class UserRepository
         $sql = "INSERT INTO `publicacao` (`imagem`) VALUES ('". $imagem ."')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
+    }
+    function getImagemById($id)
+    {
+        $sql = "SELECT `imagem` FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
+        return $conteudo['imagem'];
     }
 }
