@@ -52,6 +52,15 @@ function salvarPublicacao()
             echo "File is not an image.";
             $uploadOk = 0;
         }
+
+
+        $texto = $_POST['editor_content'];
+        $titulo = $_POST['titulo'];
+        $categoria = $_POST['str'];
+
+        $repository = new UserRepository;
+
+        $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario'], $titulo, $categoria, $target_file);
     }
 
     // Check if file already exists
