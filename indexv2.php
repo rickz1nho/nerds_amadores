@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/post/vendor.css">
     <link rel="stylesheet" href="css/post/main.css">
 
+
     <!-- script
     ================================================== -->
     <script src="js/post/modernizr.js"></script>
@@ -63,7 +64,10 @@ $img6 = $repository->getImagemById($previous8);
 
 <body id="top">
 
-<div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; ;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>
+    <div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; ;padding:1px;padding: 0px; margin: 0px; width: 100%;">
+        <div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div>
+        <div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div>
+    </div>
 
     <section class="s-pageheader s-pageheader--home">
         <!-- pageheader
@@ -80,8 +84,22 @@ $img6 = $repository->getImagemById($previous8);
                     </div> <!-- end header__logo -->
 
 
+                    <a class="header__search-trigger" href="login_page.php"></a>
+
                     <div class="header__search">
+
+                        <form role="search" method="get" class="header__search-form" action="#">
+                            <label>
+                                <span class="hide-content">Search for:</span>
+                                <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                            </label>
+                            <input type="submit" class="search-submit" value="Search">
+                        </form>
+                        <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
                     </div> <!-- end header__search -->
+
+
 
 
                     <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
@@ -221,7 +239,7 @@ $img6 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous3); ?>
+                                <?php echo $repository->getAutorById($previous3); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -252,7 +270,7 @@ $img6 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous4); ?>
+                                <?php echo $repository->getAutorById($previous4); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -283,7 +301,7 @@ $img6 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous5); ?>
+                                <?php echo $repository->getAutorById($previous5); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -314,7 +332,7 @@ $img6 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous6); ?>
+                                <?php echo $repository->getAutorById($previous6); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -346,7 +364,7 @@ $img6 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous7); ?>
+                                <?php echo $repository->getAutorById($previous7); ?>
                             </p>
                         </div>
                         <div class="entry__meta">
@@ -378,7 +396,7 @@ $img6 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__excerpt">
                             <p>
-                            <?php echo $repository->getAutorById($previous8); ?>
+                                <?php echo $repository->getAutorById($previous8); ?>
                             </p>
                         </div>
                         <div class="entry__meta">

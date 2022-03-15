@@ -1,74 +1,3 @@
-/* =================================================================== 
- *
- *  Philosophy v1.0 Main Stylesheet
- *  1-2-2018
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # base style overrides
- *    ## links
- *  # typography & general theme styles
- *    ## Lists
- *    ## responsive video container
- *    ## floated image
- *    ## tables
- *    ## spacing 
- *    ## pace.js styles - minimal
- *  # preloader (line scale)
- *  # forms
- *    ## Style Placeholder Text
- *    ## Change Autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *    ## alert box
- *    ## additional typo styles
- *    ## pagination
- *  # reusable and common theme styles
- *    ## mediaelement style overrides
- *    ## close button for search and mobile navigation
- *    ## slick slider
- *    ## masonry entries
- *    ## post formats - masonry view
- *  # pageheader
- *    ## header logo
- *    ## header social
- *    ## header-toggle
- *    ## header-search
- *    ## header search trigger
- *    ## main navigation
- *    ## pageheader content
- *    ## feature section animation
- *  # s-content
- *    ## masonry layout
- *  # s-extra
- *    ## popular posts
- *    ## about
- *    ## tags
- *  # footer
- *    ## footer link list
- *    ## subscribe form
- *    ## copyright
- *    ## go to top
- *  # blog styles
- *    ## content main
- *    ## content media
- *    ## post tags
- *    ## author profile
- *    ## blog single page navigation
- *    ## format gallery
- *    ## format video
- *    ## format audio
- *    ## comments
- *  # page styles
- *    ## contact page
- *
- * =================================================================== */
-
-
-/* ===================================================================
- * # base style overrides
- *
- * ------------------------------------------------------------------- */
 html {
    font-size: 10px;
 }
@@ -1887,91 +1816,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
    z-index: 900;
 }
 
-.header__search-form {
-   width: 100%;
-   position: absolute;
-   top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
-}
 
-.header__search-form label {
-   color: #FFFFFF;
-}
-
-.header__search-form::after {
-   content: "Press Enter to begin your search.";
-   display: block;
-   letter-spacing: 0.6px;
-   font-size: 1.6rem;
-   margin-top: 3rem;
-   text-align: center;
-   color: rgba(255, 255, 255, 0.5);
-}
-
-.header__search-form input[type="search"] {
-   background-color: transparent;
-   color: #000000;
-   height: auto;
-   width: 100%;
-   font-family: "metropolis-semibold", sans-serif;
-   font-size: 6rem;
-   line-height: 1.5;
-   border: none;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-   max-width: 680px;
-   padding-top: .6rem !important;
-   padding-bottom: .6rem !important;
-   margin: 0 auto;
-}
-
-.header__search-form input[type="search"]::-webkit-input-placeholder {
-   color: #FFFFFF;
-   text-align: center !important;
-   opacity: 1;
-}
-
-.header__search-form input[type="search"]:-moz-placeholder {
-   color: #FFFFFF;
-   text-align: center !important;
-   opacity: 1;
-}
-
-.header__search-form input[type="search"]::-moz-placeholder {
-   color: #FFFFFF;
-   text-align: center !important;
-   opacity: 1;
-}
-
-.header__search-form input[type="search"]:-ms-input-placeholder {
-   color: #FFFFFF;
-   text-align: center !important;
-   opacity: 1;
-}
-
-.header__search-form input[type="search"].placeholder {
-   color: #FFFFFF;
-   text-align: center !important;
-   opacity: 1;
-}
-
-.header__search-form input[type="search"]:focus {
-   outline: none;
-}
-
-.header__search-form input[type="submit"] {
-   display: none;
-}
-
-body.search-is-visible {
-   overflow: hidden;
-}
-
-.search-is-visible .header__search {
-   opacity: 1;
-   visibility: visible;
-}
 
 
 /* -------------------------------------------------------------------
@@ -1995,12 +1840,13 @@ body.search-is-visible {
    text-transform: uppercase;
    letter-spacing: 2px;
    line-height: 21px;
-   content: "Search";
+   content: "Login";
    display: block;
    color: #FFFFFF;
    float: left;
    padding-right: 33px;
 }
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
@@ -2047,26 +1893,6 @@ body.search-is-visible {
       top: 0;
       display: block;
    }
-
-   .header__search-trigger {
-      top: 9px;
-      right: 28px;
-   }
-
-   .header__search-trigger::before {
-      display: none;
-   }
-
-   .header__search-form::after {
-      font-size: 1.5rem;
-   }
-
-   .header__search-form input[type="search"] {
-      max-width: none;
-      width: 80%;
-      font-size: 4.2rem;
-   }
-
 }
 
 @media only screen and (max-width:600px) {
@@ -2113,10 +1939,6 @@ body.search-is-visible {
 
    .header__search-trigger {
       top: 3px;
-   }
-
-   .header__search-form input[type="search"] {
-      font-size: 2.6rem;
    }
 
 }
