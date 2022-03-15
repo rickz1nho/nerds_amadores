@@ -38,7 +38,7 @@ function salvarPublicacao()
     $repository = new UserRepository();
     $target_dir = "images/carousel/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    $repository->insertImagemBanco($target_file);
+    $target_banco = "app/controllers/" . $target_file;
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -52,17 +52,7 @@ function salvarPublicacao()
             echo "File is not an image.";
             $uploadOk = 0;
         }
-
-
-        $texto = $_POST['editor_content'];
-        $titulo = $_POST['titulo'];
-        $categoria = $_POST['str'];
-
-        $repository = new UserRepository;
-
-        $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario'], $titulo, $categoria, $target_file);
     }
-
     // Check if file already exists
     if (file_exists($target_file)) {
         echo "Sorry, file already exists.";
@@ -91,7 +81,7 @@ function salvarPublicacao()
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
-            echo $target_file;
+            echo $target_banco;
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
@@ -103,7 +93,7 @@ function salvarPublicacao()
 
     $repository = new UserRepository;
 
-    $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario'], $titulo, $categoria, $target_file);
+    $repository->salvarPublicacao($texto, $_SESSION['usuario']['usuario'], $titulo, $categoria, $target_banco);
 }
 
 function delete()
