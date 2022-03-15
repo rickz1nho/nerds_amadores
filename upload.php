@@ -1,10 +1,6 @@
 <?php
-require_once __DIR__ . "/config.php";
-require_once __DIR__ . "/app/repositories/UserRepository.php";
-$repository = new UserRepository();
 $target_dir = "app/controllers/images/carousel/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$repository->insertImagemBanco($target_file);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 

@@ -84,6 +84,7 @@
             }
         }
         
+        
         $texto = $_POST['editor_content'];
         $titulo = $_POST['titulo'];
         $categoria = $_POST['str'];
