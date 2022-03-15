@@ -29,11 +29,11 @@
 
     ?>
 
-    <div class="mask d-flex align-items-center h-50 gradient-custom-3">
+    <div class="mask d-flex align-items-center h-50 fundo" style="height: 100vh;">
         <div class="container py-4 h-25">
             <div class="row g-0 d-flex justify-content-center align-items-center">
                 <div class="col-12 col-md-5">
-                    <div class="card" style="border-radius: 15px;">
+                    <div class="card" style="border-radius: 15px; background: rgba(4, 0, 255, 0.555)">
                         <div class="card-body p-4">
                             <h2 class="text-uppercase text-center mb-5">Criar uma conta</h2>
 
@@ -63,7 +63,7 @@
                                     <button type="submit" class="button text-center">Registrar</button>
                                 </div>
 
-                                <p class="text-center text-muted mt-5 mb-0">Já tem uma conta? <a href="login_page.php" class="fw-bold text-body"><u>Logue aqui!</u></a></p>
+                                <p class="text-center mt-5 mb-0" style="color: black">Já tem uma conta? <a href="login_page.php" class="fw-bold text-body"><u>Logue aqui!</u></a></p>
 
                             </form>
 
