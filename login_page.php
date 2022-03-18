@@ -12,7 +12,7 @@
     <title>Login do Usuário</title>
 </head>
 
-<body class="corpo">
+<body style="background-color: white;">
 
     <?php
 
@@ -50,7 +50,7 @@
         <br>
 
         <div class="cadastro2">
-            <a href="cadastro_usuario.php"> Caso não tenha uma conta - Cadastre-se</a>
+            <a href="cadastro_usuario.php" style="color: black"> Caso não tenha uma conta - Cadastre-se</a>
         </div>
 
 

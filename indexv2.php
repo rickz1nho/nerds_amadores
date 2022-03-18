@@ -64,10 +64,14 @@ $img6 = $repository->getImagemById($previous8);
 
 <body id="top">
 
+<<<<<<< HEAD
     <div style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; ;padding:1px;padding: 0px; margin: 0px; width: 100%;">
         <div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div>
         <div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div>
     </div>
+=======
+<div style="height:62px; background-color: #151515; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; ;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #151515; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>
+>>>>>>> 6c1b31c322103066f2e383db85c184431be03564
 
     <section class="s-pageheader s-pageheader--home">
         <!-- pageheader
@@ -78,7 +82,7 @@ $img6 = $repository->getImagemById($previous8);
                 <div class="header__content row">
 
                     <div class="header__logo">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="index.php">
                             <img src="images/logo.png" alt="Homepage">
                         </a>
                     </div> <!-- end header__logo -->
