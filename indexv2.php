@@ -59,7 +59,7 @@ $previous7 = $repository->getPreviousPostId($previous6);
 $img8 = $repository->getImagemById($previous7);
 
 $previous8 = $repository->getPreviousPostId($previous7);
-$img6 = $repository->getImagemById($previous8);
+$img9 = $repository->getImagemById($previous8);
 ?>
 
 <body id="top">
