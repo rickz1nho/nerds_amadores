@@ -1977,29 +1977,52 @@ body.search-is-visible {
 /* -------------------------------------------------------------------
  * ## header search trigger
  * ------------------------------------------------------------------- */
-.header__search-trigger {
+.hieader__search-trigger {
    height: 21px;
    min-width: 21px;
    position: absolute;
    right: 20px;
    top: 15px;
-   background-image: url(../images/icons/icon-search.svg);
    background-repeat: no-repeat;
    background-position: right center;
    background-size: contain;
 }
 
-.header__search-trigger::before {
+.hieader__search-trigger::before {
    font-family: "metropolis-semibold", sans-serif;
    font-size: 12px;
    text-transform: uppercase;
    letter-spacing: 2px;
    line-height: 21px;
-   content: "Search";
+   content: "LOGIN";
    display: block;
    color: #FFFFFF;
    float: left;
    padding-right: 33px;
+}
+
+.h1eader__search-trigger {
+   height: 21px;
+   min-width: 21px;
+   position: absolute;
+   right: 120px;
+   top: 15px;
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-size: contain;
+}
+
+.h1eader__search-trigger::before {
+   font-family: "metropolis-semibold", sans-serif;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   line-height: 21px;
+   content: "CADASTRE-SE";
+   display: block;
+   color: #FFFFFF;
+   float: left;
+   padding-right: 13px;
 }
 
 /* ------------------------------------------------------------------- 

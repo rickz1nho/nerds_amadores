@@ -6,7 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title></title>
+    <title>Nerds Amadores</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -16,19 +16,16 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/post/base.css">
-    <link rel="stylesheet" href="css/post/vendor.css">
-    <link rel="stylesheet" href="css/post/main.css">
-
+    <link rel="stylesheet" href="post/css/base.css">
+    <link rel="stylesheet" href="post/css/vendor.css">
+    <link rel="stylesheet" href="post/css/main.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/post/modernizr.js"></script>
-    <script src="js/post/pace.min.js"></script>
+    <script src="post/js/modernizr.js"></script>
+    <script src="post/js/pace.min.js"></script>
 
 </head>
-
-
 
 <?php
 require_once __DIR__ . "/config.php";
@@ -62,74 +59,59 @@ $previous8 = $repository->getPreviousPostId($previous7);
 $img9 = $repository->getImagemById($previous8);
 ?>
 
-<body id="top">
 
+<body id="top">
     <div style="height:62px; background-color: #151515; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:40px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; ;padding:1px;padding: 0px; margin: 0px; width: 100%;">
         <div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=3315&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div>
         <div style="color: #151515; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div>
     </div>
 
+    <!-- pageheader
+    ================================================== -->
     <section class="s-pageheader s-pageheader--home">
-        <!-- pageheader
-================================================== -->
-        <div class="s-pageheader">
 
-            <header class="header">
-                <div class="header__content row">
+        <header class="header">
+            <div class="header__content row">
 
-                    <div class="header__logo">
-                        <a class="logo" href="index.php">
-                            <img src="images/logo.png" alt="Homepage">
-                        </a>
-                    </div> <!-- end header__logo -->
+                <div class="header__logo">
+                    <a class="logo" href="index.html">
+                        <img src="post/images/logo.png" alt="Homepage">
+                    </a>
+                </div> <!-- end header__logo -->
 
+                <a class="h1eader__search-trigger" href="cadastro_usuario.php"></a>
+                <a class="hieader__search-trigger" href="login_page.php"></a>
 
-                    <a class="header__search-trigger" href="login_page.php"></a>
-
-                    <div class="header__search">
-
-                        <form role="search" method="get" class="header__search-form" action="#">
-                            <label>
-                                <span class="hide-content">Search for:</span>
-                                <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
-                            </label>
-                            <input type="submit" class="search-submit" value="Search">
-                        </form>
-                        <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
-
-                    </div> <!-- end header__search -->
+            </div> <!-- end header__search -->
 
 
+            <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
+            <nav class="header__nav-wrap">
 
-                    <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+                <h2 class="header__nav-heading h6">Site Navigation</h2>
 
-                    <nav class="header__nav-wrap">
+                <ul class="header__nav">
+                    <li class="current"><a href="index.html" title="">Página principal</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">Categorias</a>
+                        <ul class="sub-menu">
+                            <li><a href="#0">Criptomoedas</a></li>
+                            <li><a href="#0">Software</a></li>
+                            <li><a href="#0">Hardware</a></li>
+                            <li><a href="#0">Tecnologias em geral</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" title="">About</a></li>
+                </ul> <!-- end header__nav -->
 
-                        <h2 class="header__nav-heading h6">Site Navigation</h2>
+                <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
-                        <ul class="header__nav">
-                            <li><a href="index.php" title="">Página Principal</a></li>
-                            <li class="has-children">
-                                <a href="#0" title="">Categorias</a>
-                                <ul class="sub-menu">
-                                    <li><a href="category.html">Cripto</a></li>
-                                    <li><a href="category.html">Software</a></li>
-                                    <li><a href="category.html">Hardware</a></li>
-                                    <li><a href="category.html">Tecnlogias em Geral</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html" title="">About</a></li>
-                        </ul> <!-- end header__nav -->
+            </nav> <!-- end header__nav-wrap -->
 
-                        <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+            </div> <!-- header-content -->
+        </header> <!-- header -->
 
-                    </nav> <!-- end header__nav-wrap -->
-
-                </div> <!-- header-content -->
-            </header> <!-- header -->
-
-        </div> <!-- end s-pageheader -->
 
         <div class="pageheader-content row">
 
@@ -210,7 +192,9 @@ $img9 = $repository->getImagemById($previous8);
 
             </div> <!-- end col-full -->
         </div> <!-- end pageheader-content row -->
+
     </section> <!-- end s-pageheader -->
+
 
     <section class="s-content">
 
@@ -412,6 +396,7 @@ $img9 = $repository->getImagemById($previous8);
         </div> <!-- end masonry-wrap -->
     </section> <!-- s-content -->
 
+
     <!-- s-extra
     ================================================== -->
     <section class="s-extra">
@@ -481,12 +466,11 @@ $img9 = $repository->getImagemById($previous8);
         </div>
     </div>
 
-
     <!-- Java Script
-================================================== -->
-    <script src="js/post/jquery-3.2.1.min.js"></script>
-    <script src="js/post/plugins.js"></script>
-    <script src="js/post/main.js"></script>
+    ================================================== -->
+    <script src="post/js/jquery-3.2.1.min.js"></script>
+    <script src="post/js/plugins.js"></script>
+    <script src="post/js/main.js"></script>
 
 </body>
 

@@ -1823,6 +1823,19 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /* -------------------------------------------------------------------
  * ## header search trigger
  * ------------------------------------------------------------------- */
+ .header__search-trigger::before {
+   font-family: "metropolis-semibold", sans-serif;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   line-height: 21px;
+   content: "Login";
+   display: block;
+   color: #FFFFFF;
+   float: left;
+   padding-right: 33px;
+}
+
 .header__search-trigger {
    height: 21px;
    min-width: 21px;
@@ -1883,7 +1896,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
    .header__logo img {
       width: 225px;
-      height: 40px;
+      height: 0px;
    }
 
    .header__social {
