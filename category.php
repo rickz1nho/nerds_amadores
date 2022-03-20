@@ -83,7 +83,7 @@ if ($cat == 1) {
                                 <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html" title="">About</a></li>
+                        <li><a href="#sobrenos" title="">About</a></li>
                     </ul> <!-- end header__nav -->
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
@@ -94,19 +94,7 @@ if ($cat == 1) {
         </header> <!-- header -->
 
     </div> <!-- end s-pageheader -->
-
-
     <section class="s-content">
-
-        <div class="row narrow">
-            <div class="col-full s-content__header" data-aos="fade-up">
-                <h1>Category: Lifestyle</h1>
-
-                <p class="lead">Dolor similique vitae. Exercitationem quidem occaecati iusto. Id non vitae enim quas
-                    error dolor maiores ut. Exercitationem earum ut repudiandae optio veritatis animi nulla qui dolores.
-                </p>
-            </div>
-        </div>
 
         <div class="row masonry-wrap">
             <div class="masonry">
@@ -161,6 +149,75 @@ if ($cat == 1) {
             </div> <!-- end masonry -->
         </div> <!-- end masonry-wrap -->
     </section> <!-- s-content -->
+
+    <!-- s-extra
+    ================================================== -->
+    <section class="s-extra">
+
+        <div class="row top" id="sobrenos">
+            <div class="col-full text-center md-six tab-full about">
+                <h3>Sobre Nerds Amadores...</h3>
+
+                <p>
+                    Um blog feito com muito carinho, especialmente para a professora Marcela Turim Koshevic.
+                </p>
+            </div> <!-- end about -->
+
+        </div> <!-- end row -->
+
+        <div class="row bottom tags-wrap">
+            <div class="col-full tags">
+                <h3>Categorias</h3>
+
+                <div class="tagcloud">
+                    <a href="category.php?cat=1">Criptomoedas</a>
+                    <a href="category.php?cat=2">Software</a>
+                    <a href="category.php?cat=3">Hardware</a>
+                    <a href="category.php?cat=4">Tecnologias no Geral</a>
+                </div> <!-- end tagcloud -->
+            </div> <!-- end tags -->
+        </div> <!-- end tags-wrap -->
+
+    </section> <!-- end s-extra -->
+
+
+
+    <!-- s-footer
+================================================== -->
+    <footer class="s-footer">
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>© Macholandia 2022</span>
+                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
+                        </span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+
+    </footer> <!-- end s-footer -->
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Java Script
     ================================================== -->
     <script src="post/js/jquery-3.2.1.min.js"></script>
