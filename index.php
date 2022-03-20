@@ -57,6 +57,19 @@ $img8 = $repository->getImagemById($previous7);
 
 $previous8 = $repository->getPreviousPostId($previous7);
 $img9 = $repository->getImagemById($previous8);
+
+if (!empty($_GET['msg'])) {
+    $link = $_GET['msg'];
+    if ($link == 1) {
+?>
+        <div class="alert-box alert-box--info hideit">
+            <p style="text-align:center;">Você já está logado!</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
+<?php
+    } else {
+    }
+}
 ?>
 
 
@@ -92,32 +105,29 @@ $img9 = $repository->getImagemById($previous8);
                 }
                 ?>
 
-            </div> <!-- end header__search -->
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
+                <nav class="header__nav-wrap">
 
-            <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
 
-            <nav class="header__nav-wrap">
+                    <ul class="header__nav">
+                        <li class="current"><a href="index.html" title="">Página principal</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="">Categorias</a>
+                            <ul class="sub-menu">
+                                <li><a href="#0">Criptomoedas</a></li>
+                                <li><a href="#0">Software</a></li>
+                                <li><a href="#0">Hardware</a></li>
+                                <li><a href="#0">Tecnologias em geral</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html" title="">Sobre Nós</a></li>
+                    </ul> <!-- end header__nav -->
 
-                <h2 class="header__nav-heading h6">Site Navigation</h2>
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
-                <ul class="header__nav">
-                    <li class="current"><a href="index.html" title="">Página principal</a></li>
-                    <li class="has-children">
-                        <a href="#0" title="">Categorias</a>
-                        <ul class="sub-menu">
-                            <li><a href="#0">Criptomoedas</a></li>
-                            <li><a href="#0">Software</a></li>
-                            <li><a href="#0">Hardware</a></li>
-                            <li><a href="#0">Tecnologias em geral</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html" title="">About</a></li>
-                </ul> <!-- end header__nav -->
-
-                <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
-
-            </nav> <!-- end header__nav-wrap -->
+                </nav> <!-- end header__nav-wrap -->
 
             </div> <!-- header-content -->
         </header> <!-- header -->

@@ -952,6 +952,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .alert-box--error {
    background-color: #ffd1d2;
    color: #e65153;
+   text-align: center;
 }
 
 .alert-box--success {
@@ -2926,6 +2927,10 @@ html.no-csstransitions .featured {
 
 .s-content--no-padding-bottom {
    padding-bottom: 0;
+}
+
+.s-content--no-padding-top {
+   padding-top: 0;
 }
 
 .s-content--narrow .row {

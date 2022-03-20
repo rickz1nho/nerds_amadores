@@ -1,78 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/register.css">
-    <title>Document</title>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="post/css/base.css">
+    <link rel="stylesheet" href="post/css/vendor.css">
+    <link rel="stylesheet" href="post/css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="post/js/modernizr.js"></script>
+    <script src="post/js/pace.min.js"></script>
+
 </head>
 
-<body>
-
-    <?php
 
 
-    if (!empty($_SESSION['msg'])) {
-        echo $_SESSION['msg'];
-        $_SESSION['msg'] = null;
-    }
+<?php
+require_once __DIR__ . "/config.php";
+require_once __DIR__ . "/app/repositories/UserRepository.php";
+if (isset($_SESSION['usuario'])) {
+    header("location: {$base_path}/index.php?msg=1");
+}
+?>
 
-    require_once __DIR__ . "/config.php";
-    if (isset($_SESSION['usuario'])) {
-        echo  "<script>alert('Você já está logado!');</script>";
-        header("location: {$base_path}/index.php?msg=talogadoja");
-    }
+<body id="top">
 
-    ?>
+    <!-- pageheader
+================================================== -->
+    <div class="s-pageheader">
 
-    <div class="mask d-flex align-items-center h-50 fundo" style="height: 100vh;">
-        <div class="container py-4 h-25">
-            <div class="row g-0 d-flex justify-content-center align-items-center">
-                <div class="col-12 col-md-5">
-                    <div class="card" style="border-radius: 15px; background: rgba(4, 0, 255, 0.555)">
-                        <div class="card-body p-4">
-                            <h2 class="text-uppercase text-center mb-5">Criar uma conta</h2>
+        <header class="header">
+            <div class="header__content row">
 
-                            <form action="app/controllers/userController.php?action=register" method="POST">
+                <div class="header__logo">
+                    <a class="logo" href="index.php">
+                        <img src="post/images/logo.png" alt="Homepage">
+                    </a>
 
-                                <div class="form-outline mb-3">
-                                    <label for="field_nome_cadastro" class="form-label">Nome</label>
-                                    <input name="field_nome_cadastro" type="text" class="form-control form-control-md" />
-                                </div>
+                </div> <!-- end header__logo -->
 
-                                <div class="form-outline mb-3">
-                                    <label for="field_usuario_cadastro" class="form-label">Usuário</label>
-                                    <input name="field_usuario_cadastro" type=" text" class="form-control form-control-md" />
-                                </div>
+                <a class="hieader__search-trigger" href="login_page.php"></a>
 
-                                <div class="form-outline mb-3">
-                                    <label for="field_email_cadastro" class="form-label">Email</label>
-                                    <input name="field_email_cadastro" type="email" class="form-control form-control-md" />
-                                </div>
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
-                                <div class="form-outline mb-3">
-                                    <label for="field_senha_cadastro" class="form-label" ">Senha</label>
-                                    <input name=" field_senha_cadastro" type="password" class="form-control form-control-md" />
-                                </div>
+                <nav class="header__nav-wrap">
 
-                                <div class="d-flex justify-content-center">
-                                    <button type="submit" class="button text-center">Registrar</button>
-                                </div>
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
 
-                                <p class="text-center mt-5 mb-0" style="color: black">Já tem uma conta? <a href="login_page.php" class="fw-bold text-body"><u>Logue aqui!</u></a></p>
+                    <ul class="header__nav">
+                        <li><a href="index.php" title="">Página Principal</a></li>
+                        <li class="has-children">
+                            <a href="#0" title="">Categorias</a>
+                            <ul class="sub-menu">
+                                <li><a href="category.html">Cripto</a></li>
+                                <li><a href="category.html">Software</a></li>
+                                <li><a href="category.html">Hardware</a></li>
+                                <li><a href="category.html">Tecnlogias em Geral</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html" title="">Sobre Nós</a></li>
+                    </ul> <!-- end header__nav -->
 
-                            </form>
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
+                </nav> <!-- end header__nav-wrap -->
+
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+
+    </div> <!-- end s-pageheader -->
+
+
+    <!-- s-content
+================================================== -->
+    <section class="s-content s-content--narrow s-content--no-padding-top">
+        <div class="row format-standard">
+
+
+            <?php
+            require_once __DIR__ . "/config.php";
+            if (isset($_SESSION['usuario'])) {
+                header("location: {$base_path}/index.php?msg=1");
+            }
+            ?>
+
+            <div class="s-content__header col-full">
+
+                <h2 class="add-bottom text-center">Cadastro</h3>
+
+                    <form action="app/controllers/userController.php?action=register" method="POST">
+                        <div>
+                            <label class="text-left" for="sampleInput">Insira seu nome</label>
+                            <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_nome_cadastro">
                         </div>
+                        <div>
+                            <label class="text-left" for="sampleInput">Escolha um usuário</label>
+                            <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_usuario_cadastro">
+                        </div>
+                        <div>
+                            <label class="text-left" for="sampleInput">Insira um email</label>
+                            <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_cadastro">
+                        </div>
+                        <div>
+                            <label class="text-left" for="sampleInput">Escolha uma senha</label>
+                            <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_senha_cadastro">
+                        </div>
+
+                        <input class="btn btn--primary full-width" type="submit" value="REGISTRAR">
+
+                    </form>
+
+                    <p>Ja tem uma conta registrada? <a href="login_page.php">Entre aqui</a></p>
+
+            </div>
+
+    </section> <!-- s-content -->
+
+
+
+    <!-- s-footer
+================================================== -->
+    <footer class="s-footer">
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>© Macholandia 2022</span>
+                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_" target="_blank">Gabriel Deniz</a>
+                        </span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
                     </div>
                 </div>
             </div>
+        </div> <!-- end s-footer__bottom -->
+
+
+    </footer> <!-- end s-footer -->
+
+
+    <!-- preloader
+================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
+
+
+    <!-- Java Script
+================================================== -->
+    <script src="js/post/jquery-3.2.1.min.js"></script>
+    <script src="js/post/plugins.js"></script>
+    <script src="js/post/main.js"></script>
 
 </body>
 
