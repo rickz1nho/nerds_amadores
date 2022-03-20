@@ -195,6 +195,18 @@ class UserRepository
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         return $conteudo['categoria'];
     }
+    function getCategoriaId($categoria)
+    {
+        if($categoria == ' Cripto'){
+            return 1;
+        }elseif($categoria == ' Software'){
+            return 2;
+        }elseif($categoria == ' Hardware'){
+            return 3;
+        }elseif($categoria == ' Tecnologias em Geral'){
+            return 4;
+        }
+    }
     function viewConteudoById($id)
     {
         $sql = "SELECT `conteudo` FROM `publicacao` WHERE `id` = $id";
@@ -269,6 +281,24 @@ class UserRepository
         $sql = "SELECT `id` FROM `publicacao` WHERE `id` < $id ORDER BY `id` DESC";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
+        $id1 = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($id1)){
+        return $id1['id'];
+        }else return null;
+    }
+    function getPreviousPostIdWCat($id, $categoria){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `id` < $id AND `categoria` = '$categoria' ORDER BY `id` DESC";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $id1 = $statement->fetch(PDO::FETCH_ASSOC);
+        if(!empty($id1)){
+        return $id1['id'];
+        }else return $id;
+    }
+    function getLastPostIdWCat($categoria){
+        $sql = "SELECT `id` FROM `publicacao` WHERE `categoria` = '$categoria' ORDER BY `postagem` DESC";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
         $id = $statement->fetch(PDO::FETCH_ASSOC);
         if(!empty($id)){
         return $id['id'];
@@ -295,5 +325,12 @@ class UserRepository
         $statement->execute();
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         return $conteudo['imagem'];
+    }
+    function countPostsByCat($categoria){
+        $sql = "SELECT count(`id`) FROM `publicacao` WHERE `categoria` = '$categoria'";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $numero = $statement->fetch(PDO::FETCH_ASSOC);
+        return $numero['count(`id`)'];
     }
 }

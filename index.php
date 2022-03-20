@@ -106,10 +106,10 @@ $img9 = $repository->getImagemById($previous8);
                     <li class="has-children">
                         <a href="#0" title="">Categorias</a>
                         <ul class="sub-menu">
-                            <li><a href="#0">Criptomoedas</a></li>
-                            <li><a href="#0">Software</a></li>
-                            <li><a href="#0">Hardware</a></li>
-                            <li><a href="#0">Tecnologias em geral</a></li>
+                        <li><a href="category.php?cat=1">Cripto</a></li>
+                        <li><a href="category.php?cat=2">Software</a></li>
+                        <li><a href="category.php?cat=3">Hardware</a></li>
+                        <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html" title="">About</a></li>
@@ -134,7 +134,8 @@ $img9 = $repository->getImagemById($previous8);
                         <div class="entry" style="background-image:url('<?php echo $img ?>');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
+                            <?php $categoria = $repository->getCategoriaById($lastPost); ?>
+                                <span class="entry__category"><a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
 
                                 <h1><a href="post.php?id=<?php echo $lastPost ?>" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
 
@@ -158,7 +159,8 @@ $img9 = $repository->getImagemById($previous8);
                         <div class="entry" style="background-image:url('<?php echo $img2 ?>');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
+                            <?php $categoria = $repository->getCategoriaById($previous1); ?>
+                                <span class="entry__category"><a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
 
                                 <h1><a href="post.php?id=<?php echo $previous1 ?>" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
 
@@ -179,7 +181,8 @@ $img9 = $repository->getImagemById($previous8);
                         <div class="entry" style="background-image:url('<?php echo $img3 ?>');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
+                            <?php $categoria = $repository->getCategoriaById($previous2); ?>
+                                <span class="entry__category"><a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
 
                                 <h1><a href="post.php?id=<?php echo $previous2 ?>" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
 
@@ -238,7 +241,8 @@ $img9 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous3); ?></a>
+                            <?php $categoria = $repository->getCategoriaById($previous3); ?>
+                                <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous3); ?></a>
                             </span>
                         </div>
                     </div>
@@ -269,7 +273,8 @@ $img9 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous4); ?></a>
+                            <?php $categoria = $repository->getCategoriaById($previous4); ?>
+                                <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous4); ?></a>
                             </span>
                         </div>
                     </div>
@@ -300,7 +305,8 @@ $img9 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous5); ?></a>
+                            <?php $categoria = $repository->getCategoriaById($previous5); ?>
+                                <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous5); ?></a>
                             </span>
                         </div>
                     </div>
@@ -331,7 +337,8 @@ $img9 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="#"><?php echo $repository->getCategoriaById($previous6); ?></a>
+                            <?php $categoria = $repository->getCategoriaById($previous6); ?>
+                                <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous6); ?></a>
                             </span>
                         </div>
                     </div>
@@ -363,7 +370,8 @@ $img9 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous7); ?></a>
+                            <?php $categoria = $repository->getCategoriaById($previous7); ?>
+                                <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous7); ?></a>
                             </span>
                         </div>
                     </div>
@@ -395,7 +403,8 @@ $img9 = $repository->getImagemById($previous8);
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html"><?php echo $repository->getCategoriaById($previous8); ?></a>
+                                <?php $categoria = $repository->getCategoriaById($previous8); ?>
+                                <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous8); ?></a>
                             </span>
                         </div>
                     </div>

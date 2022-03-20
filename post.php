@@ -47,7 +47,7 @@ $id = $_GET['id'];
 
                 <div class="header__logo">
                     <a class="logo" href="index.php">
-                        <img src="nos4.png" alt="Homepage">
+                        <img src="post/images/logo.png" alt="Homepage">
                     </a>
 
                 </div> <!-- end header__logo -->
@@ -68,10 +68,10 @@ $id = $_GET['id'];
                         <li class="has-children">
                             <a href="#0" title="">Categorias</a>
                             <ul class="sub-menu">
-                                <li><a href="category.html">Cripto</a></li>
-                                <li><a href="category.html">Software</a></li>
-                                <li><a href="category.html">Hardware</a></li>
-                                <li><a href="category.html">Tecnlogias em Geral</a></li>
+                                <li><a href="category.php?cat=1">Cripto</a></li>
+                                <li><a href="category.php?cat=2">Software</a></li>
+                                <li><a href="category.php?cat=3">Hardware</a></li>
+                                <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html" title="">About</a></li>
