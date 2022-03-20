@@ -105,28 +105,6 @@ if (!empty($_GET['msg'])) {
                 }
                 ?>
 
-                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
-
-                <nav class="header__nav-wrap">
-
-                    <h2 class="header__nav-heading h6">Site Navigation</h2>
-
-                    <ul class="header__nav">
-                        <li class="current"><a href="index.html" title="">Página principal</a></li>
-                        <li class="has-children">
-                            <a href="#0" title="">Categorias</a>
-                            <ul class="sub-menu">
-                                <li><a href="#0">Criptomoedas</a></li>
-                                <li><a href="#0">Software</a></li>
-                                <li><a href="#0">Hardware</a></li>
-                                <li><a href="#0">Tecnologias em geral</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html" title="">Sobre Nós</a></li>
-                    </ul> <!-- end header__nav -->
-
-                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
-
                 <ul class="header__nav">
                     <li class="current"><a href="index.html" title="">Página principal</a></li>
                     <li class="has-children">
@@ -140,8 +118,6 @@ if (!empty($_GET['msg'])) {
                     </li>
                     <li><a href="about.html" title="">About</a></li>
                 </ul> <!-- end header__nav -->
-
-                <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
             </nav> <!-- end header__nav-wrap -->
 
