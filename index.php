@@ -127,7 +127,6 @@ if (!empty($_GET['msg'])) {
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
-<<<<<<< HEAD
                 <ul class="header__nav">
                     <li class="current"><a href="index.html" title="">Página principal</a></li>
                     <li class="has-children">
@@ -145,9 +144,6 @@ if (!empty($_GET['msg'])) {
                 <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
             </nav> <!-- end header__nav-wrap -->
-=======
-                </nav> <!-- end header__nav-wrap -->
->>>>>>> c987fb69cb66d7947fa6ebaa8c2babee84bd42a7
 
             </div> <!-- header-content -->
         </header> <!-- header -->
