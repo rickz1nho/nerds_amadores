@@ -87,7 +87,7 @@ if (!empty($_GET['msg'])) {
             <div class="header__content row">
 
                 <div class="header__logo">
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="index.php">
                         <img src="post/images/logo.png" alt="Homepage">
                     </a>
                 </div> <!-- end header__logo -->
