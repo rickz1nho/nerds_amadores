@@ -16,14 +16,14 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/post/base.css">
-    <link rel="stylesheet" href="css/post/vendor.css">
-    <link rel="stylesheet" href="css/post/main.css">
+    <link rel="stylesheet" href="post/css/base.css">
+    <link rel="stylesheet" href="post/css/vendor.css">
+    <link rel="stylesheet" href="post/css/main.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/post/modernizr.js"></script>
-    <script src="js/post/pace.min.js"></script>
+    <script src="post/js/modernizr.js"></script>
+    <script src="post/js/pace.min.js"></script>
 
 </head>
 
@@ -52,9 +52,18 @@ $id = $_GET['id'];
 
                 </div> <!-- end header__logo -->
 
-
-                <div class="header__search">
-                </div> <!-- end header__search -->
+                <?php
+                if (!isset($_SESSION['usuario'])) {
+                ?>
+                    <a class="h1eader__search-trigger" href="cadastro_usuario.php"></a>
+                    <a class="hieader__search-trigger" href="login_page.php"></a>
+                <?php
+                } else {
+                ?>
+                    <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                <?php
+                }
+                ?>
 
 
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
@@ -124,25 +133,25 @@ $id = $_GET['id'];
 
                 <div class="s-content__pagenav">
                     <div class="s-content__nav col-full">
-                    <?php if(!empty($repository->getPreviousPostId($id))){ ?> 
-                    <div class="s-content__prev">
-                        <?php
-                        $prev = $repository->getPreviousPostId($id);
-                        echo "<a href=post.php?id=$prev>" ?>
+                        <?php if (!empty($repository->getPreviousPostId($id))) { ?>
+                            <div class="s-content__prev">
+                                <?php
+                                $prev = $repository->getPreviousPostId($id);
+                                echo "<a href=post.php?id=$prev>" ?>
                                 <span>Previous Post</span>
                                 <?php $repository->ViewTituloById($prev) ?>
-                            </a>
-                        </div> <?php } ?>
+                                </a>
+                            </div> <?php } ?>
 
-                    <?php if(!empty($repository->getNextPostId($id))){ ?> 
-                    <div class="s-content__next">
-                        <?php
-                        $next = $repository->getNextPostId($id);
-                        echo "<a href=post.php?id=$next>" ?>
+                        <?php if (!empty($repository->getNextPostId($id))) { ?>
+                            <div class="s-content__next">
+                                <?php
+                                $next = $repository->getNextPostId($id);
+                                echo "<a href=post.php?id=$next>" ?>
                                 <span>Next Post</span>
                                 <?php $repository->ViewTituloById($next) ?>
-                            </a>
-                        </div> <?php } ?>
+                                </a>
+                            </div> <?php } ?>
                     </div>
                 </div> <!-- end s-content__pagenav -->
 
