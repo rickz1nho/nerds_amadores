@@ -34,13 +34,13 @@ require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
 $cat = $_GET['cat'];
-if($cat == 1){
+if ($cat == 1) {
     $categoria = " Cripto";
-}elseif($cat == 2){
+} elseif ($cat == 2) {
     $categoria = " Software";
-}elseif($cat == 3){
+} elseif ($cat == 3) {
     $categoria = " Hardware";
-}elseif($cat == 4){
+} elseif ($cat == 4) {
     $categoria = " Tecnologias em Geral";
 };
 ?>
@@ -94,61 +94,73 @@ if($cat == 1){
         </header> <!-- header -->
 
     </div> <!-- end s-pageheader -->
+
+
     <section class="s-content">
 
-<div class="row masonry-wrap">
-    <div class="masonry">
+        <div class="row narrow">
+            <div class="col-full s-content__header" data-aos="fade-up">
+                <h1>Category: Lifestyle</h1>
 
-        <div class="grid-sizer"></div>
-
-    <?php  
-    
-    $lastPost = $repository->getLastPostIdWCat($categoria);
-    $todos = $repository->countPostsByCat($categoria);
-    $i = $lastPost+1;
-    $j = 1;
-
-     do{
-        $i = $repository->getPreviousPostIdWCat($i, $categoria);
-        $j++;
-        $img = $repository->getImagemById($i);
-    ?>
-
-        <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-            <div class="entry__thumb">
-                <a href="post.php?id=<?php echo $i ?>" class="entry__thumb-link">
-                    <img src="<?php echo $img ?>" srcset="<?php echo $img ?> 1x, <?php echo $img ?> 2x" alt="">
-                </a>
+                <p class="lead">Dolor similique vitae. Exercitationem quidem occaecati iusto. Id non vitae enim quas
+                    error dolor maiores ut. Exercitationem earum ut repudiandae optio veritatis animi nulla qui dolores.
+                </p>
             </div>
+        </div>
 
-            <div class="entry__text">
-                <div class="entry__header">
+        <div class="row masonry-wrap">
+            <div class="masonry">
 
-                    <div class="entry__date">
-                        <a href="post.php?id=<?php echo $i ?>"><?php echo $repository->getDataById($i); ?></a>
-                    </div>
-                    <h1 class="entry__title"><a href="post.php?id=<?php echo $i ?>"><?php echo $repository->getTituloById($i); ?></a>
-                    </h1>
+                <div class="grid-sizer"></div>
 
-                </div>
-                <div class="entry__excerpt">
-                    <p>
-                        <?php echo $repository->getAutorById($i); ?>
-                    </p>
-                </div>
-                <div class="entry__meta">
-                    <span class="entry__meta-links">
-                        <a href="category.html"><?php echo $repository->getCategoriaById($i); ?></a>
-                    </span>
-                </div>
-            </div>
+                <?php
 
-        </article> <!-- end article -->
-<?php }while($j <= $todos); ?>
-</div> <!-- end masonry -->
-</div> <!-- end masonry-wrap -->
-</section> <!-- s-content -->
+                $lastPost = $repository->getLastPostIdWCat($categoria);
+                $todos = $repository->countPostsByCat($categoria);
+                $i = $lastPost + 1;
+                $j = 1;
+
+                do {
+                    $i = $repository->getPreviousPostIdWCat($i, $categoria);
+                    $j++;
+                    $img = $repository->getImagemById($i);
+                ?>
+
+                    <article class="masonry__brick entry format-standard" data-aos="fade-up">
+
+                        <div class="entry__thumb">
+                            <a href="post.php?id=<?php echo $i ?>" class="entry__thumb-link">
+                                <img src="<?php echo $img ?>" srcset="<?php echo $img ?> 1x, <?php echo $img ?> 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="entry__text">
+                            <div class="entry__header">
+
+                                <div class="entry__date">
+                                    <a href="post.php?id=<?php echo $i ?>"><?php echo $repository->getDataById($i); ?></a>
+                                </div>
+                                <h1 class="entry__title"><a href="post.php?id=<?php echo $i ?>"><?php echo $repository->getTituloById($i); ?></a>
+                                </h1>
+
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                    <?php echo $repository->getAutorById($i); ?>
+                                </p>
+                            </div>
+                            <div class="entry__meta">
+                                <span class="entry__meta-links">
+                                    <a href="category.html"><?php echo $repository->getCategoriaById($i); ?></a>
+                                </span>
+                            </div>
+                        </div>
+
+                    </article> <!-- end article -->
+                <?php } while ($j <= $todos); ?>
+            </div> <!-- end masonry -->
+        </div> <!-- end masonry-wrap -->
+    </section> <!-- s-content -->
     <!-- Java Script
     ================================================== -->
     <script src="post/js/jquery-3.2.1.min.js"></script>
