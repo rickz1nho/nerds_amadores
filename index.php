@@ -116,7 +116,7 @@ if (!empty($_GET['msg'])) {
                         <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                         </ul>
                     </li>
-                    <li><a href="about.html" title="">About</a></li>
+                    <li><a href="#sobrenos" title="">About</a></li>
                 </ul> <!-- end header__nav -->
 
             </nav> <!-- end header__nav-wrap -->
@@ -422,7 +422,7 @@ if (!empty($_GET['msg'])) {
     ================================================== -->
     <section class="s-extra">
 
-        <div class="row top">
+        <div class="row top" id="sobrenos">
             <div class="col-full text-center md-six tab-full about">
                 <h3>Sobre Nerds Amadores...</h3>
 
@@ -438,10 +438,10 @@ if (!empty($_GET['msg'])) {
                 <h3>Categorias</h3>
 
                 <div class="tagcloud">
-                    <a href="#0">Criptomoedas</a>
-                    <a href="#0">Software</a>
-                    <a href="#0">Hardware</a>
-                    <a href="#0">Tecnologias no Geral</a>
+                    <a href="category.php?cat=1">Criptomoedas</a>
+                    <a href="category.php?cat=2">Software</a>
+                    <a href="category.php?cat=3">Hardware</a>
+                    <a href="category.php?cat=4">Tecnologias no Geral</a>
                 </div> <!-- end tagcloud -->
             </div> <!-- end tags -->
         </div> <!-- end tags-wrap -->
