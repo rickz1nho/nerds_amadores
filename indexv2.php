@@ -79,8 +79,18 @@ $img9 = $repository->getImagemById($previous8);
                     </a>
                 </div> <!-- end header__logo -->
 
-                <a class="h1eader__search-trigger" href="cadastro_usuario.php"></a>
-                <a class="hieader__search-trigger" href="login_page.php"></a>
+                <?php
+                if (!isset($_SESSION['usuario'])) {
+                ?>
+                    <a class="h1eader__search-trigger" href="cadastro_usuario.php"></a>
+                    <a class="hieader__search-trigger" href="login_page.php"></a>
+                <?php
+                } else {
+                ?>
+                    <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                <?php
+                }
+                ?>
 
             </div> <!-- end header__search -->
 

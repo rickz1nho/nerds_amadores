@@ -2025,6 +2025,30 @@ body.search-is-visible {
    padding-right: 13px;
 }
 
+.h2eader__search-trigger {
+   height: 21px;
+   min-width: 21px;
+   position: absolute;
+   right: 120px;
+   top: 15px;
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-size: contain;
+}
+
+.h2eader__search-trigger::before {
+   font-family: "metropolis-semibold", sans-serif;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   line-height: 21px;
+   content: "MEU PERFIL";
+   display: block;
+   color: #FFFFFF;
+   float: left;
+   padding-right: 13px;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * header components
