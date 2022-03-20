@@ -15,7 +15,7 @@ INSERT INTO usuarios (nome, usuario, senha, email, nivel) VALUES ('administrador
 
 CREATE TABLE IF NOT EXISTS `publicacao` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-      `titulo` VARCHAR(50) NOT NULL,
+      `titulo` VARCHAR(70) NOT NULL,
       `categoria` VARCHAR(50) NOT NULL,
       `autor` VARCHAR(26) NOT NULL,
       `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -23,20 +23,6 @@ CREATE TABLE IF NOT EXISTS `publicacao` (
       `imagem` text NOT NULL,
       PRIMARY KEY (`id`));
 
-CREATE TABLE IF NOT EXISTS `comentario` (
-      `autor` VARCHAR(26) NOT NULL,
-      `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-      `conteudo` text NOT NULL,
-      `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-      PRIMARY KEY (`id`),
-      FOREIGN KEY ( `id` ) REFERENCES `publicacao`( `id` ));
-
-CREATE TABLE IF NOT EXISTS `favoritos` (
-  `user_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `publi_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`user_id`, `publi_id`),
-  FOREIGN KEY (`user_id`) REFERENCES `usuarios`(`id`),
-  FOREIGN KEY (`movie_id`) REFERENCES `publicacao`(`id`));
 
 INSERT INTO `publicacao` (`titulo`, `categoria`, `autor`, `postagem`, `conteudo`, `imagem`) VALUES
 (' Boas-vindas!', ' Tecnologias em Geral', ' rickzinho', '2022-03-18 13:42:53', ' <p>Ol&aacute;! Nos somos os nerds amadores, sejam bem-vindos e aproveitem!</p> ', ' app/controllers/images/carousel/Nerds Amadores.png'),
