@@ -121,10 +121,38 @@ class UserRepository
         $statement->execute();
     }
 
-    function getId(string $id)
+    function getId(string $nome)
     {
-        $sql = "SELECT `id` FROM `usuarios` WHERE `usuario` = '$id'";
+        $sql = "SELECT `id` FROM `usuarios` WHERE `usuario` = '$nome'";
 
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
+        return $usuario_do_banco;
+    }
+
+    function getIdAllEditor()
+    {
+        $sql = "SELECT `id` FROM `usuarios` WHERE `nivel` = 3";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $usuario_do_banco[0];
+    }
+
+    function getUserEditor($id)
+    {
+        $sql = "SELECT `nome` FROM `usuarios` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
+        return $usuario_do_banco;
+    }
+
+    function getMailEditor($id)
+    {
+        $sql = "SELECT `email` FROM `usuarios` WHERE `id` = $id";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
