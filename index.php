@@ -134,7 +134,7 @@ if (!empty($_GET['msg'])) {
                 ?>
 
                 <ul class="header__nav">
-                    <li class="current"><a href="index.html" title="">Página principal</a></li>
+                    <li class="current"><a href="index.php" title="">Página principal</a></li>
                     <li class="has-children">
                         <a href="#0" title="">Categorias</a>
                         <ul class="sub-menu">

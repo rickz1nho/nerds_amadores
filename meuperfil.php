@@ -142,7 +142,7 @@ valida_login();
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha uma senha</label>
-                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="<?= $_SESSION['usuario']['senha'] ?>">
+                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="">
                             </div>
 
                             <input class="btn btn--primary full-width" type="submit" value="ATUALIZAR">
@@ -209,7 +209,7 @@ valida_login();
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha uma senha</label>
-                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="<?= $_SESSION['usuario']['senha'] ?>">
+                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="">
                             </div>
 
                             <input class="btn btn--primary full-width" type="submit" value="ATUALIZAR">
@@ -291,7 +291,7 @@ valida_login();
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha uma senha</label>
-                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="<?= $_SESSION['usuario']['senha'] ?>">
+                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="">
                             </div>
 
                             <input class="btn btn--primary full-width" type="submit" value="ATUALIZAR">

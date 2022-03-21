@@ -64,7 +64,7 @@ function register()
 
         $_SESSION['msg'] = $e->getMessage();
 
-        header("location:" . BASE_URL . "/cadastro_usuario.php");
+        header("location:" . BASE_URL . "/cadastro_usuario.php?msg=20");
     }
 }
 
