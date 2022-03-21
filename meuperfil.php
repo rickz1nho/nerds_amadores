@@ -39,7 +39,7 @@ valida_login();
 
     <!-- pageheader
 ================================================== -->
-    <div class="s-pageheader">
+    <div class="s-pageheader add-bottom">
 
         <header class="header">
             <div class="header__content row">
@@ -283,10 +283,86 @@ valida_login();
                     </div>
 
                     <div id="promover" style="display: none;">
-                        <p>Teste promover</p>
+                        <div class="row add-bottom">
+
+                            <div class="col-twelve">
+
+                                <h3>Gestão de editores</h3>
+                                <p>Controle quem tem e quem não tem o acesso de editor no blog</p>
+
+                                <div class="table-responsive">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Nome do usuário</th>
+                                                <th>Email do usuário</th>
+                                                <th>Promover para Editor/Remover cargo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Diniba</td>
+                                                <td>gabrieldinizm03@gmail.com</td>
+                                                <td><input class="btn full-width" type="submit" value="Adicionar cargo"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rickzinho</td>
+                                                <td>rickzinho@gmail.com</td>
+                                                <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div> <!-- end row -->
                     </div>
                     <div id="gerencpost" style="display: none;">
-                        <p>Teste gerenciar</p>
+                        <div class="row add-bottom">
+
+                            <div>
+
+                                <h3>Gerenciamento das publicações</h3>
+                                <p>Atualize ou remova as publicações do blog</p>
+
+                                <div class="table">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Título da publicação</th>
+                                                <th>Categoria</th>
+                                                <th>Autor</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mapeamento genético de DNA passar a contar com Inteligência artifical</td>
+                                                <td>Tecnologias em Geral</td>
+                                                <td>Diniba</td>
+                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Novas linguagens de programação emergentes</td>
+                                                <td>Software</td>
+                                                <td>Rickzinho</td>
+                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div> <!-- end row -->
                     </div>
                     <div id="favoritos" style="display: none;">
                         <p>Teste Favoritos</p>

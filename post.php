@@ -60,7 +60,7 @@ $id = $_GET['id'];
                 <?php
                 } else {
                 ?>
-                    <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                    <a class="h2eader__search-trigger" href="meuperfil.php"></a>
                     <form name="logout" action="app/controllers/logout.php" method="POST">
 
                         <a class="h3eader__search-trigger" href="javascript: submitform()"></a>

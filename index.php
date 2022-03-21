@@ -81,10 +81,10 @@ if (!empty($_GET['msg'])) {
 
     <!-- pageheader
     ================================================== -->
-    <section class="s-pageheader s-pageheader--home ">
+    <section class="s-pageheader s-pageheader--home  ">
 
         <header class="header">
-            <div class="header__content row">
+            <div class="header__content row add-bottom">
 
                 <div class="header__logo">
                     <a class="logo" href="index.php">
@@ -100,7 +100,7 @@ if (!empty($_GET['msg'])) {
                 <?php
                 } else {
                 ?>
-                    <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                    <a class="h2eader__search-trigger" href="meuperfil.php"></a>
                     <form name="logout" action="app/controllers/logout.php" method="POST">
 
                         <a class="h3eader__search-trigger" href="javascript: submitform()"></a>
@@ -138,7 +138,7 @@ if (!empty($_GET['msg'])) {
 
         <div class="pageheader-content row">
 
-            <div class="col-full">
+            <div class="col-full add-top">
 
                 <div class="featured">
 
