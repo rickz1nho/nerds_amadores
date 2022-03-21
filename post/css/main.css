@@ -589,7 +589,6 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
-textarea,
 select {
    display: block;
    height: 6rem;
@@ -661,10 +660,6 @@ select {
    display: none;
 }
 
-textarea {
-   min-height: 25rem;
-}
-
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -672,7 +667,6 @@ input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
-textarea:focus,
 select:focus {
    color: #0054a5;
    border-bottom: 2px solid #0054a5;
@@ -735,12 +729,6 @@ label > input[type="checkbox"], label > input[type="radio"] {
  * ## Change Autocomplete styles in Chrome
  * ------------------------------------------------------------------- */
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus
-input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-   -webkit-text-fill-color: #0054a5;
-   transition: background-color 5000s ease-in-out 0s;
-}
-
 
 
 /* ===================================================================
@@ -2010,6 +1998,30 @@ body.search-is-visible {
    color: #FFFFFF;
    float: left;
    padding-right: 13px;
+}
+
+.h4eader__search-trigger {
+   height: 21px;
+   min-width: 21px;
+   position: absolute;
+   right: 20px;
+   top: 15px;
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-size: contain;
+}
+
+.h4eader__search-trigger::before {
+   font-family: "metropolis-semibold", sans-serif;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   line-height: 21px;
+   content: "CRIAR POST";
+   display: block;
+   color: #FFFFFF;
+   float: left;
+   padding-right: 203px;
 }
 
 /* ------------------------------------------------------------------- 
