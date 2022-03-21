@@ -61,6 +61,16 @@ $id = $_GET['id'];
                 } else {
                 ?>
                     <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                    <form name="logout" action="app/controllers/logout.php" method="POST">
+
+                        <a class="h3eader__search-trigger" href="javascript: submitform()"></a>
+                    </form>
+
+                    <script type="text/javascript">
+                        function submitform() {
+                            document.logout.submit();
+                        }
+                    </script>
                 <?php
                 }
                 ?>

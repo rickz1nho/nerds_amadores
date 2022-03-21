@@ -81,7 +81,7 @@ if (!empty($_GET['msg'])) {
 
     <!-- pageheader
     ================================================== -->
-    <section class="s-pageheader s-pageheader--home">
+    <section class="s-pageheader s-pageheader--home ">
 
         <header class="header">
             <div class="header__content row">
@@ -101,6 +101,17 @@ if (!empty($_GET['msg'])) {
                 } else {
                 ?>
                     <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                    <form name="logout" action="app/controllers/logout.php" method="POST">
+
+                        <a class="h3eader__search-trigger" href="javascript: submitform()"></a>
+                    </form>
+
+                    <script type="text/javascript">
+                        function submitform() {
+                            document.logout.submit();
+                        }
+                    </script>
+
                 <?php
                 }
                 ?>
@@ -110,16 +121,16 @@ if (!empty($_GET['msg'])) {
                     <li class="has-children">
                         <a href="#0" title="">Categorias</a>
                         <ul class="sub-menu">
-                        <li><a href="category.php?cat=1">Cripto</a></li>
-                        <li><a href="category.php?cat=2">Software</a></li>
-                        <li><a href="category.php?cat=3">Hardware</a></li>
-                        <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
+                            <li><a href="category.php?cat=1">Cripto</a></li>
+                            <li><a href="category.php?cat=2">Software</a></li>
+                            <li><a href="category.php?cat=3">Hardware</a></li>
+                            <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                         </ul>
                     </li>
                     <li><a href="#sobrenos" title="">About</a></li>
                 </ul> <!-- end header__nav -->
 
-            </nav> <!-- end header__nav-wrap -->
+                </nav> <!-- end header__nav-wrap -->
 
             </div> <!-- header-content -->
         </header> <!-- header -->
@@ -136,7 +147,7 @@ if (!empty($_GET['msg'])) {
                         <div class="entry" style="background-image:url('<?php echo $img ?>');">
 
                             <div class="entry__content">
-                            <?php $categoria = $repository->getCategoriaById($lastPost); ?>
+                                <?php $categoria = $repository->getCategoriaById($lastPost); ?>
                                 <span class="entry__category"><a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($lastPost); ?></a></span>
 
                                 <h1><a href="post.php?id=<?php echo $lastPost ?>" title=""><?php echo $repository->getTituloById($lastPost); ?></a></h1>
@@ -161,7 +172,7 @@ if (!empty($_GET['msg'])) {
                         <div class="entry" style="background-image:url('<?php echo $img2 ?>');">
 
                             <div class="entry__content">
-                            <?php $categoria = $repository->getCategoriaById($previous1); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous1); ?>
                                 <span class="entry__category"><a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous1); ?></a></span>
 
                                 <h1><a href="post.php?id=<?php echo $previous1 ?>" title=""><?php echo $repository->getTituloById($previous1); ?></a></h1>
@@ -183,7 +194,7 @@ if (!empty($_GET['msg'])) {
                         <div class="entry" style="background-image:url('<?php echo $img3 ?>');">
 
                             <div class="entry__content">
-                            <?php $categoria = $repository->getCategoriaById($previous2); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous2); ?>
                                 <span class="entry__category"><a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous2); ?></a></span>
 
                                 <h1><a href="post.php?id=<?php echo $previous2 ?>" title=""><?php echo $repository->getTituloById($previous2); ?></a></h1>
@@ -243,7 +254,7 @@ if (!empty($_GET['msg'])) {
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                            <?php $categoria = $repository->getCategoriaById($previous3); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous3); ?>
                                 <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous3); ?></a>
                             </span>
                         </div>
@@ -275,7 +286,7 @@ if (!empty($_GET['msg'])) {
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                            <?php $categoria = $repository->getCategoriaById($previous4); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous4); ?>
                                 <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous4); ?></a>
                             </span>
                         </div>
@@ -307,7 +318,7 @@ if (!empty($_GET['msg'])) {
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                            <?php $categoria = $repository->getCategoriaById($previous5); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous5); ?>
                                 <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous5); ?></a>
                             </span>
                         </div>
@@ -339,7 +350,7 @@ if (!empty($_GET['msg'])) {
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                            <?php $categoria = $repository->getCategoriaById($previous6); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous6); ?>
                                 <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous6); ?></a>
                             </span>
                         </div>
@@ -372,7 +383,7 @@ if (!empty($_GET['msg'])) {
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                            <?php $categoria = $repository->getCategoriaById($previous7); ?>
+                                <?php $categoria = $repository->getCategoriaById($previous7); ?>
                                 <a href="category.php?cat=<?php echo $repository->getCategoriaId($categoria); ?>"><?php echo $repository->getCategoriaById($previous7); ?></a>
                             </span>
                         </div>

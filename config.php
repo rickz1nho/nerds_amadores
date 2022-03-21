@@ -24,9 +24,11 @@ function valida_login()
 
 function valida_nivel()
 {
-    if ($_SESSION['usuario']['nivel'] == 4) {
+    if ($_SESSION['usuario']['nivel'] == 1) {
         return 1;
     } elseif ($_SESSION['usuario']['nivel'] == 3) {
-        return 2;
+        return 3;
+    } elseif ($_SESSION['usuario']['nivel'] == 4) {
+        return 4;
     }
 }

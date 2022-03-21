@@ -62,8 +62,29 @@ if ($cat == 1) {
                 </div> <!-- end header__logo -->
 
 
-                <div class="header__search">
-                </div> <!-- end header__search -->
+                <?php
+                if (!isset($_SESSION['usuario'])) {
+                ?>
+                    <a class="h1eader__search-trigger" href="cadastro_usuario.php"></a>
+                    <a class="hieader__search-trigger" href="login_page.php"></a>
+                <?php
+                } else {
+                ?>
+                    <a class="h2eader__search-trigger" href="valida_login.php"></a>
+                    <form name="logout" action="app/controllers/logout.php" method="POST">
+
+                        <a class="h3eader__search-trigger" href="javascript: submitform()"></a>
+                    </form>
+
+                    <script type="text/javascript">
+                        function submitform() {
+                            document.logout.submit();
+                        }
+                    </script>
+
+                <?php
+                }
+                ?>
 
 
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
