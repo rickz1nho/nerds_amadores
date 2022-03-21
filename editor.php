@@ -4,7 +4,7 @@ require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
 
 valida_login();
-if (valida_nivel() == 2) {
+if (valida_nivel() == 3) {
 
 ?>
   <!DOCTYPE html>
@@ -71,7 +71,7 @@ if (valida_nivel() == 2) {
 
     ?>
 
-  <form action="app/controllers/controllerForm.php?action=save" method="post" enctype="multipart/form-data">
+    <form action="app/controllers/controllerForm.php?action=save" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label>Titulo*:</label>
         <input required pattern="[A-Za-z[^0-9]*{0,50}" class="col-sm-6" type="text" name="titulo"><br><br>

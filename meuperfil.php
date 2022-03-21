@@ -51,7 +51,11 @@ valida_login();
 
                 </div> <!-- end header__logo -->
 
-
+                <?php
+                if (valida_nivel() == 3) { ?>
+                    <a class="h4eader__search-trigger" href="create_post.php"></a>
+                <?php } else {
+                } ?>
                 <form name="logout" action="app/controllers/logout.php" method="POST">
 
                     <a class="h3eader__search-trigger" href="javascript: submitform()"></a>
@@ -308,17 +312,45 @@ valida_login();
 
                             <div class="col-twelve">
 
-                                <h3>Gestão de editores</h3>
-                                <p>Controle quem tem e quem não tem o acesso de editor no blog</p>
+                                <h3>Lista de editores</h3>
+                                <p>Aqui aparecem todos os editores do blog</p>
 
                                 <div class="table-responsive">
 
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Nome do usuário</th>
-                                                <th>Email do usuário</th>
-                                                <th>Promover para Editor/Remover cargo</th>
+                                                <th>Nome</th>
+                                                <th>Usuário</th>
+                                                <th>Remover cargo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Rickzinho</td>
+                                                <td>rickzinho@gmail.com</td>
+                                                <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-twelve">
+
+                                <h3>Lista de usuários</h3>
+                                <p>Lista de usuários comuns do site</p>
+
+                                <div class="table-responsive">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Usuário</th>
+                                                <th>Promover para Editor</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -326,11 +358,6 @@ valida_login();
                                                 <td>Diniba</td>
                                                 <td>gabrieldinizm03@gmail.com</td>
                                                 <td><input class="btn full-width" type="submit" value="Adicionar cargo"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Rickzinho</td>
-                                                <td>rickzinho@gmail.com</td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
                                             </tr>
                                         </tbody>
                                     </table>
