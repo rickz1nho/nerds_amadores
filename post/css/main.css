@@ -1,74 +1,3 @@
-/* =================================================================== 
- *
- *  Philosophy v1.0 Main Stylesheet
- *  1-2-2018
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # base style overrides
- *    ## links
- *  # typography & general theme styles
- *    ## Lists
- *    ## responsive video container
- *    ## floated image
- *    ## tables
- *    ## spacing 
- *    ## pace.js styles - minimal
- *  # preloader (line scale)
- *  # forms
- *    ## Style Placeholder Text
- *    ## Change Autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *    ## alert box
- *    ## additional typo styles
- *    ## pagination
- *  # reusable and common theme styles
- *    ## mediaelement style overrides
- *    ## close button for search and mobile navigation
- *    ## slick slider
- *    ## masonry entries
- *    ## post formats - masonry view
- *  # pageheader
- *    ## header logo
- *    ## header social
- *    ## header-toggle
- *    ## header-search
- *    ## header search trigger
- *    ## main navigation
- *    ## pageheader content
- *    ## feature section animation
- *  # s-content
- *    ## masonry layout
- *  # s-extra
- *    ## popular posts
- *    ## about
- *    ## tags
- *  # footer
- *    ## footer link list
- *    ## subscribe form
- *    ## copyright
- *    ## go to top
- *  # blog styles
- *    ## content main
- *    ## content media
- *    ## post tags
- *    ## author profile
- *    ## blog single page navigation
- *    ## format gallery
- *    ## format video
- *    ## format audio
- *    ## comments
- *  # page styles
- *    ## contact page
- *
- * =================================================================== */
-
-
-/* ===================================================================
- * # base style overrides
- *
- * ------------------------------------------------------------------- */
 html {
    font-size: 10px;
 }
@@ -94,6 +23,13 @@ body {
    color: #656565;
    margin: 0;
    padding: 0;
+}
+
+form i {
+   position: absolute;
+   cursor: pointer;
+   margin-top: -70px;
+   margin-left: 370px;
 }
 
 
@@ -929,9 +865,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ## alert box
  * ------------------------------------------------------------------- */
 .alert-box {
-   padding: 2.1rem 4rem 2.1rem 3rem;
+   padding: 1.5rem 2rem 3px 2rem;
    position: relative;
-   margin-bottom: 3rem;
+   padding-top:10px;
+   padding-bottom: 3px;
    border-radius: 3px;
    font-family: "metropolis-semibold", sans-serif;
    font-size: 1.5rem;
@@ -1139,6 +1076,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .pgn {
    margin: 3rem auto;
    text-align: center;
+   position: absolute;
 }
 
 .pgn ul {

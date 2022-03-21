@@ -24,6 +24,7 @@
     ================================================== -->
     <script src="post/js/modernizr.js"></script>
     <script src="post/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
 </head>
 
@@ -124,11 +125,12 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
                         <div>
                             <label class="text-left" for="sampleInput">Sua senha</label>
                             <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_senha">
-                        </div>
 
+                        </div>
                         <input class="btn--primary full-width" type="submit" value="ENTRAR">
 
                     </form>
+
 
                     <p>Caso não tenha uma conta, <a href="cadastro_usuario.php">cadastre-se</a></p>
 
@@ -178,9 +180,9 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 
     <!-- Java Script
 ================================================== -->
-    <script src="js/post/jquery-3.2.1.min.js"></script>
-    <script src="js/post/plugins.js"></script>
-    <script src="js/post/main.js"></script>
+    <script src="post/js/jquery-3.2.1.min.js"></script>
+    <script src="post/js/plugins.js"></script>
+    <script src="post/js/main.js"></script>
 
 </body>
 

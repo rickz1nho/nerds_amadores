@@ -127,27 +127,35 @@ valida_login();
                     <div id="atualizar" style="display: block;">
                         <h3 class="add-bottom text-center">Atualizar dados</h3>
 
-                        <form action="app/controllers/userController.php?action=register" method="POST">
+                        <form action="app/controllers/userController.php?action=update" method="POST">
                             <div>
                                 <label class="text-left" for="sampleInput">Insira seu nome</label>
-                                <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_nome_cadastro">
+                                <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_name_update" value="<?= $_SESSION['usuario']['nome'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha um usuário</label>
-                                <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_usuario_cadastro">
+                                <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_user_update" value="<?= $_SESSION['usuario']['usuario'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Insira um email</label>
-                                <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_cadastro">
+                                <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_update" value="<?= $_SESSION['usuario']['email'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha uma senha</label>
-                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_senha_cadastro">
+                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="<?= $_SESSION['usuario']['senha'] ?>">
                             </div>
 
                             <input class="btn btn--primary full-width" type="submit" value="ATUALIZAR">
 
                         </form>
+
+                        <div class="col-full">
+                            <form action="app/controllers/userController.php?action=delete" method="POST">
+
+                                <input class="btn btn--primary" type="submit" value="DELETAR USUARIO" onclick="return confirm('Tem certeza que deseja deletar sua conta?')">
+
+                            </form>
+                        </div>]
                     </div>
                     <div id="favoritos" style="display: none;">
                         <p>Teste Favoritos</p>
@@ -186,27 +194,36 @@ valida_login();
                     <div id="atualizar" style="display: block;">
                         <h3 class="add-bottom text-center">Atualizar dados</h3>
 
-                        <form action="app/controllers/userController.php?action=register" method="POST">
+                        <form action="app/controllers/userController.php?action=update" method="POST">
                             <div>
                                 <label class="text-left" for="sampleInput">Insira seu nome</label>
-                                <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_nome_cadastro">
+                                <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_name_update" value="<?= $_SESSION['usuario']['nome'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha um usuário</label>
-                                <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_usuario_cadastro">
+                                <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_user_update" value="<?= $_SESSION['usuario']['usuario'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Insira um email</label>
-                                <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_cadastro">
+                                <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_update" value="<?= $_SESSION['usuario']['email'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha uma senha</label>
-                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_senha_cadastro">
+                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="<?= $_SESSION['usuario']['senha'] ?>">
                             </div>
 
                             <input class="btn btn--primary full-width" type="submit" value="ATUALIZAR">
 
                         </form>
+
+                        <div class="col-full">
+                            <form action="app/controllers/userController.php?action=delete" method="POST">
+
+                                <input class="btn btn--primary" type="submit" value="DELETAR USUARIO" onclick="return confirm('Tem certeza que deseja deletar sua conta?')">
+
+                            </form>
+                        </div>
+
                     </div>
                     <div id="gerencpost" style="display: none;">
                         <p>Teste gerenciar</p>
@@ -259,121 +276,120 @@ valida_login();
                     <div id="atualizar" style="display: block;">
                         <h3 class="add-bottom text-center">Atualizar dados</h3>
 
-                        <form action="app/controllers/userController.php?action=register" method="POST">
+                        <form action="app/controllers/userController.php?action=update" method="POST">
                             <div>
                                 <label class="text-left" for="sampleInput">Insira seu nome</label>
-                                <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_nome_cadastro">
+                                <input class="full-width" type="text" placeholder="Anderson Cardoso" id="sampleInput" name="field_name_update" value="<?= $_SESSION['usuario']['nome'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha um usuário</label>
-                                <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_usuario_cadastro">
+                                <input class="full-width" type="text" placeholder="wuju333" id="sampleInput" name="field_user_update" value="<?= $_SESSION['usuario']['usuario'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Insira um email</label>
-                                <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_cadastro">
+                                <input class="full-width" type="email" placeholder="jubirainer@gmail.com" id="sampleInput" name="field_email_update" value="<?= $_SESSION['usuario']['email'] ?>">
                             </div>
                             <div>
                                 <label class="text-left" for="sampleInput">Escolha uma senha</label>
-                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_senha_cadastro">
+                                <input class="full-width" type="password" placeholder="coxinha123" id="sampleInput" name="field_pass_update" value="<?= $_SESSION['usuario']['senha'] ?>">
                             </div>
 
                             <input class="btn btn--primary full-width" type="submit" value="ATUALIZAR">
 
                         </form>
-                    </div>
 
-                    <div id="promover" style="display: none;">
-                        <div class="row add-bottom">
+                        <div id="promover" style="display: none;">
+                            <div class="row add-bottom">
 
-                            <div class="col-twelve">
+                                <div class="col-twelve">
 
-                                <h3>Gestão de editores</h3>
-                                <p>Controle quem tem e quem não tem o acesso de editor no blog</p>
+                                    <h3>Gestão de editores</h3>
+                                    <p>Controle quem tem e quem não tem o acesso de editor no blog</p>
 
-                                <div class="table-responsive">
+                                    <div class="table-responsive">
 
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Nome do usuário</th>
-                                                <th>Email do usuário</th>
-                                                <th>Promover para Editor/Remover cargo</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Diniba</td>
-                                                <td>gabrieldinizm03@gmail.com</td>
-                                                <td><input class="btn full-width" type="submit" value="Adicionar cargo"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Rickzinho</td>
-                                                <td>rickzinho@gmail.com</td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome do usuário</th>
+                                                    <th>Email do usuário</th>
+                                                    <th>Promover para Editor/Remover cargo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Diniba</td>
+                                                    <td>gabrieldinizm03@gmail.com</td>
+                                                    <td><input class="btn full-width" type="submit" value="Adicionar cargo"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rickzinho</td>
+                                                    <td>rickzinho@gmail.com</td>
+                                                    <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
-                                </div>
-
-                            </div>
-
-                        </div> <!-- end row -->
-                    </div>
-                    <div id="gerencpost" style="display: none;">
-                        <div class="row add-bottom">
-
-                            <div>
-
-                                <h3>Gerenciamento das publicações</h3>
-                                <p>Atualize ou remova as publicações do blog</p>
-
-                                <div class="table">
-
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Título da publicação</th>
-                                                <th>Categoria</th>
-                                                <th>Autor</th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Mapeamento genético de DNA passar a contar com Inteligência artifical</td>
-                                                <td>Tecnologias em Geral</td>
-                                                <td>Diniba</td>
-                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Novas linguagens de programação emergentes</td>
-                                                <td>Software</td>
-                                                <td>Rickzinho</td>
-                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    </div>
 
                                 </div>
 
-                            </div>
+                            </div> <!-- end row -->
+                        </div>
+                        <div id="gerencpost" style="display: none;">
+                            <div class="row add-bottom">
 
-                        </div> <!-- end row -->
-                    </div>
-                    <div id="favoritos" style="display: none;">
-                        <p>Teste Favoritos</p>
-                    </div>
-                <?php } else {
+                                <div>
+
+                                    <h3>Gerenciamento das publicações</h3>
+                                    <p>Atualize ou remova as publicações do blog</p>
+
+                                    <div class="table">
+
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Título da publicação</th>
+                                                    <th>Categoria</th>
+                                                    <th>Autor</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mapeamento genético de DNA passar a contar com Inteligência artifical</td>
+                                                    <td>Tecnologias em Geral</td>
+                                                    <td>Diniba</td>
+                                                    <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                    <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Novas linguagens de programação emergentes</td>
+                                                    <td>Software</td>
+                                                    <td>Rickzinho</td>
+                                                    <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                    <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- end row -->
+                        </div>
+                        <div id="favoritos" style="display: none;">
+                            <p>Teste Favoritos</p>
+                        </div>
+                    <?php } else {
                 }
-                ?>
+                    ?>
 
 
 
-            </div>
+                    </div>
 
     </section> <!-- s-content -->
 

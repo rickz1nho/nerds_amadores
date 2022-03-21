@@ -66,8 +66,25 @@ if (!empty($_GET['msg'])) {
             <p style="text-align:center;">Você já está logado!</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
+    <?php
+    } else if ($link == 10) { ?>
+        <div class="alert-box alert-box--info text-center hideit">
+            <p>Usuário cadastrado com sucesso</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
+    <?php
+    } else if ($link == 11) { ?>
+        <div class="alert-box alert-box--info text-center hideit">
+            <p>Usuário atualizado com sucesso</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
+    <?php
+    } else if ($link == 12) { ?>
+        <div class="alert-box alert-box--info text-center hideit">
+            <p>Usuário deletado com sucesso</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
 <?php
-    } else {
     }
 }
 ?>
