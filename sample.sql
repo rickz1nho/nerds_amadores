@@ -15,7 +15,7 @@ INSERT INTO usuarios (nome, usuario, senha, email, nivel) VALUES ('administrador
 
 CREATE TABLE IF NOT EXISTS `publicacao` (
       `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-      `titulo` VARCHAR(300) NOT NULL,
+      `titulo` VARCHAR(70) NOT NULL,
       `categoria` VARCHAR(50) NOT NULL,
       `autor` VARCHAR(26) NOT NULL,
       `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
