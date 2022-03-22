@@ -117,7 +117,9 @@ $id = $_GET['id'];
                     <?php $repository->viewTituloById($id); ?>
                 </h1>
                 <ul class="s-content__header-meta">
-                    <li class="date"><?php $repository->viewDataById($id); ?></li>
+                    <li class="date"><?php $data = $repository->getDataById($id); 
+                                            echo date('j M Y', strtotime($data));
+                                        ?></li>
                     <li class="cat">
                         In
                         <a href="#0"><?php $repository->viewCategoriaById($id); ?></a>
