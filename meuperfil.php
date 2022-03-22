@@ -228,7 +228,47 @@ valida_login();
                         </div>
                     </div>
                     <div id="gerencpost" style="display: none;">
-                        <p>Teste gerenciar</p>
+                        <div class="row add-bottom">
+
+                            <div>
+
+                                <h3>Gerenciamento das publicações</h3>
+                                <p>Atualize ou remova as publicações do blog</p>
+
+                                <div class="table">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Título da publicação</th>
+                                                <th>Categoria</th>
+                                                <th>Autor</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php $publi = $repository->getIdAllPubliFromAutor(" ".$_SESSION['usuario']['usuario']); 
+                                            foreach($publi as $id){
+                                        ?>
+                                        <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
+                                            <tr>
+                                                <td><?php echo $repository->getTituloById($id['id']) ?></td>
+                                                <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
+                                                <td><?php echo $repository->getAutorById($id['id']) ?></td>
+                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                            </tr>
+                                        </form>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div> <!-- end row -->
                     </div>
                     <div id="favoritos" style="display: none;">
                         <p>Teste Favoritos</p>

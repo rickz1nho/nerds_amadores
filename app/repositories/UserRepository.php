@@ -402,4 +402,13 @@ class UserRepository
         $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $usuario_do_banco;
     }
+    function getIdAllPubliFromAutor($autor)
+    {
+        $sql = "SELECT `id` FROM `publicacao` WHERE `autor` = '$autor'";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $usuario_do_banco;
+    }
 }
