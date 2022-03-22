@@ -221,12 +221,14 @@ class UserRepository
             $sql = "UPDATE `publicacao` SET `categoria` =  '$categoria'  WHERE `id`  = '$id'";
 
             $statement = $this->connection->prepare($sql);
+            $statement->execute();
         }
 
         if (!empty($imagem)) {
             $sql = "UPDATE `publicacao` SET `imagem` =  '$imagem'  WHERE `id`  = '$id'";
 
             $statement = $this->connection->prepare($sql);
+            $statement->execute();
         }
     }
     function viewTituloById($id)
