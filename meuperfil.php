@@ -32,6 +32,7 @@
 <?php
 require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
+$repository = new UserRepository();
 valida_login();
 ?>
 
@@ -241,7 +242,47 @@ valida_login();
                         </div>
                     </div>
                     <div id="gerencpost" style="display: none;">
-                        <p>Teste gerenciar</p>
+                        <div class="row add-bottom">
+
+                            <div>
+
+                                <h3>Gerenciamento das publicações</h3>
+                                <p>Atualize ou remova as publicações do blog</p>
+
+                                <div class="table">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Título da publicação</th>
+                                                <th>Categoria</th>
+                                                <th>Autor</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php $publi = $repository->getIdAllPubliFromAutor(" ".$_SESSION['usuario']['usuario']); 
+                                            foreach($publi as $id){
+                                        ?>
+                                        <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
+                                            <tr>
+                                                <td><?php echo $repository->getTituloById($id['id']) ?></td>
+                                                <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
+                                                <td><?php echo $repository->getAutorById($id['id']) ?></td>
+                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                            </tr>
+                                        </form>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div> <!-- end row -->
                     </div>
                     <div id="favoritos" style="display: none;">
                         <p>Teste Favoritos</p>
@@ -340,11 +381,17 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php $editores = $repository->getIdAllEditor(); 
+                                            foreach($editores as $id){
+                                        ?>
+                                        <form action="app/controllers/userController.php?action=despromove&id=<?php echo $id['id'] ?>" method="POST">
                                             <tr>
-                                                <td>Rickzinho</td>
-                                                <td>rickzinho@gmail.com</td>
+                                                <td><?php echo $repository->getUserEditor($id['id']) ?></td>
+                                                <td><?php echo $repository->getMailEditor($id['id']) ?></td>
                                                 <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
                                             </tr>
+                                        </form>
+                                        <?php } ?>
                                         </tbody>
                                     </table>
 
@@ -357,9 +404,8 @@ valida_login();
                                 <h3>Lista de usuários</h3>
                                 <p>Lista de usuários comuns do site</p>
 
-                                <div class="table-responsive">
-
-                                    <table>
+                            <div class="table-responsive">
+                                <table>
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
@@ -368,15 +414,20 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php $usuarios = $repository->getIdAllNonEditor(); 
+                                            foreach($usuarios as $id){
+                                        ?>
+                                            <form action="app/controllers/userController.php?action=promove&id=<?php echo $id['id'] ?>" method="POST">
                                             <tr>
-                                                <td>Diniba</td>
-                                                <td>gabrieldinizm03@gmail.com</td>
-                                                <td><input class="btn full-width" type="submit" value="Adicionar cargo"></td>
+                                                <td><?php echo $repository->getUserNonEditor($id['id']) ?></td>
+                                                <td><?php echo $repository->getMailNonEditor($id['id']) ?></td>
+                                                <td><input class="btn full-width" type="submit" value="Promover usuario"></td>
                                             </tr>
+                                            </form>
+                                        <?php } ?>
                                         </tbody>
-                                    </table>
-
-                                </div>
+                                </table>
+                            </div>
 
                             </div>
 
@@ -403,20 +454,19 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php $publi = $repository->getIdAllPubli(); 
+                                            foreach($publi as $id){
+                                        ?>
+                                        <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
                                             <tr>
-                                                <td>Mapeamento genético de DNA passar a contar com Inteligência artifical</td>
-                                                <td>Tecnologias em Geral</td>
-                                                <td>Diniba</td>
+                                                <td><?php echo $repository->getTituloById($id['id']) ?></td>
+                                                <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
+                                                <td><?php echo $repository->getAutorById($id['id']) ?></td>
                                                 <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
                                                 <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
                                             </tr>
-                                            <tr>
-                                                <td>Novas linguagens de programação emergentes</td>
-                                                <td>Software</td>
-                                                <td>Rickzinho</td>
-                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
-                                            </tr>
+                                        </form>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
 
@@ -429,8 +479,7 @@ valida_login();
                     <div id="favoritos" style="display: none;">
                         <p>Teste Favoritos</p>
                     </div>
-                <?php } else {
-                }
+                <?php }
                 ?>
 
 

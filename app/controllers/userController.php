@@ -25,6 +25,10 @@ switch ($_GET['action']) {
         promove();
         break;
 
+    case 'despromove':
+        despromove();
+        break;
+
     default:
         # code...
         break;
@@ -106,16 +110,22 @@ function update()
 
 function promove()
 {
-    $nome_promovido = $_POST['field_name_promove'];
+    $userId = $_GET['id'];
 
-    $repository = new UserRepository();
+    $repository = new UserRepository();;
 
-    $userId = $repository->getId($nome_promovido);
+    $repository->promover($userId);
 
-    $userBanco['usuario'] = $userId;
+    header("location:" . BASE_URL . "/meuperfil.php?msg=");
+}
 
-    $repository->promover($userBanco['usuario']['id']);
+function despromove()
+{
+    $userId = $_GET['id'];
 
-    echo  "<script>alert('Usuario promovido!');</script>";
-    header("location:" . BASE_URL . "/adm_page.php?");
+    $repository = new UserRepository();;
+
+    $repository->despromover($userId);
+
+    header("location:" . BASE_URL . "/meuperfil.php?msg=");
 }
