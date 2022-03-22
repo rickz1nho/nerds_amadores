@@ -139,9 +139,11 @@ if (isset($_SESSION['usuario'])) {
             <div class="row">
                 <div class="col-full">
                     <div class="s-footer__copyright">
-                        <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_" target="_blank">Gabriel Deniz</a>
-                        </span>
+                        <span>© Nerds Amadores 2022</span><br>
+                        <span>FrontEnd feito pelo monstro <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
+                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
+                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
+                        <span>Modelagem e documentação feita pelo monstro Guilherme Royer</span>
                     </div>
 
                     <div class="go-top">

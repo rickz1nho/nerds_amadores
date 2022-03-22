@@ -51,11 +51,6 @@ valida_login();
 
                 </div> <!-- end header__logo -->
 
-                <?php
-                if (valida_nivel() == 3) { ?>
-                    <a class="h4eader__search-trigger" href="create_post.php"></a>
-                <?php } else {
-                } ?>
                 <form name="logout" action="app/controllers/logout.php" method="POST">
 
                     <a class="h3eader__search-trigger" href="javascript: submitform()"></a>
@@ -103,6 +98,25 @@ valida_login();
     <section class="s-content s-content--narrow s-content--no-padding-top">
         <div class="row format-standard">
             <div class="s-content__header col-full">
+                <?php
+                if (!empty($_GET['msg'])) {
+                    $link = $_GET['msg'];
+                    if ($link == 1) {
+                ?>
+                        <div class="alert-box alert-box--info hideit">
+                            <p style="text-align:center;">Usuário promovido com sucesso</p>
+                            <i class="fa fa-times alert-box__close"></i>
+                        </div>
+                    <?php
+                    } else if ($link == 2) { ?>
+                        <div class="alert-box alert-box--info text-center hideit">
+                            <p>Cargo removido com sucesso</p>
+                            <i class="fa fa-times alert-box__close"></i>
+                        </div>
+                <?php
+                    }
+                }
+                ?>
 
 
                 <?php
@@ -237,7 +251,7 @@ valida_login();
 
                         <span class="s-content__tag-list">
                             <a href="#0" onclick="replace()">Atualizar dados</a>
-                            <a href="#0" onclick="replace1()">Promover editor</a>
+                            <a href="#0" onclick="replace1()">Gerenciar usuários</a>
                             <a href="#0" onclick="replace2()">Gerenciar os posts</a>
                             <a href="#0" onclick="replace3()">Suas publicações favoritas</a>
                         </span>
@@ -434,9 +448,11 @@ valida_login();
             <div class="row">
                 <div class="col-full">
                     <div class="s-footer__copyright">
-                        <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_" target="_blank">Gabriel Deniz</a>
-                        </span>
+                        <span>© Nerds Amadores 2022</span><br>
+                        <span>FrontEnd feito pelo monstro <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
+                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
+                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
+                        <span>Modelagem e documentação feita pelo monstro Guilherme Royer</span>
                     </div>
 
                     <div class="go-top">

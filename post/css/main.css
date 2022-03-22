@@ -1,3 +1,23 @@
+/* width */
+::-webkit-scrollbar {
+   width: 10px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: #888; 
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: black; 
+ }
+ 
 html {
    font-size: 10px;
 }
@@ -2004,11 +2024,12 @@ body.search-is-visible {
    height: 21px;
    min-width: 21px;
    position: absolute;
-   right: 20px;
+   left: 20px;
    top: 15px;
    background-repeat: no-repeat;
    background-position: right center;
    background-size: contain;
+   
 }
 
 .h4eader__search-trigger::before {

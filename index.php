@@ -84,6 +84,24 @@ if (!empty($_GET['msg'])) {
             <p>Usuário deletado com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
+    <?php
+    } else if ($link == 20) { ?>
+        <div class="alert-box alert-box--success text-center hideit">
+            <p>Publicação criada com sucesso</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
+    <?php
+    } else if ($link == 21) { ?>
+        <div class="alert-box alert-box--info text-center hideit">
+            <p>Publicação atualizada com sucesso</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
+    <?php
+    } else if ($link == 22) { ?>
+        <div class="alert-box alert-box--info text-center hideit">
+            <p>Publicação deletada com sucesso</p>
+            <i class="fa fa-times alert-box__close"></i>
+        </div>
 <?php
     }
 }
@@ -117,6 +135,10 @@ if (!empty($_GET['msg'])) {
                 <?php
                 } else {
                 ?>
+                    <?php
+                    if (valida_nivel() == 3) { ?>
+                        <a class="h4eader__search-trigger" href="create_post.php"></a>
+                    <?php } ?>
                     <a class="h2eader__search-trigger" href="meuperfil.php"></a>
                     <form name="logout" action="app/controllers/logout.php" method="POST">
 
@@ -144,7 +166,7 @@ if (!empty($_GET['msg'])) {
                             <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                         </ul>
                     </li>
-                    <li><a href="#sobrenos" title="">About</a></li>
+                    <li><a href="#sobrenos" title="">Sobre Nós</a></li>
                 </ul> <!-- end header__nav -->
 
                 </nav> <!-- end header__nav-wrap -->
@@ -485,9 +507,11 @@ if (!empty($_GET['msg'])) {
             <div class="row">
                 <div class="col-full">
                     <div class="s-footer__copyright">
-                        <span>© Macholandia 2022</span>
-                        <span>FrontEnd feito pelo monstro <a href="https://twitter.com/xdinizz_">Gabriel Deniz</a>
-                        </span>
+                        <span>© Nerds Amadores 2022</span><br>
+                        <span>FrontEnd feito pelo monstro <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
+                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
+                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
+                        <span>Modelagem e documentação feita pelo monstro Guilherme Royer</span>
                     </div>
 
                     <div class="go-top">
