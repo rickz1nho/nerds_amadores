@@ -169,7 +169,9 @@ function fav($id){
                     </div>
                 </div>
 
-                <?php if(empty($_GET['fav'])){?>
+                <?php 
+                if (isset($_SESSION['usuario'])) {
+                if(empty($_GET['fav'])){?>
                 <form name="fav" action="#1000" method="POST">
                     <p class="s-content__tags">
                         <span class="s-content__tag-list">
@@ -177,16 +179,7 @@ function fav($id){
                         </span>
                     </p> <!-- end s-content__tags -->
                 </form>
-                <?php } ?>
-                <script type="text/javascript">
-                    function submitform() {
-                        document.fav.submit();
-                    }
-
-                    function replace() {
-                        document.getElementById("sim").style.display = "block";
-                    }
-                </script>
+                <?php } } ?>
 
 
                 <div class="s-content__pagenav">

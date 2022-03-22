@@ -35,7 +35,6 @@ $lastPost = $repository->getLastPostId();
 $img = $repository->getImagemById($lastPost);
 
 $previous1 = $repository->getPreviousPostId($lastPost);
-echo $previous1;
 $img2 = $repository->getImagemById($previous1);
 
 $previous2 = $repository->getPreviousPostId($previous1);

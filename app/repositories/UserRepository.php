@@ -414,4 +414,11 @@ class UserRepository
         $statement = $this->connection->prepare($sql);
         $statement->execute();
     }
+    function getFavs($id){
+        $sql = "SELECT `publi_id` FROM `favoritos` WHERE `user_id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $favs = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $favs;
+    }
 }
