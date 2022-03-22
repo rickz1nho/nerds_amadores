@@ -51,7 +51,7 @@ $repository = new UserRepository();
 $id = $_GET['id'];
 
 valida_login();
-if (valida_nivel() == 3) {
+if (valida_nivel() == 3 or 4) {
 
 ?>
 
