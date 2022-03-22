@@ -204,7 +204,9 @@ if (!empty($_GET['msg'])) {
 
                                     <ul class="entry__meta">
                                         <li><a href="#0"><?php echo $repository->getAutorById($lastPost); ?></a></li>
-                                        <li><?php echo $repository->getDataById($lastPost); ?></li>
+                                        <li><?php $data = $repository->getDataById($lastPost); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></li>
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
@@ -229,7 +231,9 @@ if (!empty($_GET['msg'])) {
 
                                     <ul class="entry__meta">
                                         <li><a href="#0"><?php echo $repository->getAutorById($previous1); ?></a></li>
-                                        <li><?php echo $repository->getDataById($previous1); ?></li>
+                                        <li><?php $data = $repository->getDataById($previous1); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></li>
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
@@ -251,7 +255,9 @@ if (!empty($_GET['msg'])) {
 
                                     <ul class="entry__meta">
                                         <li><a href="#0"><?php echo $repository->getAutorById($previous2); ?></a></li>
-                                        <li><?php echo $repository->getDataById($previous2); ?></li>
+                                        <li><?php $data = $repository->getDataById($previous2); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></li>
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
@@ -286,7 +292,9 @@ if (!empty($_GET['msg'])) {
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous3 ?>"><?php echo $repository->getDataById($previous3); ?></a>
+                                <a href="post.php?id=<?php echo $previous3 ?>"><?php $data = $repository->getDataById($previous3); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></a>
                             </div>
                             <h1 class="entry__title"><a href="post.php?id=<?php echo $previous3 ?>"><?php echo $repository->getTituloById($previous3); ?></a>
                             </h1>
@@ -319,7 +327,9 @@ if (!empty($_GET['msg'])) {
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous4 ?>"><?php echo $repository->getDataById($previous4); ?></a>
+                                <a href="post.php?id=<?php echo $previous4 ?>"><?php $data = $repository->getDataById($previous4); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></a>
                             </div>
                             <h1 class="entry__title"><a href="post.php?id=<?php echo $previous4 ?>"><?php echo $repository->getTituloById($previous4); ?></a></h1>
 
@@ -351,7 +361,9 @@ if (!empty($_GET['msg'])) {
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous5 ?>"><?php echo $repository->getDataById($previous5); ?></a>
+                                <a href="post.php?id=<?php echo $previous5 ?>"><?php $data = $repository->getDataById($previous5); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></a>
                             </div>
                             <h1 class="entry__title"><a href="post.php?id=<?php echo $previous5 ?>"><?php echo $repository->getTituloById($previous5); ?></a></h1>
 
@@ -383,7 +395,9 @@ if (!empty($_GET['msg'])) {
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous6 ?>"><?php echo $repository->getDataById($previous6); ?></a>
+                                <a href="post.php?id=<?php echo $previous6 ?>"><?php $data = $repository->getDataById($previous6); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></a>
                             </div>
                             <h1 class="entry__title"><a href="post.php?id=<?php echo $previous6 ?>"><?php echo $repository->getTituloById($previous6); ?></a></h1>
 
@@ -415,7 +429,9 @@ if (!empty($_GET['msg'])) {
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous7 ?>"><?php echo $repository->getDataById($previous7); ?></a>
+                                <a href="post.php?id=<?php echo $previous7 ?>"><?php $data = $repository->getDataById($previous7); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></a>
                             </div>
                             <h1 class="entry__title"><a href="post.php?id=<?php echo $previous7 ?>"><?php echo $repository->getTituloById($previous7); ?></a>
                             </h1>
@@ -449,7 +465,9 @@ if (!empty($_GET['msg'])) {
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="post.php?id=<?php echo $previous8 ?>"><?php echo $repository->getDataById($previous8); ?></a>
+                                <a href="post.php?id=<?php echo $previous8 ?>"><?php $data = $repository->getDataById($previous8); 
+                                            echo date('j M Y g:i A', strtotime($data));
+                                        ?></a>
                             </div>
                             <h1 class="entry__title"><a href="post.php?id=<?php echo $previous8 ?>"><?php echo $repository->getTituloById($previous8); ?></a></h1>
 
