@@ -868,6 +868,18 @@ button::-moz-focus-inner, input::-moz-focus-inner {
    line-height: 1.6;
 }
 
+
+@keyframes cssAnimation {
+   0%   {opacity: 1;}
+   90%  {opacity: 1;}
+   100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+   0%   {opacity: 1;}
+   90%  {opacity: 1;}
+   100% {opacity: 0;}
+}
+
 .alert-box__close {
    position: absolute;
    right: 1.8rem;
