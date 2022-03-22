@@ -144,7 +144,7 @@ if (valida_nivel() == 3 or 4) {
                 <div class="s-content__header col-full">
 
                     <h2 class="add-bottom text-center">Criar publicação</h3>
-                        <form action="app/controllers/controllerForm.php?action=update" method="post" enctype="multipart/form-data">
+                        <form action="app/controllers/controllerForm.php?action=update&id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
                             <div>
                                 <label class="text-left" for="sampleInput">Título da publicação: </label>
                                 <input class="full-width" type="text" placeholder="Título teste" id="sampleInput" name="titulo_update" value="<?php echo $repository->getTituloById($id) ?>">

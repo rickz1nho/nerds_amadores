@@ -35,9 +35,11 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
 $id = $_GET['id'];
 
-switch ($_GET['fav']) {
-    case "1":
-        fav($id);
+if (!empty($_GET['fav'])) {
+    switch ($_GET['fav']) {
+        case "1":
+            fav($id);
+    }
 }
 
 function fav($id)
@@ -170,23 +172,16 @@ function fav($id)
 
                 <?php
                 if (isset($_SESSION['usuario'])) {
-                    if ($_GET['fav'] != 1) { ?>
+                    if (empty($_GET['fav'])) { ?>
                         <form name="fav" action="#1000" method="POST">
                             <p class="s-content__tags">
                                 <span class="s-content__tag-list">
-                                    <a href="post.php?id=<?php echo $id ?>&fav=1">Favoritar publicação</a>
+                                    <a id="teste" onclick="replace()" href="post.php?id=<?php echo $id ?>&fav=1">Favoritar publicação</a>
                                 </span>
                             </p> <!-- end s-content__tags -->
                         </form>
-                <?php
-                    }
-                }
-                ?>
-                <script type="text/javascript">
-                    function submitform() {
-                        document.fav.submit();
-                    }
-                </script>
+                <?php }
+                } ?>
 
 
                 <div class="s-content__pagenav">
