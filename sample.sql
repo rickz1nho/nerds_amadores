@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
       `senha` VARCHAR( 40 ) NOT NULL ,
       `email` VARCHAR( 100 ) NOT NULL ,
       `nivel` INT(1) UNSIGNED NOT NULL DEFAULT '1',
-      `cadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      `cadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       `twitch` VARCHAR(50) NOT NULL,
       PRIMARY KEY (`id`),
       UNIQUE KEY `usuario` (`usuario`),
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `publicacao` (
       `titulo` VARCHAR(70) NOT NULL,
       `categoria` VARCHAR(50) NOT NULL,
       `autor` VARCHAR(26) NOT NULL,
-      `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      `postagem` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       `conteudo` text NOT NULL,
       `imagem` text NOT NULL,
       PRIMARY KEY (`id`));

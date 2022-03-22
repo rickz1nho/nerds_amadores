@@ -195,36 +195,34 @@ class UserRepository
     }
     function salvarPublicacao($text, $autor, $titulo, $categoria, $imagem)
     {
-
         $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`, `titulo`, `categoria`, `imagem`) VALUES (' " . $text . " ', ' " . $autor . "', ' " . $titulo . "', ' " . $categoria . "', ' ". $imagem . "')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         //header("location: {$this->base_path}/index.php?msg=publicacaocriada");
     }
-
-    function view($comando)
+    function attPublicacao($text, $titulo, $categoria, $imagem, $id)
     {
-        $sql = "SELECT `conteudo`, `titulo`, `id` FROM `publicacao` ORDER BY `postagem` DESC LIMIT 3";
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
-        $conteudo = $statement->fetchAll(PDO::FETCH_ASSOC);
-        $conteudoTexto = $conteudo;
-        if(!empty($conteudoTexto[0])){$link1 = $conteudoTexto[0]['id'];};
-        if(!empty($conteudoTexto[1])){$link2 = $conteudoTexto[1]['id'];};
-        if(!empty($conteudoTexto[2])){$link3 = $conteudoTexto[2]['id'];};
-        if (!empty($conteudoTexto[0]) && $comando == 1) {
-            echo "<a href=post.php?id=$link1>" . $conteudoTexto[0]['titulo'] . "<br>" . $conteudoTexto[0]['conteudo'] . "</a>";
-        }else return null;
-        if (!empty($conteudoTexto[1]) && $comando == 1) {
-            echo "<a href=post.php?id=$link1>" . $conteudoTexto[1]['titulo'] . "<br>" . $conteudoTexto[1]['conteudo'] . "</a>";
-        }else return null;
-        if (!empty($conteudoTexto[2]) && $comando == 1) {
-            echo "<a href=post.php?id=$link1>" . $conteudoTexto[2]['titulo'] . "<br>" . $conteudoTexto[2]['conteudo'] . "</a>";
-        }else return null;
-        if (!empty($conteudoTexto)) {
+
+        if (!empty($text)) {
+            $sql = "UPDATE `publicacao` SET `conteudo` =  '$text'  WHERE `id` = '$id'";
+
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();
+        }
+
+        if (!empty($titulo)) {
+            $sql = "UPDATE `publicacao` SET `titulo` =  '$categoria'  WHERE `id`  = '$id'";
+
+            $statement = $this->connection->prepare($sql);
+            $statement->execute();
+        }
+
+        if (!empty($imagem)) {
+            $sql = "UPDATE `publicacao` SET `imagem` =  '$imagem'  WHERE `id`  = '$id'";
+
+            $statement = $this->connection->prepare($sql);
         }
     }
-
     function viewTituloById($id)
     {
         $sql = "SELECT `titulo` FROM `publicacao` WHERE `id` = $id";
