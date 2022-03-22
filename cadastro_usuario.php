@@ -140,10 +140,10 @@ if (isset($_SESSION['usuario'])) {
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Nerds Amadores 2022</span><br>
-                        <span>FrontEnd feito pelo monstro <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
-                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
-                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
-                        <span>Modelagem e documentação feita pelo monstro Guilherme Royer</span>
+                        <span>Feito por <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
+                        <span>Feito por <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
+                        <span>Feito por <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
+                        <span>Feito por Guilherme Royer</span>
                     </div>
 
                     <div class="go-top">

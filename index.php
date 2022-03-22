@@ -62,43 +62,43 @@ if (!empty($_GET['msg'])) {
     $link = $_GET['msg'];
     if ($link == 1) {
 ?>
-        <div class="alert-box alert-box--info hideit">
+        <div id='mydiv' class="alert-box alert-box--info hideit">
             <p style="text-align:center;">Você já está logado!</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
     <?php
     } else if ($link == 10) { ?>
-        <div class="alert-box alert-box--info text-center hideit">
+        <div id='mydiv' class="alert-box alert-box--info text-center hideit">
             <p>Usuário cadastrado com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
     <?php
     } else if ($link == 11) { ?>
-        <div class="alert-box alert-box--info text-center hideit">
+        <div id='mydiv' class="alert-box alert-box--info text-center hideit">
             <p>Usuário atualizado com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
     <?php
     } else if ($link == 12) { ?>
-        <div class="alert-box alert-box--info text-center hideit">
+        <div id='mydiv' class="alert-box alert-box--info text-center hideit">
             <p>Usuário deletado com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
     <?php
     } else if ($link == 20) { ?>
-        <div class="alert-box alert-box--success text-center hideit">
+        <div id='mydiv' class="alert-box alert-box--success text-center hideit">
             <p>Publicação criada com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
     <?php
     } else if ($link == 21) { ?>
-        <div class="alert-box alert-box--info text-center hideit">
+        <div id='mydiv' class="alert-box alert-box--info text-center hideit">
             <p>Publicação atualizada com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
     <?php
     } else if ($link == 22) { ?>
-        <div class="alert-box alert-box--info text-center hideit">
+        <div id='mydiv' class="alert-box alert-box--info text-center hideit">
             <p>Publicação deletada com sucesso</p>
             <i class="fa fa-times alert-box__close"></i>
         </div>
@@ -106,6 +106,12 @@ if (!empty($_GET['msg'])) {
     }
 }
 ?>
+
+<script type="text/javascript">
+    setTimeout(function() {
+        $('#mydiv').fadeOut('fast');
+    }, 5000); // <-- time in milliseconds
+</script>
 
 
 <body id="top">
@@ -508,10 +514,10 @@ if (!empty($_GET['msg'])) {
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Nerds Amadores 2022</span><br>
-                        <span>FrontEnd feito pelo monstro <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
-                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
-                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
-                        <span>Modelagem e documentação feita pelo monstro Guilherme Royer</span>
+                        <span>Feito por <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
+                        <span>Feito por <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
+                        <span>Feito por <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
+                        <span>Feito por Guilherme Royer</span>
                     </div>
 
                     <div class="go-top">

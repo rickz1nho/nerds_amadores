@@ -104,13 +104,13 @@ valida_login();
                     $link = $_GET['msg'];
                     if ($link == 1) {
                 ?>
-                        <div class="alert-box alert-box--info hideit">
+                        <div id='mydiv' class="alert-box alert-box--info hideit">
                             <p style="text-align:center;">Usuário promovido com sucesso</p>
                             <i class="fa fa-times alert-box__close"></i>
                         </div>
                     <?php
                     } else if ($link == 2) { ?>
-                        <div class="alert-box alert-box--info text-center hideit">
+                        <div id='mydiv' class="alert-box alert-box--info text-center hideit">
                             <p>Cargo removido com sucesso</p>
                             <i class="fa fa-times alert-box__close"></i>
                         </div>
@@ -118,7 +118,11 @@ valida_login();
                     }
                 }
                 ?>
-
+                <script type="text/javascript">
+                    setTimeout(function() {
+                        $('#mydiv').fadeOut('fast');
+                    }, 5000); // <-- time in milliseconds
+                </script>
 
                 <?php
                 if (valida_nivel() == 1) { ?>
@@ -262,18 +266,18 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php $publi = $repository->getIdAllPubliFromAutor(" ".$_SESSION['usuario']['usuario']); 
-                                            foreach($publi as $id){
-                                        ?>
-                                        <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
-                                            <tr>
-                                                <td><?php echo $repository->getTituloById($id['id']) ?></td>
-                                                <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
-                                                <td><?php echo $repository->getAutorById($id['id']) ?></td>
-                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
-                                            </tr>
-                                        </form>
+                                            <?php $publi = $repository->getIdAllPubliFromAutor(" " . $_SESSION['usuario']['usuario']);
+                                            foreach ($publi as $id) {
+                                            ?>
+                                                <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
+                                                    <tr>
+                                                        <td><?php echo $repository->getTituloById($id['id']) ?></td>
+                                                        <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
+                                                        <td><?php echo $repository->getAutorById($id['id']) ?></td>
+                                                        <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                        <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                                    </tr>
+                                                </form>
                                             <?php } ?>
                                         </tbody>
                                     </table>
@@ -381,17 +385,17 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php $editores = $repository->getIdAllEditor(); 
-                                            foreach($editores as $id){
-                                        ?>
-                                        <form action="app/controllers/userController.php?action=despromove&id=<?php echo $id['id'] ?>" method="POST">
-                                            <tr>
-                                                <td><?php echo $repository->getUserEditor($id['id']) ?></td>
-                                                <td><?php echo $repository->getMailEditor($id['id']) ?></td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo"></td>
-                                            </tr>
-                                        </form>
-                                        <?php } ?>
+                                            <?php $editores = $repository->getIdAllEditor();
+                                            foreach ($editores as $id) {
+                                            ?>
+                                                <form action="app/controllers/userController.php?action=despromove&id=<?php echo $id['id'] ?>" method="POST">
+                                                    <tr>
+                                                        <td><?php echo $repository->getUserEditor($id['id']) ?></td>
+                                                        <td><?php echo $repository->getMailEditor($id['id']) ?></td>
+                                                        <td><input class="btn btn--primary full-width" type="submit" value="Remover cargo" onclick="return confirm('Tem certeza que deseja remover o cargo de editor?')"></td>
+                                                    </tr>
+                                                </form>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
 
@@ -404,8 +408,8 @@ valida_login();
                                 <h3>Lista de usuários</h3>
                                 <p>Lista de usuários comuns do site</p>
 
-                            <div class="table-responsive">
-                                <table>
+                                <div class="table-responsive">
+                                    <table>
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
@@ -414,20 +418,20 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php $usuarios = $repository->getIdAllNonEditor(); 
-                                            foreach($usuarios as $id){
-                                        ?>
-                                            <form action="app/controllers/userController.php?action=promove&id=<?php echo $id['id'] ?>" method="POST">
-                                            <tr>
-                                                <td><?php echo $repository->getUserNonEditor($id['id']) ?></td>
-                                                <td><?php echo $repository->getMailNonEditor($id['id']) ?></td>
-                                                <td><input class="btn full-width" type="submit" value="Promover usuario"></td>
-                                            </tr>
-                                            </form>
-                                        <?php } ?>
+                                            <?php $usuarios = $repository->getIdAllNonEditor();
+                                            foreach ($usuarios as $id) {
+                                            ?>
+                                                <form action="app/controllers/userController.php?action=promove&id=<?php echo $id['id'] ?>" method="POST">
+                                                    <tr>
+                                                        <td><?php echo $repository->getUserNonEditor($id['id']) ?></td>
+                                                        <td><?php echo $repository->getMailNonEditor($id['id']) ?></td>
+                                                        <td><input class="btn full-width" type="submit" value="Promover usuario"></td>
+                                                    </tr>
+                                                </form>
+                                            <?php } ?>
                                         </tbody>
-                                </table>
-                            </div>
+                                    </table>
+                                </div>
 
                             </div>
 
@@ -454,18 +458,18 @@ valida_login();
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php $publi = $repository->getIdAllPubli(); 
-                                            foreach($publi as $id){
-                                        ?>
-                                        <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
-                                            <tr>
-                                                <td><?php echo $repository->getTituloById($id['id']) ?></td>
-                                                <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
-                                                <td><?php echo $repository->getAutorById($id['id']) ?></td>
-                                                <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
-                                                <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
-                                            </tr>
-                                        </form>
+                                            <?php $publi = $repository->getIdAllPubli();
+                                            foreach ($publi as $id) {
+                                            ?>
+                                                <form action="app/controllers/controllerForm.php?action=delete&id=<?php echo $id['id'] ?>" method="POST">
+                                                    <tr>
+                                                        <td><?php echo $repository->getTituloById($id['id']) ?></td>
+                                                        <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
+                                                        <td><?php echo $repository->getAutorById($id['id']) ?></td>
+                                                        <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
+                                                        <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                                    </tr>
+                                                </form>
                                             <?php } ?>
                                         </tbody>
                                     </table>
@@ -498,10 +502,10 @@ valida_login();
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>© Nerds Amadores 2022</span><br>
-                        <span>FrontEnd feito pelo monstro <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
-                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
-                        <span>BackEnd feito pelo monstro <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
-                        <span>Modelagem e documentação feita pelo monstro Guilherme Royer</span>
+                        <span>Feito por <a href="https://instagram.com/gabxdinizz" target="_blank">Gabriel Diniz</a></span><br>
+                        <span>Feito por <a href="https://instagram.com/anthonyvogado" target="_blank">Anthony Vogado</a></span><br>
+                        <span>Feito por <a href="https://instagram.com/rickz1nho" target="_blank">Matheus Ferreira</a></span><br>
+                        <span>Feito por Guilherme Royer</span>
                     </div>
 
                     <div class="go-top">

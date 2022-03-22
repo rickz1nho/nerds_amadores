@@ -116,7 +116,7 @@ function promove()
 
     $repository->promover($userId);
 
-    header("location:" . BASE_URL . "/meuperfil.php?msg=");
+    header("location:" . BASE_URL . "/meuperfil.php?msg=1");
 }
 
 function despromove()
@@ -127,5 +127,5 @@ function despromove()
 
     $repository->despromover($userId);
 
-    header("location:" . BASE_URL . "/meuperfil.php?msg=");
+    header("location:" . BASE_URL . "/meuperfil.php?msg=2");
 }
