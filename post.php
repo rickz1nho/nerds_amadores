@@ -35,9 +35,11 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
 $id = $_GET['id'];
 
+if(!empty($_GET['fav'])){
 switch($_GET['fav']){
     case "1":
         fav($id);
+}
 }
 
 function fav($id){
@@ -167,7 +169,7 @@ function fav($id){
                     </div>
                 </div>
 
-                <?php if($_GET['fav'] != 1) { ?>
+                <?php if(empty($_GET['fav'])){?>
                 <form name="fav" action="#1000" method="POST">
                     <p class="s-content__tags">
                         <span class="s-content__tag-list">
