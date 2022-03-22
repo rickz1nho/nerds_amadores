@@ -411,4 +411,9 @@ class UserRepository
         $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $usuario_do_banco;
     }
+    function fav($user, $id){
+        $sql = "INSERT INTO `favoritos` VALUES ('". $user ."', '". $id ."')";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
 }

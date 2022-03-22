@@ -34,6 +34,19 @@ require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
 $repository = new UserRepository();
 $id = $_GET['id'];
+
+switch($_GET['fav']){
+    case "1":
+        fav($id);
+}
+
+function fav($id){
+
+    $repository = new UserRepository();
+
+    $repository->fav($_SESSION['usuario']['id'],$id);
+
+}
 ?>
 
 <body id="top">
@@ -108,6 +121,17 @@ $id = $_GET['id'];
 
     <!-- s-content
 ================================================== -->
+<?php
+                if (!empty($_GET['fav'])) {
+                    $link = $_GET['fav'];
+                    if ($link == 1) {
+                ?>
+                        <div id='mydiv' class="alert-box alert-box--info hideit">
+                            <p style="text-align:center;">Publicação favoritada com sucesso</p>
+                            <i class="fa fa-times alert-box__close"></i>
+                        </div>
+                    <?php
+                    } }?>
     <section class="s-content s-content--narrow s-content--no-padding-bottom">
 
         <article class="row format-standard">
@@ -143,15 +167,15 @@ $id = $_GET['id'];
                     </div>
                 </div>
 
-
+                <?php if($_GET['fav'] != 1) { ?>
                 <form name="fav" action="#1000" method="POST">
                     <p class="s-content__tags">
                         <span class="s-content__tag-list">
-                            <a id="teste" onclick="replace()" href="#0">Favoritar publicação</a>
-                            <label id="sim" style="display:none;">Publicação favoritada</label>
+                            <a id="teste" onclick="replace()" href="post.php?id=<?php echo $id ?>&fav=1">Favoritar publicação</a>
                         </span>
                     </p> <!-- end s-content__tags -->
                 </form>
+                <?php } ?>
                 <script type="text/javascript">
                     function submitform() {
                         document.fav.submit();
