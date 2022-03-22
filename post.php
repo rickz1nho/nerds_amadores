@@ -141,6 +141,26 @@ $id = $_GET['id'];
                     </div>
                 </div>
 
+
+                <form name="fav" action="#1000" method="POST">
+                    <p class="s-content__tags">
+                        <span class="s-content__tag-list">
+                            <a id="teste" onclick="replace()" href="#0">Favoritar publicação</a>
+                            <label id="sim" style="display:none;">Publicação favoritada</label>
+                        </span>
+                    </p> <!-- end s-content__tags -->
+                </form>
+                <script type="text/javascript">
+                    function submitform() {
+                        document.fav.submit();
+                    }
+
+                    function replace() {
+                        document.getElementById("sim").style.display = "block";
+                    }
+                </script>
+
+
                 <div class="s-content__pagenav">
                     <div class="s-content__nav col-full">
                         <?php if (!empty($repository->getPreviousPostId($id))) { ?>
