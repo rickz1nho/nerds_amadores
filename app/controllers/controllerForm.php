@@ -98,5 +98,5 @@ function delete()
 
     $repository->deletePubli($id);
 
-    header("location:" . BASE_URL . "/meuperfil.php?msg=");
+    header("location:" . BASE_URL . "/index.php?msg=22");
 }
