@@ -180,7 +180,45 @@ valida_login();
                         </div>
                     </div>
                     <div id="favoritos" style="display: none;">
-                        <p>Teste Favoritos</p>
+                    <div id="favoritos" style="display: none;">
+                        <div class="row add-bottom">
+
+                            <div>
+
+                                <h3>Publicações favoritas</h3>
+                                <p>Suas publicações favoritas</p>
+
+                                <div class="table">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Título da publicação</th>
+                                                <th>Categoria</th>
+                                                <th>Autor</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $publi = $repository->getFavs(" " . $_SESSION['usuario']['id']);
+                                            foreach ($publi as $id) {
+                                            ?>
+                                                    <tr>
+                                                        <td><a href="post.php?id=<?php echo $id['publi_id'] ?>&fav=2"><?php echo $repository->getTituloById($id['publi_id']) ?></a></td>
+                                                        <td><?php echo $repository->getCategoriaById($id['publi_id']) ?></td>
+                                                        <td><?php echo $repository->getAutorById($id['publi_id']) ?></td>
+                                                    </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div> <!-- end row -->
+                    </div>
                     </div>
                 <?php  } elseif (valida_nivel() == 3) { ?>
                     <p class="s-content__tags">
