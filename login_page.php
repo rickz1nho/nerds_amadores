@@ -70,7 +70,7 @@ require_once __DIR__ . "/app/repositories/UserRepository.php";
                                 <li><a href="category.html">Tecnlogias em Geral</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html" title="">Sobre Nós</a></li>
+                        <li><a href="sobrenos.php" title="">Sobre Nós</a></li>
                     </ul> <!-- end header__nav -->
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>

@@ -108,7 +108,7 @@ function fav($id)
                                 <li><a href="category.php?cat=4">Tecnlogias em Geral</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html" title="">About</a></li>
+                        <li><a href="sobrenos.php" title="">Sobre nós</a></li>
                     </ul> <!-- end header__nav -->
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
