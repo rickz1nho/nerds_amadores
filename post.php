@@ -135,6 +135,11 @@ function fav($id)
     <?php
         }
     } ?>
+    <script type="text/javascript">
+        setTimeout(function() {
+            $('#mydiv').fadeOut('fast');
+        }, 5000); // <-- time in milliseconds
+    </script>
     <section class="s-content s-content--narrow s-content--no-padding-bottom">
 
         <article class="row format-standard">

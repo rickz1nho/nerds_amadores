@@ -48,7 +48,7 @@ require_once __DIR__ . "/config.php";
 require_once __DIR__ . "/app/repositories/UserRepository.php";
 
 valida_login();
-if (valida_nivel() == 3) {
+if (valida_nivel() == 3 or 4) {
 
 ?>
 

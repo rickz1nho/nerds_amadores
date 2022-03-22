@@ -195,7 +195,7 @@ class UserRepository
     }
     function salvarPublicacao($text, $autor, $titulo, $categoria, $imagem)
     {
-        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`, `titulo`, `categoria`, `imagem`) VALUES (' " . $text . " ', ' " . $autor . "', ' " . $titulo . "', ' " . $categoria . "', ' ". $imagem . "')";
+        $sql = "INSERT INTO `publicacao` (`conteudo`, `autor`, `titulo`, `categoria`, `imagem`) VALUES (' " . $text . " ', ' " . $autor . "', ' " . $titulo . "', ' " . $categoria . "', ' " . $imagem . "')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         //header("location: {$this->base_path}/index.php?msg=publicacaocriada");
@@ -211,10 +211,16 @@ class UserRepository
         }
 
         if (!empty($titulo)) {
-            $sql = "UPDATE `publicacao` SET `titulo` =  '$categoria'  WHERE `id`  = '$id'";
+            $sql = "UPDATE `publicacao` SET `titulo` =  '$titulo'  WHERE `id`  = '$id'";
 
             $statement = $this->connection->prepare($sql);
             $statement->execute();
+        }
+
+        if (!empty($categoria)) {
+            $sql = "UPDATE `publicacao` SET `categoria` =  '$categoria'  WHERE `id`  = '$id'";
+
+            $statement = $this->connection->prepare($sql);
         }
 
         if (!empty($imagem)) {
@@ -257,13 +263,13 @@ class UserRepository
     }
     function getCategoriaId($categoria)
     {
-        if($categoria == ' Cripto'){
+        if ($categoria == ' Cripto') {
             return 1;
-        }elseif($categoria == ' Software'){
+        } elseif ($categoria == ' Software') {
             return 2;
-        }elseif($categoria == ' Hardware'){
+        } elseif ($categoria == ' Hardware') {
             return 3;
-        }elseif($categoria == ' Tecnologias em Geral'){
+        } elseif ($categoria == ' Tecnologias em Geral') {
             return 4;
         }
     }
@@ -320,59 +326,66 @@ class UserRepository
         } else exit;
     }
 
-    function deletePubli($id){
-            $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
-            $statement = $this->connection->prepare($sql);
-            $statement->execute();
+    function deletePubli($id)
+    {
+        $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
     }
 
-    function getNextPostId($id){
+    function getNextPostId($id)
+    {
         $sql = "SELECT `id` FROM `publicacao` WHERE `id` > $id ORDER BY `id` ASC";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $id = $statement->fetch(PDO::FETCH_ASSOC);
-        if(!empty($id)){
-        return $id['id'];
-        }else return null;
+        if (!empty($id)) {
+            return $id['id'];
+        } else return null;
     }
-    function getPreviousPostId($id){
+    function getPreviousPostId($id)
+    {
         $sql = "SELECT `id` FROM `publicacao` WHERE `id` < $id ORDER BY `id` DESC";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $id1 = $statement->fetch(PDO::FETCH_ASSOC);
-        if(!empty($id1)){
-        return $id1['id'];
-        }else return null;
+        if (!empty($id1)) {
+            return $id1['id'];
+        } else return null;
     }
-    function getPreviousPostIdWCat($id, $categoria){
+    function getPreviousPostIdWCat($id, $categoria)
+    {
         $sql = "SELECT `id` FROM `publicacao` WHERE `id` < $id AND `categoria` = '$categoria' ORDER BY `id` DESC";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $id1 = $statement->fetch(PDO::FETCH_ASSOC);
-        if(!empty($id1)){
-        return $id1['id'];
-        }else return $id;
+        if (!empty($id1)) {
+            return $id1['id'];
+        } else return $id;
     }
-    function getLastPostIdWCat($categoria){
+    function getLastPostIdWCat($categoria)
+    {
         $sql = "SELECT `id` FROM `publicacao` WHERE `categoria` = '$categoria' ORDER BY `postagem` DESC";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $id = $statement->fetch(PDO::FETCH_ASSOC);
-        if(!empty($id)){
-        return $id['id'];
-        }else return null;
+        if (!empty($id)) {
+            return $id['id'];
+        } else return null;
     }
-    function getLastPostId(){
+    function getLastPostId()
+    {
         $sql = "SELECT `id` FROM `publicacao` WHERE `postagem` = (SELECT MAX(`postagem`) FROM `publicacao`);";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $id = $statement->fetch(PDO::FETCH_ASSOC);
-        if(!empty($id)){
-        return $id['id'];
-        }else return null;
+        if (!empty($id)) {
+            return $id['id'];
+        } else return null;
     }
-    function insertImagemBanco($imagem){
-        $sql = "INSERT INTO `publicacao` (`imagem`) VALUES ('". $imagem ."')";
+    function insertImagemBanco($imagem)
+    {
+        $sql = "INSERT INTO `publicacao` (`imagem`) VALUES ('" . $imagem . "')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
     }
@@ -384,7 +397,8 @@ class UserRepository
         $conteudo = $statement->fetch(PDO::FETCH_ASSOC);
         return $conteudo['imagem'];
     }
-    function countPostsByCat($categoria){
+    function countPostsByCat($categoria)
+    {
         $sql = "SELECT count(`id`) FROM `publicacao` WHERE `categoria` = '$categoria'";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
@@ -409,12 +423,14 @@ class UserRepository
         $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $usuario_do_banco;
     }
-    function fav($user, $id){
-        $sql = "INSERT INTO `favoritos` VALUES ('". $user ."', '". $id ."')";
+    function fav($user, $id)
+    {
+        $sql = "INSERT INTO `favoritos` VALUES ('" . $user . "', '" . $id . "')";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
     }
-    function getFavs($id){
+    function getFavs($id)
+    {
         $sql = "SELECT `publi_id` FROM `favoritos` WHERE `user_id` = $id";
         $statement = $this->connection->prepare($sql);
         $statement->execute();
