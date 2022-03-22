@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `publicacao` (
       `imagem` text NOT NULL,
       PRIMARY KEY (`id`));
 
-CREATE TABLE favoritos (
+CREATE TABLE `favoritos` (
   `user_id` INT(11) UNSIGNED NOT NULL,
   `publi_id` INT(11) UNSIGNED NOT NULL,
   PRIMARY KEY (user_id, publi_id),

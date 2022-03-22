@@ -97,18 +97,11 @@ function salvarPublicacao()
 
 function delete()
 {
-
-    $titulo = $_GET['msg'];
-
     $repository = new UserRepository;
 
-    $id = $repository->getPubliId($titulo);
+    $id = $_GET['id'];
 
-    $publiId['publi'] = $id;
+    $repository->deletePubli($id);
 
-    if ($repository->deletePubli($publiId['publi']) == 1) {
-        header("location:" . BASE_URL . "/index.php?msg=vocenaotempermissao");
-    } else {
-        header("location:" . BASE_URL . "/index.php?msg=publicacaodeletada");
-    }
+    header("location:" . BASE_URL . "/meuperfil.php?msg=");
 }

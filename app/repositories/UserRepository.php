@@ -120,6 +120,13 @@ class UserRepository
         $statement = $this->connection->prepare($sql);
         $statement->execute();
     }
+    function despromover($user_banco)
+    {
+        $sql = "UPDATE `usuarios` SET `nivel` =  '1'  WHERE `id`  = $user_banco";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
 
     function getId(string $nome)
     {
@@ -138,7 +145,7 @@ class UserRepository
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
-        return $usuario_do_banco[0];
+        return $usuario_do_banco;
     }
 
     function getUserEditor($id)
@@ -147,7 +154,7 @@ class UserRepository
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
-        return $usuario_do_banco;
+        return $usuario_do_banco['nome'];
     }
 
     function getMailEditor($id)
@@ -156,9 +163,36 @@ class UserRepository
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
+        return $usuario_do_banco['email'];
+    }
+
+    function getIdAllNonEditor()
+    {
+        $sql = "SELECT `id` FROM `usuarios` WHERE `nivel` = 1";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $usuario_do_banco;
     }
 
+    function getUserNonEditor($id)
+    {
+        $sql = "SELECT `nome` FROM `usuarios` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
+        return $usuario_do_banco['nome'];
+    }
+
+    function getMailNonEditor($id)
+    {
+        $sql = "SELECT `email` FROM `usuarios` WHERE `id` = $id";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetch(PDO::FETCH_ASSOC);
+        return $usuario_do_banco['email'];
+    }
     function salvarPublicacao($text, $autor, $titulo, $categoria, $imagem)
     {
 
@@ -289,11 +323,9 @@ class UserRepository
     }
 
     function deletePubli($id){
-        if ($_GET['session']['nivel'] == 4) {
             $sql = "DELETE FROM `publicacao` WHERE `id` = $id";
             $statement = $this->connection->prepare($sql);
             $statement->execute();
-        } else return 1;
     }
 
     function getNextPostId($id){
@@ -360,5 +392,14 @@ class UserRepository
         $statement->execute();
         $numero = $statement->fetch(PDO::FETCH_ASSOC);
         return $numero['count(`id`)'];
+    }
+    function getIdAllPubli()
+    {
+        $sql = "SELECT `id` FROM `publicacao`";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $usuario_do_banco = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $usuario_do_banco;
     }
 }
