@@ -274,8 +274,8 @@ valida_login();
                                                         <td><?php echo $repository->getTituloById($id['id']) ?></td>
                                                         <td><?php echo $repository->getCategoriaById($id['id']) ?></td>
                                                         <td><?php echo $repository->getAutorById($id['id']) ?></td>
-                                                        <td><input class="btn full-width" type="submit" value="Atualizar post"></td>
-                                                        <td><input class="btn btn--primary full-width" type="submit" value="Excluir post"></td>
+                                                        <td><a href="update.php?id=<?php echo $id['id'] ?>"><input class="btn full-width" type="button" value="Atualizar post"></a></td>
+                                                        <td><a><input class="btn btn--primary full-width" type="button" value="Excluir post"></td>
                                                     </tr>
                                                 </form>
                                             <?php } ?>
